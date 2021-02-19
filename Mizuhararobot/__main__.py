@@ -50,12 +50,11 @@ def get_readable_time(seconds: int) -> str:
     return ping_time
 
 
-PM_START_TEXT = "Hi {}, my name is {}!\n\nI'm a next gen powerful group manager bot. Made by @InfinityJE's crew.\n\nYou can find my list of available commands with /help."
+PM_START_TEXT = "Hi {}, my name is {}!\n\nI'm a next gen powerful group manager bot. Made by @InfinityJE's crew based on Project Mizuki.\n\nYou can find my list of available commands with /help."
 
 HELP_STRINGS = """
 Hey there! My name is *{}*.
-I'm a rent girlfriend, rent me for your group to have fun there. You can have a look at the following for an idea of some of \
-the things I can help you with.
+I'm a group management bot, here to help you get around and keep the order in your groups!
 
 *Main* commands available:
  ✪ /help: PM's you this message.
@@ -67,7 +66,7 @@ the things I can help you with.
 {}
 """.format(
     dispatcher.bot.first_name, ""
-    if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n")
+    if not ALLOW_EXCL else "\nAll commands can either be used with / or !\n")
 
 SAITAMA_IMG = "https://telegra.ph/file/9b5041ddf59ce43a0f231.jpg"
 
