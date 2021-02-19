@@ -1,6 +1,6 @@
 import html
 
-from telegram import ParseMode, Update
+from telegram import ParseMode, Update, Bot
 from telegram.error import BadRequest
 from telegram.ext import CallbackContext, CommandHandler, Filters, run_async
 from telegram.utils.helpers import mention_html
@@ -23,7 +23,7 @@ from Mizuhararobot.modules.log_channel import gloggable, loggable
 @user_admin
 @user_can_ban
 @loggable
-def ban(update: Update, context: CallbackContext) -> str:
+def ban(update: Update, bot: Bot, context: CallbackContext) -> str:
     chat = update.effective_chat
     user = update.effective_user
     message = update.effective_message
