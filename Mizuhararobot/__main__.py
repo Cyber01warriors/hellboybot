@@ -52,13 +52,13 @@ def get_readable_time(seconds: int) -> str:
 
 PM_START_TEXT = """
 Hi {}, my name is {}! 
-I am chizuru mizuhara(rent a girlfriend) a group manager bot.Rent me for your group if you want😃😃.
+I am a powerful group manager bot. Made by @Infinity_BOTs.
 You can find my list of available commands with /help.
 """
 
 HELP_STRINGS = """
 Hey there! My name is *{}*.
-Hello I'm  mizuhara a rent girlfriend rent me for your grp to have fun there.You can have a look at the following for an idea of some of \
+I'm a rent girlfriend, rent me for your group to have fun there. You can have a look at the following for an idea of some of \
 the things I can help you with.
 
 *Main* commands available:
