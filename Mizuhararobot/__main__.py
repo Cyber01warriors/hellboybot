@@ -69,7 +69,7 @@ the things I can help you with.
     dispatcher.bot.first_name, ""
     if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n")
 
-SAITAMA_IMG = "https://telegra.ph/file/2a0f844ae486a5f419ea1.jpg"
+SAITAMA_IMG = "https://telegra.ph/file/9b5041ddf59ce43a0f231.jpg"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
 Mizuki is forked from saitama, so there is no need for donation but \You can donate to the original writer of the Base code, Paul
