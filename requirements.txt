@@ -24,7 +24,6 @@ regex
 bleach
 git+https://github.com/starry69/python-markdown2.git
 wikipedia
-telethon
 spamwatch
 alphabet_detector
 pyrate-limiter
