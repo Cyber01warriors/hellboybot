@@ -29,3 +29,5 @@ spamwatch
 alphabet_detector
 pyrate-limiter
 cachetools
+telethon==1.16.4
+youtube_dl
