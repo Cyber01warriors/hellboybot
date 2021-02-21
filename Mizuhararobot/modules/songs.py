@@ -18,7 +18,7 @@ from youtube_dl.utils import (
 )
 
 from Mizuhararobot.events import register
-from Mizuhararobot.utils import progress
+from Mizuhararobot.progress import progress
 
 try:
 
