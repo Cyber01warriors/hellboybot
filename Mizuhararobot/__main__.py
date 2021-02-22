@@ -50,7 +50,7 @@ def get_readable_time(seconds: int) -> str:
     return ping_time
 
 
-PM_START_TEXT = "Hi {}, my name is {}!\n\nI'm a next gen powerful group manager bot. Made by @InfinityJE's crew based on Project Mizuki.\n\nYou can find my list of available commands with /help."
+PM_START_TEXT = "Hi {}, my name is {}!\n\nI'm a next gen powerful group manager bot. Made by [Janindu](t.me/imjanindu) based on Project Mizuki.\n\nYou can find my list of available commands with /help."
 
 HELP_STRINGS = """
 Hey there! My name is *{}*.
