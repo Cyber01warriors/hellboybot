@@ -25,7 +25,6 @@ from pyrogram.errors.exceptions.bad_request_400 import (
     UserNotParticipant,
 )
 from pyrogram.types import ChatPermissions, InlineKeyboardButton, InlineKeyboardMarkup
-from Mizuhararobot import dispatcher
 from Mizuhararobot import DRAGONS as SUDO_USERS
 from Mizuhararobot import pbot
 from Mizuhararobot.modules.sql import forceSubscribe_sql as sql
@@ -207,7 +206,5 @@ Note: Only creator of the group can setup me and i will not allow force subscrib
 💬 Only on Sinhala 🇱🇰 yet
  
 """
-FORCESUBSCRIBE_HANDLER = DisableAbleCommandHandler("forcesubscribe", forcesubscribe)
-dispatcher.add_handler(FORCESUBSCRIBE_HANDLER)
 
 __mod_name__ = "FSubscribe 💬"
