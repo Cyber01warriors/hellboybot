@@ -50,7 +50,7 @@ def get_readable_time(seconds: int) -> str:
     return ping_time
 
 
-PM_START_TEXT = "Hi {}, my name is {}!\n\nI'm a next gen powerful group manager bot. Made by [Janindu](t.me/imjanindu) based on Project Mizuki.\n\nYou can find my list of available commands with /help."
+PM_START_TEXT = "Hi {}, my name is {}!\n\nI'm a next gen powerful group manager bot. Made by [Janindu](t.me/imjanindu).\n\nHit /help to find my list of available commands."
 
 HELP_STRINGS = """
 Hey there! My name is *{}*.
@@ -204,10 +204,9 @@ def start(update: Update, context: CallbackContext):
                      ],
                      [
                          InlineKeyboardButton(
-                             text="🧾 Getting Started Guide",
-                             url="https://t.me/Infinity_BOTs/362")
-                     ],
-                     [
+                             text="❓Help",
+                             url="https://t.me/TheMizukiBot?start=help")
+                     ],[
                          InlineKeyboardButton(
                              text="🇱🇰 Developer",
                              url="https://github.com/imjanindu")
