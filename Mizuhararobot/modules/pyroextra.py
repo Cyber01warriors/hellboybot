@@ -6,7 +6,7 @@ from asyncio import sleep
 import os
 from pytube import YouTube
 from youtubesearchpython import VideosSearch
-from Mizuhararobot.utils.ut import get_arg
+from Mizuhararobot.ut import get_arg
 from Mizuhararobot import pbot, LOGGER
 from pyrogram import Client, filters
 from pyrogram.errors import PeerIdInvalid
