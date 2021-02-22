@@ -19,3 +19,4 @@ def ehi(update: Update, context: CallbackContext):
     update.effective_message.reply_text(EHI_STRINGS)
 
 EHI_HANDLER = DisableAbleCommandHandler("ehi", ehi)
+dispatcher.add_handler(EHI_HANDLER)
