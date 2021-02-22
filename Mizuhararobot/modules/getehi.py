@@ -11,7 +11,7 @@ from telegram import ChatPermissions, ParseMode, Update
 from telegram.error import BadRequest
 from telegram.ext import CallbackContext, run_async
 
-EHI_STRINGS = ("Lmao, wait it's on next update")
+EHI_STRINGS = ("*Here, latest ehi files by @TheMizukiBot.\n\n🔗 https://www.mediafire.com/folder/1g0te1sz25qrt/Mizuki+EHI\n\nShare and rent me in your groups free 😌*")
 
 
 @run_async
