@@ -238,6 +238,8 @@ __help__ = """
  • `/weebify <text>`*:* returns a weebified text
  • `/sanitize`*:* always use this before /pat or any contact
  • `/pat`*:* pats a user, or get patted
+ • `/truth`*:* for random truth
+ • `/dare`*:* for random dare
 """
 
 SANITIZE_HANDLER = DisableAbleCommandHandler("sanitize", sanitize)
