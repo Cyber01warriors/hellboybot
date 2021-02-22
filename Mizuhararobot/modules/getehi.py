@@ -17,3 +17,5 @@ EHI_STRINGS = ("Lmao, wait it's on next update")
 @run_async
 def ehi(update: Update, context: CallbackContext):
     update.effective_message.reply_text(EHI_STRINGS)
+
+EHI_HANDLER = DisableAbleCommandHandler("ehi", ehi)
