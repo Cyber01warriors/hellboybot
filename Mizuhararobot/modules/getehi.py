@@ -11,11 +11,12 @@ from telegram import ChatPermissions, ParseMode, Update
 from telegram.error import BadRequest
 from telegram.ext import CallbackContext, run_async
 
-EHI_STRINGS = ("Here, latest ehi files by @TheMizukiBot.\n\n🔗 https://www.mediafire.com/folder/1g0te1sz25qrt/Mizuki+EHI\n\nReport errors to @JasonPMsBot. Share and rent me in your groups free 😌")
+EHI_STRINGS = (f"{name}, here latest ehi files by @TheMizukiBot.\n\n🔗 https://www.mediafire.com/folder/1g0te1sz25qrt/Mizuki+EHI\n\nReport errors to @JasonPMsBot. Share and rent me in your groups free 😌")
 
 
 @run_async
 def ehi(update: Update, context: CallbackContext):
+    name = message.reply_to_message.from_user.first_name if message.reply_to_message else message.from_user.first_name
     update.effective_message.reply_text(EHI_STRINGS)
 
 EHI_HANDLER = DisableAbleCommandHandler("ehi", ehi)
