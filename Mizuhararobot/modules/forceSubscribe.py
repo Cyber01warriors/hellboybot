@@ -26,9 +26,9 @@ from pyrogram.errors.exceptions.bad_request_400 import (
 )
 from pyrogram.types import ChatPermissions, InlineKeyboardButton, InlineKeyboardMarkup
 
-from LaraCroftRobot import DRAGONS as SUDO_USERS
-from LaraCroftRobot import pbot
-from LaraCroftRobot.modules.sql import forceSubscribe_sql as sql
+from Mizuhararobot import DRAGONS as SUDO_USERS
+from Mizuhararobot import pbot
+from Mizuhararobot.modules.sql import forceSubscribe_sql as sql
 
 logging.basicConfig(level=logging.INFO)
 
