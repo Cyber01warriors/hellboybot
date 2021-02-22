@@ -79,7 +79,7 @@ def markdown_help(update: Update, context: CallbackContext):
 __help__ = """
 *Available commands:*
 *Markdown:*
- • `/markdownhelp`*:* quick summary of how markdown works in telegram - can only be called in private chats
+ • `/markdownhelp`*:* Quick summary of how markdown works in telegram - can only be called in private chats
 *Paste:*
  • `/paste`*:* Saves replied content to `nekobin.com` and replies with a url
 *React:*
@@ -87,9 +87,11 @@ __help__ = """
 *Urban Dictonary:*
  • `/ud <word>`*:* Type the word or expression you want to search use
 *Wikipedia:*
- • `/wiki <query>`*:* wikipedia your query
+ • `/wiki <query>`*:* Wikipedia your query
 *Wallpapers:*
- • `/wall <query>`*:* get a wallpaper from wall.alphacoders.com
+ • `/wall <query>`*:* Get a wallpaper from wall.alphacoders.com
+*EHI Files:*
+ • `/ehi`*:* Get latest ehi files (for sl users)
 *Currency converter:* 
  • `/cash`*:* currency converter
 Example:
