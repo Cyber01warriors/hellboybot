@@ -9,12 +9,9 @@ import traceback
 from Mizuhararobot import telethn as bot
 from Mizuhararobot.modules.urluploader import download_file
 
-def main():
+async def up(event):
     if not os.path.isdir(DOWNLOADPATH):
         os.makedirs(DOWNLOADPATH)
-
-if __name__ == '__main__':
-    main()
 
 def get_date_in_two_weeks():
     """
