@@ -14,8 +14,7 @@ from telegram.ext import CallbackContext, run_async
 
 @run_async
 def ehi(update: Update, context: CallbackContext):
-name = update.effective_user.first_name
-EHI_STRINGS = (f"{name}, Here the latest ehi files by @TheMizukiBot 👸")
+EHI_STRINGS = ("Here, latest ehi files by @TheMizukiBot 👸")
    
 buttons = InlineKeyboardMarkup(
                 [
