@@ -27,7 +27,7 @@ def paste(update: Update, context: CallbackContext):
 
     url = f'https://nekobin.com/{key}'
 
-    reply_text = f'Nekofied to *Nekobin* : {url}'
+    reply_text = f'Text Pasted to *Nekobin*\n\n👉 {url}'
 
     message.reply_text(
         reply_text,
