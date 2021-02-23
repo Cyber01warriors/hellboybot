@@ -5,7 +5,7 @@ from telegraph import upload_file
 from Mizuhararobot import pbot as app
 
 
-@app.on_message(filters.command('telegraph')
+@app.on_message(filters.command("telegraph"))
 async def telegraph(client, message):
     replied = message.reply_to_message
     if not replied:
