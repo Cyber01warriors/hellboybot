@@ -1,5 +1,5 @@
 from telethon import TelegramClient, events
-from Mizuhararobot.modules.download_from_url import download_file
+from Mizuhararobot.modules.urluploader import download_file
 import os
 import time
 import datetime
