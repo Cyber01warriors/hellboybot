@@ -5,9 +5,9 @@ import zipfile
 from telethon import types
 from telethon.tl import functions
 
-from LaraCroftRobot import TEMP_DOWNLOAD_DIRECTORY
-from LaraCroftRobot import telethn as client
-from LaraCroftRobot.event import register
+from Mizuhararobot import TEMP_DOWNLOAD_DIRECTORY
+from Mizuhararobot import telethn as client
+from Mizuhararobot.events import register
 
 
 async def is_register_admin(chat, user):
