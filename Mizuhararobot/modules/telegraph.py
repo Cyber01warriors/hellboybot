@@ -23,7 +23,3 @@ async def uploader(event):
                     buttons=[
                         Button.url("Link To File", url=f"https://telegra.ph{media_urls[0]}")
                     ])
-
-def resize_image(image):
-    im = Image.open(image)
-    tmp = im.save(image, "PNG")
