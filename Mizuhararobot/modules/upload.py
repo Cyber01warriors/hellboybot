@@ -147,8 +147,6 @@ def main():
     if not os.path.isdir(DOWNLOADPATH):
         os.mkdir(DOWNLOADPATH)
 
-bot.run_until_disconnected()
-
 if __name__ == '__main__':
     main()
 
