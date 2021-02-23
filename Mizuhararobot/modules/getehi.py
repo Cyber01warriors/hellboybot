@@ -1,8 +1,6 @@
 import html
 import random
 import time
-from telegram import (InlineKeyboardButton, InlineKeyboardMarkup, ParseMode,
-                      Update)
 import Mizuhararobot.modules.fun_strings as fun_strings
 from Mizuhararobot import dispatcher
 from Mizuhararobot.modules.disable import DisableAbleCommandHandler
@@ -12,15 +10,11 @@ from telegram import ChatPermissions, ParseMode, Update
 from telegram.error import BadRequest
 from telegram.ext import CallbackContext, run_async
 
-EHI_STRINGS = ("Here, latest ehi files by @TheMizukiBot 👸")
+EHI_STRINGS = ("Here, latest ehi files by @TheMizukiBot 👸\n\n[👉 Download Here 👈](https://www.mediafire.com/folder/1g0te1sz25qrt/Mizuki+EHI)")
 
 @run_async
 def ehi(update: Update, context: CallbackContext):
-buttons = InlineKeyboardMarkup(
-                [
-                [InlineKeyboardButton(text="👉 Download EHI Files 👈", url="https://www.mediafire.com/folder/1g0te1sz25qrt/Mizuki+EHI")]]
-     )
-update.effective_message.reply_text(EHI_STRINGS, disable_web_page_preview=True, reply_markup=(buttons))
+update.effective_message.reply_text(EHI_STRINGS)
 
 
 EHI_HANDLER = DisableAbleCommandHandler("ehi", ehi)
