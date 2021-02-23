@@ -12,7 +12,10 @@ from telegram import ChatPermissions, ParseMode, Update
 from telegram.error import BadRequest
 from telegram.ext import CallbackContext, run_async
 
-EHI_STRINGS = ("Here, latest ehi files by @TheMizukiBot 👸")
+@run_async
+def ehi(update: Update, context: CallbackContext):
+name = update.effective_user.first_name
+EHI_STRINGS = (f"{name}, Here the latest ehi files by @TheMizukiBot 👸")
    
 buttons = InlineKeyboardMarkup(
                 [
@@ -20,10 +23,6 @@ buttons = InlineKeyboardMarkup(
      )
 update.effective_message.reply_text(EHI_STRINGS, disable_web_page_preview=True, reply_markup=(buttons))
 
-
-@run_async
-def ehi(update: Update, context: CallbackContext):
-    update.effective_message.reply_text(EHI_STRINGS)
 
 EHI_HANDLER = DisableAbleCommandHandler("ehi", ehi)
 dispatcher.add_handler(EHI_HANDLER)
