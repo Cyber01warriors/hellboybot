@@ -12,8 +12,7 @@ from telegram import ChatPermissions, ParseMode, Update
 from telegram.error import BadRequest
 from telegram.ext import CallbackContext, run_async
 
-first_name = update.effective_user.first_name
-EHI_STRINGS = (f"{name}, here the latest ehi files by @TheMizukiBot 👸")
+EHI_STRINGS = ("Here, latest ehi files by @TheMizukiBot 👸")
    
 buttons = InlineKeyboardMarkup(
                 [
