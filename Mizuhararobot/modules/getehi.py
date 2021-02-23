@@ -10,7 +10,8 @@ from telegram import ChatPermissions, ParseMode, Update
 from telegram.error import BadRequest
 from telegram.ext import CallbackContext, run_async
 
-EHI_STRINGS = ("Here, latest ehi files by @TheMizukiBot 👸\n\n[👉 Download Here 👈](https://www.mediafire.com/folder/1g0te1sz25qrt/Mizuki+EHI")
+EHI_STRINGS = ("Here, latest ehi files by @TheMizukiBot 👸\n\n[👉 Download Here 👈](https://www.mediafire.com/folder/1g0te1sz25qrt/Mizuki+EHI",
+              parse_mode=ParseMode.MARKDOWN)
 
 @run_async
 def ehi(update: Update, context: CallbackContext):
