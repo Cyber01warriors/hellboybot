@@ -8,15 +8,7 @@ from Mizuhararobot.uputils import progress, humanbytes, time_formatter, convert_
 import traceback
 from Mizuhararobot import telethn as bot
 from Mizuhararobot.modules.urluploader import download_file
-
-DOWNLOADPATH = "Downloads/"
-
-def main():
-    if not os.path.isdir(DOWNLOADPATH):
-        os.mkdir(DOWNLOADPATH)
-
-if __name__ == '__main__':
-    main()
+from Mizuhararobot import DOWNLOADPATH
 
 def get_date_in_two_weeks():
     """
@@ -151,6 +143,12 @@ async def up(event):
 
     raise events.StopPropagation
 
+def main():
+    if not os.path.isdir(DOWNLOADPATH):
+        os.mkdir(DOWNLOADPATH)
+
+if __name__ == '__main__':
+    main()
 
 __help__ = """
  ⦁ `/transfersh`*:* reply to a telegram file to upload it on transfersh and get direct download link
