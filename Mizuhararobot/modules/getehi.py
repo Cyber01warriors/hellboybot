@@ -15,7 +15,7 @@ from telegram.ext import CallbackContext, run_async
 first_name = update.effective_user.first_name
 EHI_STRINGS = (f"{name}, here the latest ehi files by @TheMizukiBot 👸")
                
-update.effective_message(EHI_STRINGS),
+update.effective_text(EHI_STRINGS),
                 parse_mode=ParseMode.MARKDOWN,
                 disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup(
@@ -28,7 +28,7 @@ update.effective_message(EHI_STRINGS),
 
 @run_async
 def ehi(update: Update, context: CallbackContext):
-    update.effective_message.reply_message(EHI_STRINGS)
+    update.effective_message.reply_text(EHI_STRINGS)
 
 EHI_HANDLER = DisableAbleCommandHandler("ehi", ehi)
 dispatcher.add_handler(EHI_HANDLER)
