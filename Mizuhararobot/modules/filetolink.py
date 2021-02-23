@@ -119,7 +119,7 @@ __help__ = """
  ⦁ `/transfersh`*:* reply to a telegram file to upload it on transfersh and get direct download link
  ⦁ `/tmpninja`*:* reply to a telegram file to upload it on tmpninja and get direct download link
 
-* Supports only upto 50mb file size due to hosted on heroku and using telethon for upload
+*Supports only upto 50mb file size due to hosted on heroku and using telethon for upload*
 
 © @TheMizukiBot 👸
 """
