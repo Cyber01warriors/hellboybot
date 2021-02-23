@@ -59,11 +59,7 @@ async def _(event):
 
 @register(pattern="^/imdb (.*)")
 async def imdb(e):
-    approved_userss = approved_users.find({})
-    for ch in approved_userss:
-        iid = ch["id"]
-        userss = ch["user"]
-    if e.is_group:
+        if e.is_group:
         if await is_register_admin(e.input_chat, e.message.sender_id):
             pass
         elif e.chat_id == iid and e.sender_id == userss:
