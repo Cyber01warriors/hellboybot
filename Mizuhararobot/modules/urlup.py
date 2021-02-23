@@ -8,8 +8,12 @@ import aiohttp
 from Mizuhararobot.uputils import progress, humanbytes, time_formatter, convert_from_bytes
 import traceback
 from Mizuhararobot import telethn as bot
-from Mizuhararobot import TEMP_DOWNLOAD_DIRECTORY
 
+def main():
+        os.mkdir(DOWNLOADPATH)
+
+if __name__ == '__main__':
+    main()
 
 @bot.on(events.NewMessage(pattern='/up'))
 async def up(event):
@@ -19,7 +23,7 @@ async def up(event):
         ilk = await event.respond("Downloading...")
         
         try:
-            filename = os.path.join(TEMP_DOWNLOAD_DIRECTORY, os.path.basename(url.text))
+            filename = os.path.join(DOWNLOADPATH, os.path.basename(url.text))
             file_path = await download_file(url.text, filename, ilk, start, bot)
         except Exception as e:
             print(e)
