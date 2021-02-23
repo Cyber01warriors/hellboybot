@@ -5,10 +5,7 @@ from telegraph import upload_file
 from Mizuhararobot import pbot as app
 
 
-@app.on_message(
-    filters.user(AdminSettings) &
-    filters.command('telegraph', COMMAND_PREFIXES),
-)
+@app.on_message(filters.command('telegraph')
 async def telegraph(client, message):
     replied = message.reply_to_message
     if not replied:
@@ -33,7 +30,7 @@ async def telegraph(client, message):
         await message.reply(message, text='not supported!')
         return
     download_location = await client.download_media(
-        message=message.reply_to_message, file_name='root/nana/',
+        message=message.reply_to_message, file_name='root/mizuki/',
     )
     try:
         response = upload_file(download_location)
