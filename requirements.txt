@@ -33,3 +33,4 @@ youtube_dl
 hachoir
 asyncio
 pybase64
+html2text
