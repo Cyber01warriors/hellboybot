@@ -115,5 +115,5 @@ __help__ = """
 © @TheMizukiBot 👸
 """
 
-__mod_name__ = "File Upload 🔗"
+__mod_name__ = "File Upload 📤"
 
