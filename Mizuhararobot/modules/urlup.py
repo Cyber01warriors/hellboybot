@@ -7,6 +7,7 @@ import asyncio
 import aiohttp
 from Mizuhararobot.uputils import progress, humanbytes, time_formatter, convert_from_bytes
 import traceback
+from Mizuhararobot import telethn as bot
 
 @bot.on(events.NewMessage(pattern='/up'))
 async def up(event):
