@@ -19,7 +19,7 @@ buttons = InlineKeyboardMarkup(
                 [
                 [InlineKeyboardButton(text="👉 Download EHI Files 👈", url="https://www.mediafire.com/folder/1g0te1sz25qrt/Mizuki+EHI")]]
      )
-update.effective_message.reply_text(EHI_STRINGS, disable_web_page_preview=True, reply_markup=(buttons), parse_mode=ParseMode.MARKDOWN)
+update.effective_message.reply_text(EHI_STRINGS, disable_web_page_preview=True, reply_markup=(buttons))
 
 
 @run_async
