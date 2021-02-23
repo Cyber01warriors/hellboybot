@@ -14,16 +14,12 @@ from telegram.ext import CallbackContext, run_async
 
 first_name = update.effective_user.first_name
 EHI_STRINGS = (f"{name}, here the latest ehi files by @TheMizukiBot 👸")
-               
-update.effective_text(EHI_STRINGS),
-                parse_mode=ParseMode.MARKDOWN,
-                disable_web_page_preview=True,
-                reply_markup=InlineKeyboardMarkup(
-                    [[
-                        InlineKeyboardButton(
-                            text="👉 Download EHI Files 👈",
-                            url="https://www.mediafire.com/folder/1g0te1sz25qrt/Mizuki+EHI")
-                    ]])
+   
+buttons = InlineKeyboardMarkup(
+                [
+                [InlineKeyboardButton(text="👉 Download EHI Files 👈", url="https://www.mediafire.com/folder/1g0te1sz25qrt/Mizuki+EHI")]]
+     )
+update.effective_message.reply_text(EHI_STRINGS, disable_web_page_preview=True, reply_markup=(buttons), parse_mode=ParseMode.MARKDOWN)
 
 
 @run_async
