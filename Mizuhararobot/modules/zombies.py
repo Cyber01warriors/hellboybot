@@ -110,3 +110,9 @@ async def zombies(event):
         \n`{del_a}` Zombie Admin Accounts Are Not Removed!"
 
     await cleaning_zombies.edit(del_status)
+
+__help__ = """
+ ⦁ `/zombies`*:* Check if any deleted accounts available in the group member list and give results."""
+
+__mod_name__ = "Zombies ⚰"
+
