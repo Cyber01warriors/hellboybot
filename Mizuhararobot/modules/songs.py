@@ -113,7 +113,7 @@ async def download_video(v_url):
         await rkp.edit(
             f"`Preparing to upload song:`\
         \n**{rip_data['title']}**\
-        \nby *{rip_data['uploader']}*"
+        \nby **{rip_data['uploader']}**"
         )
         await v_url.client.send_file(
             v_url.chat_id,
@@ -133,9 +133,9 @@ async def download_video(v_url):
         os.remove(f"{rip_data['id']}.mp3")
     elif video:
         await rkp.edit(
-            f"`Preparing to upload song :`\
+            f"`Preparing to upload song:`\
         \n**{rip_data['title']}**\
-        \nby *{rip_data['uploader']}*"
+        \nby **{rip_data['uploader']}**"
         )
         await v_url.client.send_file(
             v_url.chat_id,
@@ -224,9 +224,9 @@ async def download_video(v_url):
     c_time = time.time()
     if song:
         await rkp.edit(
-            f"`Preparing to upload song `\
+            f"`Preparing to upload video song:`\
         \n**{rip_data['title']}**\
-        \nby *{rip_data['uploader']}*"
+        \nby **{rip_data['uploader']}**"
         )
         await v_url.client.send_file(
             v_url.chat_id,
@@ -247,9 +247,9 @@ async def download_video(v_url):
         await v_url.delete()
     elif video:
         await rkp.edit(
-            f"`Preparing to upload video song :`\
+            f"`Preparing to upload video song:`\
         \n**{rip_data['title']}**\
-        \nby *{rip_data['uploader']}*"
+        \nby **{rip_data['uploader']}**"
         )
         await v_url.client.send_file(
             v_url.chat_id,
