@@ -32,4 +32,3 @@ telethon
 youtube_dl
 hachoir
 asyncio
-telegraph
