@@ -1,4 +1,4 @@
-from Mizuhararobot import client
+from Mizuhararobot import telethn as client
 import os
 import urllib.request
 from datetime import datetime
