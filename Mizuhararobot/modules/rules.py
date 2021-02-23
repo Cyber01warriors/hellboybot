@@ -84,3 +84,12 @@ async def _(event):
     chat_id = event.chat_id
     sql.set_rules(chat_id, "")
     await event.reply("Successfully cleared rules for this chat !")
+
+__help__ = """
+ • `/rules`*:* get the rules for this chat.
+*Admins only:*
+ • `/setrules <your rules here>`*:* set the rules for this chat.
+ • `/clearrules`*:* clear the rules for this chat.
+"""
+
+__mod_name__ = "Rules 📛"
