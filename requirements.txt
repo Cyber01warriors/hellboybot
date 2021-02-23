@@ -32,3 +32,4 @@ telethon==1.16.4
 youtube_dl
 hachoir
 asyncio
+pybase64
