@@ -9,6 +9,14 @@ from Mizuhararobot.uputils import progress, humanbytes, time_formatter, convert_
 import traceback
 from Mizuhararobot import telethn as bot
 
+
+def main():
+    if not os.path.isdir(DOWNLOADPATH):
+        os.mkdir(DOWNLOADPATH)
+
+if __name__ == '__main__':
+    main()
+
 @bot.on(events.NewMessage(pattern='/up'))
 async def up(event):
     if event.reply_to_msg_id:
@@ -44,16 +52,9 @@ async def up(event):
 
     raise events.StopPropagation
 
-def main():
-    if not os.path.isdir(DOWNLOADPATH):
-        os.mkdir(DOWNLOADPATH)
-
-if __name__ == '__main__':
-    main()
-
 
 __help__ = """
- ⦁ `/up`*:* send a direct download link to group or bot pm. Then reply to that link with /up command to upload link on telegram
+ ⦁ `/up`*:* send a direct download link to group or bot pm. Then reply to that link with `/up` command to upload link on telegram
 """
 
 __mod_name__ = "URL Upload 📤"
