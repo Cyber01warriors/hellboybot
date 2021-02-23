@@ -4,6 +4,7 @@ from telethon.tl import *
 import Mizuhararobot.modules.sql.rules2_sql as sql
 from Mizuhararobot import *
 from Mizuhararobot import telethn as tbot
+from Mizuhararobot.events import register
 
 
 async def can_change_info(message):
