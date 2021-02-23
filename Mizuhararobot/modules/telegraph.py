@@ -17,12 +17,6 @@ async def uploader(event):
     ok = await event.reply("`Downloading...`")
     downloaded_file_name = await bot.download_media(pic, TMP_DOWNLOAD_DIRECTORY)
     try:
-        media_urls = upload_file(downloaded_file_name)
-    except exceptions.TelegraphException as exc:
-        await ok.edit("**Error : **" + str(exc))
-        os.remove(downloaded_file_name)
-        return
-    else:
         os.remove(downloaded_file_name)
         await ok.edit("Uploaded to [Telegraph](https://telegra.ph{})\n\n~ @TheMizukiBot".format(media_urls[0]),
                     link_preview=True,
