@@ -47,7 +47,7 @@ async def _(event):
             )
             return
 
-    mone = await event.reply("`⏳️ Please wait...`")
+    mone = await event.reply("⏳️ Please wait...")
     if not os.path.isdir(TEMP_DOWNLOAD_DIRECTORY):
         os.makedirs(TEMP_DOWNLOAD_DIRECTORY)
     if event.reply_to_msg_id:
@@ -129,7 +129,7 @@ async def _(event):
             )
             return
 
-    mone = await event.reply("Processing ...")
+    mone = await event.reply("Processing...")
     if not os.path.isdir(TEMP_DOWNLOAD_DIRECTORY):
         os.makedirs(TEMP_DOWNLOAD_DIRECTORY)
     if event.reply_to_msg_id:
@@ -149,7 +149,7 @@ async def _(event):
         with zipfile.ZipFile(downloaded_file_name, "r") as zip_ref:
             zip_ref.extractall(extracted)
         filename = sorted(get_lst_of_files(extracted, []))
-        await event.reply("Unzipping now")
+        await event.reply("Unzipping now 😌")
         for single_file in filename:
             if os.path.exists(single_file):
                 caption_rts = os.path.basename(single_file)
