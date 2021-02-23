@@ -12,10 +12,10 @@ from telegram import ChatPermissions, ParseMode, Update
 from telegram.error import BadRequest
 from telegram.ext import CallbackContext, run_async
 
+EHI_STRINGS = ("Here, latest ehi files by @TheMizukiBot 👸")
+
 @run_async
 def ehi(update: Update, context: CallbackContext):
-EHI_STRINGS = ("Here, latest ehi files by @TheMizukiBot 👸")
-   
 buttons = InlineKeyboardMarkup(
                 [
                 [InlineKeyboardButton(text="👉 Download EHI Files 👈", url="https://www.mediafire.com/folder/1g0te1sz25qrt/Mizuki+EHI")]]
