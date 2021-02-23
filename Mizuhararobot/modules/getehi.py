@@ -13,7 +13,9 @@ from telegram.error import BadRequest
 from telegram.ext import CallbackContext, run_async
 
 first_name = update.effective_user.first_name
-EHI_STRINGS = (f"{name}, here the latest ehi files by @TheMizukiBot 👸",
+EHI_STRINGS = (f"{name}, here the latest ehi files by @TheMizukiBot 👸")
+               
+update.effective_message(EHI_STRINGS),
                 parse_mode=ParseMode.MARKDOWN,
                 disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup(
@@ -21,7 +23,7 @@ EHI_STRINGS = (f"{name}, here the latest ehi files by @TheMizukiBot 👸",
                         InlineKeyboardButton(
                             text="👉 Download EHI Files 👈",
                             url="https://www.mediafire.com/folder/1g0te1sz25qrt/Mizuki+EHI")
-                    ]]))
+                    ]])
 
 
 @run_async
