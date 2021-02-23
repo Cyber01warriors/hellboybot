@@ -11,6 +11,13 @@ from Mizuhararobot.modules.urluploader import download_file
 
 DOWNLOADPATH = "Downloads/"
 
+def main():
+    if not os.path.isdir(DOWNLOADPATH):
+        os.mkdir(DOWNLOADPATH)
+
+if __name__ == '__main__':
+    main()
+
 def get_date_in_two_weeks():
     """
     get maximum date of storage for file
@@ -144,12 +151,6 @@ async def up(event):
 
     raise events.StopPropagation
 
-def main():
-    if not os.path.isdir(DOWNLOADPATH):
-        os.mkdir(DOWNLOADPATH)
-
-if __name__ == '__main__':
-    main()
 
 __help__ = """
  ⦁ `/transfersh`*:* reply to a telegram file to upload it on transfersh and get direct download link
