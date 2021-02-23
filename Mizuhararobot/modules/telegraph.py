@@ -15,7 +15,7 @@ async def uploader(event):
         os.makedirs(TMP_DOWNLOAD_DIRECTORY)
     pic = event.media
     ok = await event.reply("`Downloading...`")
-    downloaded_file_name = await BotzHub.download_media(pic, TMP_DOWNLOAD_DIRECTORY)
+    downloaded_file_name = await bot.download_media(pic, TMP_DOWNLOAD_DIRECTORY)
     if downloaded_file_name.endswith((".webp")):
         await ok.edit("`Oh! It's a sticker...\nLemme convert it!!`")
         resize_image(downloaded_file_name)
