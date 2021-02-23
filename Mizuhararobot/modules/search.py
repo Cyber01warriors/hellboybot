@@ -58,7 +58,7 @@ async def _(event):
     await event.reply("{}".format(output_str), link_preview=False, parse_mode='Markdown')
 
 @register(pattern="^/imdb (.*)")
-async def imdb:
+async def (imdb):
         movie_name = e.pattern_match.group(1)
         remove_space = movie_name.split(" ")
         final_name = "+".join(remove_space)
