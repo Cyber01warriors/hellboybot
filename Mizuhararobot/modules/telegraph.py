@@ -1,6 +1,6 @@
 import os
 
-from pyrogram import filters
+from pyrogram import filters, Client
 from telegraph import upload_file
 from Mizuhararobot import pbot as app
 
