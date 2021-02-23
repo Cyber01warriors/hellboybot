@@ -58,16 +58,7 @@ async def _(event):
     await event.reply("{}".format(output_str), link_preview=False, parse_mode='Markdown')
 
 @register(pattern="^/imdb (.*)")
-async def imdb(e):
-        if e.is_group:
-        if await is_register_admin(e.input_chat, e.message.sender_id):
-            pass
-        elif e.chat_id == iid and e.sender_id == userss:
-            pass
-        else:
-            return
-
-    try:
+async def imdb:
         movie_name = e.pattern_match.group(1)
         remove_space = movie_name.split(" ")
         final_name = "+".join(remove_space)
