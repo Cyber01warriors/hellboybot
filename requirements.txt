@@ -33,3 +33,5 @@ youtube_dl
 hachoir
 asyncio
 gtts
+bs4
+
