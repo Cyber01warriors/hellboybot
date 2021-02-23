@@ -183,10 +183,11 @@ def scam(imgspage, lim):
 __help__ = f"""
 *Commands:* 
 • `/reverse`*:* Does a *reverse image search* of the media which it was replied to.
+• `/app <app name>`*:* Get details of play store apps.
 Reports bugs at @InfinityJE
 """
 
-__mod_name__ = "Image 🔍"
+__mod_name__ = "Search 🔍"
 
 REVERSE_HANDLER = DisableAbleCommandHandler(
     "reverse", reverse, pass_args=True, admin_ok=True
