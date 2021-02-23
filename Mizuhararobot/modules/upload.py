@@ -8,7 +8,7 @@ from Mizuhararobot.uputils import progress, humanbytes, time_formatter, convert_
 import traceback
 from Mizuhararobot import telethn as bot
 from Mizuhararobot.modules.urluploader import download_file
-from Mizuhararobot import DOWNLOADPATH
+from Mizuhararobot.conf import DOWNLOADPATH
 
 def get_date_in_two_weeks():
     """
@@ -146,6 +146,8 @@ async def up(event):
 def main():
     if not os.path.isdir(DOWNLOADPATH):
         os.mkdir(DOWNLOADPATH)
+
+bot.run_until_disconnected()
 
 if __name__ == '__main__':
     main()
