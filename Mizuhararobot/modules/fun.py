@@ -233,7 +233,7 @@ __help__ = """
  • `/toss`*:* Tosses A coin
  • `/bluetext`*:* check urself :V
  • `/roll`*:* Roll a dice
- • `/rlg`*:* Join ears,nose,mouth and create an emo ;-;
+ • `/rlg`*:* Join ears, nose, mouth and create an emoji
  • `/shout <keyword>`*:* write anything you want to give loud shout
  • `/weebify <text>`*:* returns a weebified text
  • `/sanitize`*:* always use this before `/pat` or any contact
