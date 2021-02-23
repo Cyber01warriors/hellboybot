@@ -18,8 +18,4 @@ async def uploader(event):
     downloaded_file_name = await bot.download_media(pic, TMP_DOWNLOAD_DIRECTORY)
     try:
         os.remove(downloaded_file_name)
-        await ok.edit("Uploaded to [Telegraph](https://telegra.ph{})\n\n~ @TheMizukiBot".format(media_urls[0]),
-                    link_preview=True,
-                    buttons=[
-                        Button.url("Link To File", url=f"https://telegra.ph{media_urls[0]}")
-                    ])
+        await ok.edit("Uploaded to Telegraph\n\n👉 https://telegra.ph{}")\n\n~ @TheMizukiBot".format(media_urls[0])
