@@ -12,7 +12,8 @@ from telegram import ChatPermissions, ParseMode, Update
 from telegram.error import BadRequest
 from telegram.ext import CallbackContext, run_async
 
-EHI_STRINGS = ("Here, latest ehi files by @TheMizukiBot 👸",
+first_name = update.effective_user.first_name
+EHI_STRINGS = (f"{name}, here the latest ehi files by @TheMizukiBot 👸",
                 parse_mode=ParseMode.MARKDOWN,
                 disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup(
