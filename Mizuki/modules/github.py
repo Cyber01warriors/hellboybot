@@ -73,22 +73,6 @@ def github(update, context):
     )
 
 
-@run_async
-def repo(update, context):
-    context.args
-    message = update.effective_message
-    text = message.text[len("/repo ") :]
-    usr = get(f"https://api.github.com/users/{text}/repos?per_page=40").json()
-    reply_text = "*Repositorys*\n"
-    for i in range(len(usr)):
-        reply_text += f"[{usr[i]['name']}]({usr[i]['html_url']})\n"
-    message.reply_text(
-        reply_text, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True
-    )
-
-
 GITHUB_HANDLER = DisableAbleCommandHandler("git", github, admin_ok=True)
-REPO_HANDLER = DisableAbleCommandHandler("repo", repo, pass_args=True, admin_ok=True)
 
 dispatcher.add_handler(GITHUB_HANDLER)
-dispatcher.add_handler(REPO_HANDLER)
