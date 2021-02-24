@@ -3,7 +3,7 @@
 
 A Telegram Python bot running on python3 forked with saitama with a sqlalchemy database and an entirely themed persona to make chizuru fun and good management for you in your groups.
 
-Can be found on telegram as [Mizuki Bot](https://t.me/TheMizukiBot).
+Can be found on telegram as [Mizuki](https://t.me/TheMizukiBot)
 
 The Support group can be reached out to at [Infinity JE](https://t.me/InfinityJEOT), where you can ask for help , discover new features, report bugs, and stay in the loop whenever a new update is available. 
 
@@ -163,7 +163,6 @@ You can use [nssm](https://nssm.cc/usage) to install the bot as service on windo
 Make sure to edit the start and restart bats to your needs. 
 Note: the restart bat requires that User account control be disabled.
 
-For queries or any issues regarding the bot please open an issue ticket or visit us at [One Punch Support](https://t.me/OnePunchSupport)
 ## How to setup on Heroku 
 For starters click on this button 
 
