@@ -87,7 +87,9 @@ __help__ = """
 *Paste:*
  • `/paste`*:* Saves replied content to `nekobin.com` and replies with a url
 *React:*
- • `/react`*:* Reacts with a random reaction 
+ • `/react`*:* Reacts with a random reaction
+*Github:*
+ • `/git <username>`*:* Get details of github profiles
 *Urban Dictonary:*
  • `/ud <word>`*:* Type the word or expression you want to search use
 *Wikipedia:*
