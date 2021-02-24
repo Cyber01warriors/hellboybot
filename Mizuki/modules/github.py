@@ -1,33 +1,13 @@
-import codecs
-import os
-import random
-import re
 from datetime import datetime
-from io import BytesIO
-from typing import Optional
 
-import requests
-import requests as r
-import wikipedia
-from bs4 import BeautifulSoup
-from requests import get, post
-from telegram import (
-    Chat,
-    ChatAction,
-    InlineKeyboardButton,
-    InlineKeyboardMarkup,
-    ParseMode,
-    ReplyKeyboardRemove,
-    TelegramError,
-    Update,
-)
-from telegram.error import BadRequest
-from telegram.ext import CallbackContext, CommandHandler, Filters, run_async
+from requests import get
+from telegram import ParseMode
+from telegram.ext import run_async
 from telegram.ext.dispatcher import run_async
+
 from Mizuki.modules.disable import DisableAbleCommandHandler
-from Mizuki.modules.helper_funcs.alternate import send_action, typing_action
-from Mizuki.modules.helper_funcs.chat_status import user_admin
-from Mizuki.modules.helper_funcs.filters import CustomFilters
+from Mizuki.modules.helper_funcs.alternate import typing_action
+
 
 @run_async
 @typing_action
