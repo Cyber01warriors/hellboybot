@@ -1,18 +1,20 @@
-from telegram import Message, Chat, Update, Bot, MessageEntity
-from telegram.ext import CommandHandler, run_async, Filters
+from telegram.ext import run_async
+
 from Mizuhararobot import dispatcher
 from Mizuhararobot.modules.disable import DisableAbleCommandHandler
-from Mizuhararobot.modules.helper_funcs.filters import CustomFilters
+from Mizuhararobot.modules.helper_funcs.alternate import send_message
+from Mizuhararobot.modules.helper_funcs.chat_status import user_admin
+
 
 @run_async
-def echo(bot: Bot, update: Update):
+@user_admin
+def send(update, context):
     args = update.effective_message.text.split(None, 1)
-    message = update.effective_message
-    if message.reply_to_message:
-        message.reply_to_message.reply_text(args[1])
-    else:
-        message.reply_text(args[1], quote=False)
-    message.delete()
+    creply = args[1]
+    send_message(update.effective_message, creply)
 
-SEND_HANDLER = CommandHandler("send", echo)
-dispatcher.add_handler(SEND_HANDLER)
+
+ADD_CCHAT_HANDLER = DisableAbleCommandHandler("snd", send)
+dispatcher.add_handler(ADD_CCHAT_HANDLER)
+__command_list__ = ["send"]
+__handlers__ = [ADD_CCHAT_HANDLER]
