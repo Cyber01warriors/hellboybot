@@ -4,7 +4,7 @@ from requests import get
 from telegram import ParseMode
 from telegram.ext import run_async
 from telegram.ext.dispatcher import run_async
-
+from Mizuki import dispatcher
 from Mizuki.modules.disable import DisableAbleCommandHandler
 from Mizuki.modules.helper_funcs.alternate import typing_action
 
