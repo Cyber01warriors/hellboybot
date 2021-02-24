@@ -1,17 +1,16 @@
 ![Mizuki](https://telegra.ph/file/2cdd052cf883e8ace4ffa.jpg)
 # Mizuki Bot
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/6141417ceaf84545bab6bd671503df51)](https://app.codacy.com/gh/AnimeKaizoku/Mizuki?utm_source=github.com&utm_medium=referral&utm_content=AnimeKaizoku/Mizuki&utm_campaign=Badge_Grade_Settings)  [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/AnimeKaizoku/Mizuki/graphs/commit-activity) [![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://perso.crans.org/besson/LICENSE.html) [![Open Source Love svg2](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://makeapullrequest.com) [![Updates channel!](https://img.shields.io/badge/Join%20Channel-!-red)](https://t.me/chizuruupdates)
 
 A Telegram Python bot running on python3 forked with saitama with a sqlalchemy database and an entirely themed persona to make chizuru fun and good management for you in your groups.
 
-Can be found on telegram as [Mizuhara robot](https://t.me/Chizurumanagementbot).
+Can be found on telegram as [Mizuki Bot](https://t.me/TheMizukiBot).
 
-The Support group can be reached out to at [chizuru support](https://t.me/chizurusupport), where you can ask for help , discover new features, report bugs, and stay in the loop whenever a new update is available. 
+The Support group can be reached out to at [Infinity JE](https://t.me/InfinityJEOT), where you can ask for help , discover new features, report bugs, and stay in the loop whenever a new update is available. 
 
 
-News channel as at [Chizuru updates](https://t.me/chizuruupdates)
+Updates channel as at [Infinity BOTs](https://t.me/Infinity_BOTs)
 
-## How to setup/deploy.
+## How to setup or deploy.
 
 ### Read these notes carefully before proceeding 
  - This bot is forked from saitama which is based on marie
@@ -19,11 +18,11 @@ News channel as at [Chizuru updates](https://t.me/chizuruupdates)
  - last, we don't support fork and asking for fork in our support group will result to gban.
 
 <details>
-  <summary>Steps to deploy on Heroku !! </summary>
+  <summary>Steps to deploy on Heroku 😉 </summary>
 
 ```
 Fill in all the details, Deploy!
-Now go to https://dashboard.heroku.com/apps/(app-name)/resources ( Replace (app-name) with your app name )
+Now go to https://dashboard.heroku.com/apps/(app-name)/resources (Replace (app-name) with your app name)
 REMEMBER: Turn on worker dyno (Don't worry It's free :D) & Webhook
 Now send the bot /start, If it doesn't respond go to https://dashboard.heroku.com/apps/(app-name)/settings and remove webhook and port.
 ```
@@ -32,7 +31,7 @@ Now send the bot /start, If it doesn't respond go to https://dashboard.heroku.co
 
 </details>  
 <details>
-  <summary>Steps to self Host !! </summary>
+  <summary>Steps to self Host 😌 </summary>
 
   ## Setting up the bot (Read this before trying to use!):
 Please make sure to use python3.6, as I cannot guarantee everything will work as expected on older Python versions!
@@ -174,9 +173,3 @@ For starters click on this button
 ## Credits
 The bot is based on the original work done by [PaulSonOfLars](https://github.com/PaulSonOfLars)
 This repo was just revamped to suit an Anime-centric community. All original credits go to Paul and his dedication, Without his efforts, this fork would not have been possible!
-
-Also, missing proper credit for blacklistusers taken from TheRealPhoenixBot (will add it later, this note says unless it is done)
-
-Any other authorship/credits can be seen through the commits.
-
-Should any be missing kindly let us know at [One Punch Support](https://t.me/OnePunchSupport) or simply submit a pull request on the readme.
