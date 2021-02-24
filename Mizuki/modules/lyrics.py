@@ -1,13 +1,12 @@
 # Simple get lyrics plugin
 
+from telegram import Update
+from telegram.ext import CallbackContext, run_async
 from tswift import Song
-from typing import Optional, List
-from Mizuki.modules.helper_funcs.alternate import send_action, typing_action
-from telegram import Bot, Update, Message, Chat
-from telegram.ext import run_async, MessageHandler, Filters, CallbackContext
 
 from Mizuki import dispatcher
 from Mizuki.modules.disable import DisableAbleCommandHandler
+from Mizuki.modules.helper_funcs.alternate import typing_action
 
 
 @run_async
@@ -46,6 +45,4 @@ LYRICS_HANDLER = DisableAbleCommandHandler("lyrics", lyrics, pass_args=True)
 dispatcher.add_handler(LYRICS_HANDLER)
 
 __command_list__ = ["lyrics"]
-__handlers__ = [
-    LYRICS_HANDLER
-]
+__handlers__ = [LYRICS_HANDLER]

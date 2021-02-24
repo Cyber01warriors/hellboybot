@@ -1,19 +1,22 @@
-import html
 import random
+
+from telegram import Update
+from telegram.ext import CallbackContext, run_async
+
 import Mizuki.modules.truth_and_dare_string as truth_and_dare_string
 from Mizuki import dispatcher
-from telegram import ParseMode, Update, Bot
 from Mizuki.modules.disable import DisableAbleCommandHandler
-from telegram.ext import CallbackContext, run_async
+
 
 @run_async
 def truth(update: Update, context: CallbackContext):
-    args = context.args
+    context.args
     update.effective_message.reply_text(random.choice(truth_and_dare_string.TRUTH))
+
 
 @run_async
 def dare(update: Update, context: CallbackContext):
-    args = context.args
+    context.args
     update.effective_message.reply_text(random.choice(truth_and_dare_string.DARE))
 
 
@@ -23,4 +26,3 @@ DARE_HANDLER = DisableAbleCommandHandler("dare", dare)
 
 dispatcher.add_handler(TRUTH_HANDLER)
 dispatcher.add_handler(DARE_HANDLER)
-

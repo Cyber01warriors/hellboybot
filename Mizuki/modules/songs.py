@@ -149,7 +149,6 @@ async def download_video(v_url):
         os.remove(f"{rip_data['id']}.mp4")
 
 
-
 __help__ = """
  • `/song <song name>`*:* uploads the song in it's best quality available
  • `/lyrics <song name>`*:* provides the lyrics of the song you want
