@@ -13,9 +13,9 @@ if is_module_loaded(FILENAME):
     from telegram.ext import CommandHandler, JobQueue, run_async
     from telegram.utils.helpers import escape_markdown
 
-    from LaraCroftRobot import EVENT_LOGS, LOGGER, dispatcher
-    from LaraCroftRobot.modules.helper_funcs.chat_status import user_admin
-    from LaraCroftRobot.modules.sql import log_channel_sql as sql
+    from Mizuhararobot import EVENT_LOGS, LOGGER, dispatcher
+    from Mizuhararobot.modules.helper_funcs.chat_status import user_admin
+    from Mizuhararobot.modules.sql import log_channel_sql as sql
 
     def loggable(func):
         @wraps(func)
