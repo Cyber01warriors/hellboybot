@@ -12,11 +12,6 @@ def send(update, context):
     args = update.effective_message.text.split(None, 1)
     creply = args[1]
     send_message(update.effective_message, creply)
-    if send_message:
-        send_message.reply_text(args[1])
-    else:
-        send_message.reply_text(args[1], quote=False)
-    send_message.reply_text.delete()
 
 ADD_CCHAT_HANDLER = DisableAbleCommandHandler("send", send)
 dispatcher.add_handler(ADD_CCHAT_HANDLER)
