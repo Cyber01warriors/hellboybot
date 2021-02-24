@@ -35,5 +35,3 @@ asyncio
 gtts
 bs4
 tswift
-pyrogram
-tgCrypto
