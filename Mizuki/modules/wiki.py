@@ -1,6 +1,6 @@
 import wikipedia
-from Mizuhararobot import dispatcher
-from Mizuhararobot.modules.disable import DisableAbleCommandHandler
+from Mizuki import dispatcher
+from Mizuki.modules.disable import DisableAbleCommandHandler
 from telegram import ParseMode, Update
 from telegram.ext import CallbackContext, run_async
 from wikipedia.exceptions import DisambiguationError, PageError

@@ -1,7 +1,7 @@
 from functools import wraps
 from cachetools import TTLCache
 from threading import RLock
-from Mizuhararobot import (DEL_CMDS, DEV_USERS, DRAGONS, SUPPORT_CHAT, DEMONS,
+from Mizuki import (DEL_CMDS, DEV_USERS, DRAGONS, SUPPORT_CHAT, DEMONS,
                           TIGERS, WOLVES, dispatcher)
 
 from telegram import Chat, ChatMember, ParseMode, Update
@@ -393,6 +393,6 @@ def connection_status(func):
 
 
 # Workaround for circular import with connection.py
-from Mizuhararobot.modules import connection
+from Mizuki.modules import connection
 
 connected = connection.connected

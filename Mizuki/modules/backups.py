@@ -5,23 +5,23 @@ from telegram import ParseMode, Message
 from telegram.error import BadRequest
 from telegram.ext import CommandHandler, run_async
 
-import Mizuhararobot.modules.sql.notes_sql as sql
-from Mizuhararobot import dispatcher, LOGGER, OWNER_ID, JOIN_LOGGER
-from Mizuhararobot.__main__ import DATA_IMPORT
-from Mizuhararobot.modules.helper_funcs.chat_status import user_admin
-from Mizuhararobot.modules.helper_funcs.alternate import typing_action
+import Mizuki.modules.sql.notes_sql as sql
+from Mizuki import dispatcher, LOGGER, OWNER_ID, JOIN_LOGGER
+from Mizuki.__main__ import DATA_IMPORT
+from Mizuki.modules.helper_funcs.chat_status import user_admin
+from Mizuki.modules.helper_funcs.alternate import typing_action
 
-# from Mizuhararobot.modules.rules import get_rules
-import Mizuhararobot.modules.sql.rules_sql as rulessql
+# from Mizuki.modules.rules import get_rules
+import Mizuki.modules.sql.rules_sql as rulessql
 
-# from Mizuhararobot.modules.sql import warns_sql as warnssql
-import Mizuhararobot.modules.sql.blacklist_sql as blacklistsql
-from Mizuhararobot.modules.sql import disable_sql as disabledsql
+# from Mizuki.modules.sql import warns_sql as warnssql
+import Mizuki.modules.sql.blacklist_sql as blacklistsql
+from Mizuki.modules.sql import disable_sql as disabledsql
 
-# from Mizuhararobot.modules.sql import cust_filters_sql as filtersql
-# import Mizuhararobot.modules.sql.welcome_sql as welcsql
-import Mizuhararobot.modules.sql.locks_sql as locksql
-from Mizuhararobot.modules.connection import connected
+# from Mizuki.modules.sql import cust_filters_sql as filtersql
+# import Mizuki.modules.sql.welcome_sql as welcsql
+import Mizuki.modules.sql.locks_sql as locksql
+from Mizuki.modules.connection import connected
 
 
 @run_async
@@ -318,7 +318,7 @@ def export_data(update, context):
         },
     }
     baccinfo = json.dumps(backup, indent=4)
-    f = open("Mizuhararobot{}.backup".format(chat_id), "w")
+    f = open("Mizuki{}.backup".format(chat_id), "w")
     f.write(str(baccinfo))
     f.close()
     context.bot.sendChatAction(current_chat_id, "upload_document")
@@ -334,14 +334,14 @@ def export_data(update, context):
         pass
     context.bot.sendDocument(
         current_chat_id,
-        document=open("Mizuhararobot{}.backup".format(chat_id), "rb"),
-        caption="*Successfully Exported backup:*\nChat: `{}`\nChat ID: `{}`\nOn: `{}`\n\nNote: This `Mizuhararobot-Backup` was specially made for notes."
+        document=open("Mizuki{}.backup".format(chat_id), "rb"),
+        caption="*Successfully Exported backup:*\nChat: `{}`\nChat ID: `{}`\nOn: `{}`\n\nNote: This `Mizuki-Backup` was specially made for notes."
         .format(chat.title, chat_id, tgl),
         timeout=360,
         reply_to_message_id=msg.message_id,
         parse_mode=ParseMode.MARKDOWN,
     )
-    os.remove("Mizuhararobot{}.backup".format(chat_id))  # Cleaning file
+    os.remove("Mizuki{}.backup".format(chat_id))  # Cleaning file
 
 
 # Temporary data

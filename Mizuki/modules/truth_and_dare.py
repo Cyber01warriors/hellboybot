@@ -1,9 +1,9 @@
 import html
 import random
-import Mizuhararobot.modules.truth_and_dare_string as truth_and_dare_string
-from Mizuhararobot import dispatcher
+import Mizuki.modules.truth_and_dare_string as truth_and_dare_string
+from Mizuki import dispatcher
 from telegram import ParseMode, Update, Bot
-from Mizuhararobot.modules.disable import DisableAbleCommandHandler
+from Mizuki.modules.disable import DisableAbleCommandHandler
 from telegram.ext import CallbackContext, run_async
 
 @run_async

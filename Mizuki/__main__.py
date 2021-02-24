@@ -4,14 +4,14 @@ import re
 from sys import argv
 from typing import Optional
 
-from Mizuhararobot import (ALLOW_EXCL, CERT_PATH, DONATION_LINK, LOGGER,
+from Mizuki import (ALLOW_EXCL, CERT_PATH, DONATION_LINK, LOGGER,
                           OWNER_ID, PORT, SUPPORT_CHAT, TOKEN, URL, WEBHOOK,
                           SUPPORT_CHAT, dispatcher, StartTime, telethn, updater)
 # needed to dynamically load modules
 # NOTE: Module order is not guaranteed, specify that in the config file!
-from Mizuhararobot.modules import ALL_MODULES
-from Mizuhararobot.modules.helper_funcs.chat_status import is_user_admin
-from Mizuhararobot.modules.helper_funcs.misc import paginate_modules
+from Mizuki.modules import ALL_MODULES
+from Mizuki.modules.helper_funcs.chat_status import is_user_admin
+from Mizuki.modules.helper_funcs.misc import paginate_modules
 from telegram import (InlineKeyboardButton, InlineKeyboardMarkup, ParseMode,
                       Update)
 from telegram.error import (BadRequest, ChatMigrated, NetworkError,
@@ -83,7 +83,7 @@ CHAT_SETTINGS = {}
 USER_SETTINGS = {}
 
 for module_name in ALL_MODULES:
-    imported_module = importlib.import_module("Mizuhararobot.modules." +
+    imported_module = importlib.import_module("Mizuki.modules." +
                                               module_name)
     if not hasattr(imported_module, "__mod_name__"):
         imported_module.__mod_name__ = imported_module.__name__

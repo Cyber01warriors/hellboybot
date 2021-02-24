@@ -3,17 +3,17 @@ import json
 import os
 from typing import Optional
 
-from Mizuhararobot import (DEV_USERS, OWNER_ID, DRAGONS, SUPPORT_CHAT, DEMONS,
+from Mizuki import (DEV_USERS, OWNER_ID, DRAGONS, SUPPORT_CHAT, DEMONS,
                           TIGERS, WOLVES, dispatcher)
-from Mizuhararobot.modules.helper_funcs.chat_status import (dev_plus, sudo_plus,
+from Mizuki.modules.helper_funcs.chat_status import (dev_plus, sudo_plus,
                                                            whitelist_plus)
-from Mizuhararobot.modules.helper_funcs.extraction import extract_user
-from Mizuhararobot.modules.log_channel import gloggable
+from Mizuki.modules.helper_funcs.extraction import extract_user
+from Mizuki.modules.log_channel import gloggable
 from telegram import ParseMode, TelegramError, Update
 from telegram.ext import CallbackContext, CommandHandler, run_async
 from telegram.utils.helpers import mention_html
 
-ELEVATED_USERS_FILE = os.path.join(os.getcwd(), 'Mizuhararobot/elevated_users.json')
+ELEVATED_USERS_FILE = os.path.join(os.getcwd(), 'Mizuki/elevated_users.json')
 
 
 def check_user_id(user_id: int, context: CallbackContext) -> Optional[str]:

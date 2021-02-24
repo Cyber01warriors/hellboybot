@@ -2,14 +2,14 @@ import html
 # AI module using Intellivoid's Coffeehouse API by @TheRealPhoenix
 from time import sleep, time
 
-import Mizuhararobot.modules.sql.chatbot_sql as sql
+import Mizuki.modules.sql.chatbot_sql as sql
 from coffeehouse.api import API
 from coffeehouse.exception import CoffeeHouseError as CFError
 from coffeehouse.lydia import LydiaAI
-from Mizuhararobot import AI_API_KEY, OWNER_ID, SUPPORT_CHAT, dispatcher
-from Mizuhararobot.modules.helper_funcs.chat_status import user_admin
-from Mizuhararobot.modules.helper_funcs.filters import CustomFilters
-from Mizuhararobot.modules.log_channel import gloggable
+from Mizuki import AI_API_KEY, OWNER_ID, SUPPORT_CHAT, dispatcher
+from Mizuki.modules.helper_funcs.chat_status import user_admin
+from Mizuki.modules.helper_funcs.filters import CustomFilters
+from Mizuki.modules.log_channel import gloggable
 from telegram import Update
 from telegram.error import BadRequest, RetryAfter, Unauthorized
 from telegram.ext import (CallbackContext, CommandHandler, Filters,

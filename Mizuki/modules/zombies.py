@@ -5,7 +5,7 @@ from telethon.errors import ChatAdminRequiredError, UserAdminInvalidError
 from telethon.tl.functions.channels import EditBannedRequest
 from telethon.tl.types import ChannelParticipantsAdmins, ChatBannedRights
 
-from Mizuhararobot import DEV_USERS, DRAGONS, OWNER_ID, TIGERS, telethn
+from Mizuki import DEV_USERS, DRAGONS, OWNER_ID, TIGERS, telethn
 
 # =================== CONSTANT ===================
 

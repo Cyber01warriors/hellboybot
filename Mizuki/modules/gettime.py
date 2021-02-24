@@ -2,8 +2,8 @@ import datetime
 from typing import List
 
 import requests
-from Mizuhararobot import TIME_API_KEY, dispatcher
-from Mizuhararobot.modules.disable import DisableAbleCommandHandler
+from Mizuki import TIME_API_KEY, dispatcher
+from Mizuki.modules.disable import DisableAbleCommandHandler
 from telegram import ParseMode, Update
 from telegram.ext import CallbackContext, run_async
 

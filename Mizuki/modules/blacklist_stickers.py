@@ -1,18 +1,18 @@
 import html
 from typing import Optional
 
-import Mizuhararobot.modules.sql.blsticker_sql as sql
-from Mizuhararobot import LOGGER, dispatcher
-from Mizuhararobot.modules.connection import connected
-from Mizuhararobot.modules.disable import DisableAbleCommandHandler
-from Mizuhararobot.modules.helper_funcs.alternate import send_message
-from Mizuhararobot.modules.helper_funcs.chat_status import (user_admin,
+import Mizuki.modules.sql.blsticker_sql as sql
+from Mizuki import LOGGER, dispatcher
+from Mizuki.modules.connection import connected
+from Mizuki.modules.disable import DisableAbleCommandHandler
+from Mizuki.modules.helper_funcs.alternate import send_message
+from Mizuki.modules.helper_funcs.chat_status import (user_admin,
                                                            user_not_admin)
-from Mizuhararobot.modules.helper_funcs.misc import split_message
-from Mizuhararobot.modules.helper_funcs.string_handling import extract_time
+from Mizuki.modules.helper_funcs.misc import split_message
+from Mizuki.modules.helper_funcs.string_handling import extract_time
 
-from Mizuhararobot.modules.log_channel import loggable
-from Mizuhararobot.modules.warns import warn
+from Mizuki.modules.log_channel import loggable
+from Mizuki.modules.warns import warn
 from telegram import (Chat, Message, ParseMode, Update, User, ChatPermissions)
 from telegram.error import BadRequest
 from telegram.ext import (CallbackContext, CommandHandler, Filters,

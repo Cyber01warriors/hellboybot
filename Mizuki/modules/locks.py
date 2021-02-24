@@ -14,20 +14,20 @@ from telegram.ext import CommandHandler, Filters, MessageHandler
 from telegram.ext.dispatcher import run_async
 from telegram.utils.helpers import mention_html
 
-import Mizuhararobot.modules.sql.locks_sql as sql
-from Mizuhararobot import DRAGONS, LOGGER, dispatcher
-from Mizuhararobot.modules.connection import connected
-from Mizuhararobot.modules.disable import DisableAbleCommandHandler
-from Mizuhararobot.modules.helper_funcs.alternate import send_message, typing_action
-from Mizuhararobot.modules.helper_funcs.chat_status import (
+import Mizuki.modules.sql.locks_sql as sql
+from Mizuki import DRAGONS, LOGGER, dispatcher
+from Mizuki.modules.connection import connected
+from Mizuki.modules.disable import DisableAbleCommandHandler
+from Mizuki.modules.helper_funcs.alternate import send_message, typing_action
+from Mizuki.modules.helper_funcs.chat_status import (
     can_delete,
     is_bot_admin,
     is_user_admin,
     user_admin,
     user_not_admin,
 )
-from Mizuhararobot.modules.log_channel import loggable
-from Mizuhararobot.modules.sql.approve_sql import is_approved
+from Mizuki.modules.log_channel import loggable
+from Mizuki.modules.sql.approve_sql import is_approved
 
 ad = AlphabetDetector()
 

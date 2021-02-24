@@ -1,10 +1,10 @@
 import html
 
-from Mizuhararobot import (LOGGER, DRAGONS, TIGERS, WOLVES, dispatcher)
-from Mizuhararobot.modules.helper_funcs.chat_status import (user_admin,
+from Mizuki import (LOGGER, DRAGONS, TIGERS, WOLVES, dispatcher)
+from Mizuki.modules.helper_funcs.chat_status import (user_admin,
                                                            user_not_admin)
-from Mizuhararobot.modules.log_channel import loggable
-from Mizuhararobot.modules.sql import reporting_sql as sql
+from Mizuki.modules.log_channel import loggable
+from Mizuki.modules.sql import reporting_sql as sql
 from telegram import (Chat, InlineKeyboardButton, InlineKeyboardMarkup,
                       ParseMode, Update)
 from telegram.error import BadRequest, Unauthorized

@@ -64,12 +64,12 @@ RUN apt update && apt upgrade -y && \
 # Pypi package Repo upgrade
 RUN pip3 install --upgrade pip setuptools
 
-# Copy Python Requirements to /root/Mizuhararobot
-RUN git clone -b shiken https://github.com/ImJanindu/Mizuki /root/Mizuhararobot
-WORKDIR /root/Mizuhararobot
+# Copy Python Requirements to /root/Mizuki
+RUN git clone -b shiken https://github.com/ImJanindu/Mizuki /root/Mizuki
+WORKDIR /root/Mizuki
 
-#Copy config file to /root/Mizuhararobot/Mizuhararobot
-COPY ./Mizuhararobot/sample_config.py ./Mizuhararobot/config.py* /root/Mizuhararobot/Mizuhararobot/
+#Copy config file to /root/Mizuki/Mizuki
+COPY ./Mizuki/sample_config.py ./Mizuki/config.py* /root/Mizuki/Mizuki/
 
 ENV PATH="/home/bot/bin:$PATH"
 
@@ -77,4 +77,4 @@ ENV PATH="/home/bot/bin:$PATH"
 RUN pip3 install -U -r requirements.txt
 
 # Starting Worker
-CMD ["python3","-m","Mizuhararobot"]
+CMD ["python3","-m","Mizuki"]

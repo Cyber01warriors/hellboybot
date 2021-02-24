@@ -1,7 +1,7 @@
 import aiohttp
 import os
 import time
-from Mizuhararobot.uputils import humanbytes, time_formatter
+from Mizuki.uputils import humanbytes, time_formatter
 from telethon import Button, custom, events
 
 

@@ -5,12 +5,12 @@ from telegram.error import BadRequest
 from telegram.ext import CallbackContext, CallbackQueryHandler, run_async
 from telegram.utils.helpers import mention_html
 
-import Mizuhararobot.modules.sql.approve_sql as sql
-from Mizuhararobot import DRAGONS, dispatcher
-from Mizuhararobot.modules.disable import DisableAbleCommandHandler
-from Mizuhararobot.modules.helper_funcs.chat_status import user_admin
-from Mizuhararobot.modules.helper_funcs.extraction import extract_user
-from Mizuhararobot.modules.log_channel import loggable
+import Mizuki.modules.sql.approve_sql as sql
+from Mizuki import DRAGONS, dispatcher
+from Mizuki.modules.disable import DisableAbleCommandHandler
+from Mizuki.modules.helper_funcs.chat_status import user_admin
+from Mizuki.modules.helper_funcs.extraction import extract_user
+from Mizuki.modules.log_channel import loggable
 
 
 @loggable

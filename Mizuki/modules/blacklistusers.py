@@ -1,12 +1,12 @@
 # Module to blacklist users and prevent them from using commands by @TheRealPhoenix
 import html
-import Mizuhararobot.modules.sql.blacklistusers_sql as sql
-from Mizuhararobot import (DEV_USERS, OWNER_ID, DRAGONS, DEMONS, TIGERS, WOLVES,
+import Mizuki.modules.sql.blacklistusers_sql as sql
+from Mizuki import (DEV_USERS, OWNER_ID, DRAGONS, DEMONS, TIGERS, WOLVES,
                           dispatcher)
-from Mizuhararobot.modules.helper_funcs.chat_status import dev_plus
-from Mizuhararobot.modules.helper_funcs.extraction import (extract_user,
+from Mizuki.modules.helper_funcs.chat_status import dev_plus
+from Mizuki.modules.helper_funcs.extraction import (extract_user,
                                                           extract_user_and_text)
-from Mizuhararobot.modules.log_channel import gloggable
+from Mizuki.modules.log_channel import gloggable
 from telegram import ParseMode, Update
 from telegram.error import BadRequest
 from telegram.ext import CallbackContext, CommandHandler, run_async

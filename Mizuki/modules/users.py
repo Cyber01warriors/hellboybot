@@ -1,10 +1,10 @@
 from io import BytesIO
 from time import sleep
 
-import Mizuhararobot.modules.sql.users_sql as sql
-from Mizuhararobot import DEV_USERS, LOGGER, OWNER_ID, dispatcher
-from Mizuhararobot.modules.helper_funcs.chat_status import dev_plus, sudo_plus
-from Mizuhararobot.modules.sql.users_sql import get_all_users
+import Mizuki.modules.sql.users_sql as sql
+from Mizuki import DEV_USERS, LOGGER, OWNER_ID, dispatcher
+from Mizuki.modules.helper_funcs.chat_status import dev_plus, sudo_plus
+from Mizuki.modules.sql.users_sql import get_all_users
 from telegram import TelegramError, Update
 from telegram.error import BadRequest
 from telegram.ext import (CallbackContext, CommandHandler, Filters,

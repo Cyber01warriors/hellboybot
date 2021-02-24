@@ -4,19 +4,19 @@ from typing import Optional, List
 
 from telegram import Message, Chat, Update, User, ChatPermissions
 
-from Mizuhararobot import TIGERS, WOLVES, dispatcher
-from Mizuhararobot.modules.helper_funcs.chat_status import (bot_admin,
+from Mizuki import TIGERS, WOLVES, dispatcher
+from Mizuki.modules.helper_funcs.chat_status import (bot_admin,
                                                            is_user_admin,
                                                            user_admin,
                                                            user_admin_no_reply)
-from Mizuhararobot.modules.log_channel import loggable
-from Mizuhararobot.modules.sql import antiflood_sql as sql
+from Mizuki.modules.log_channel import loggable
+from Mizuki.modules.sql import antiflood_sql as sql
 from telegram.error import BadRequest
 from telegram.ext import CallbackContext, CallbackQueryHandler, CommandHandler, Filters, MessageHandler, run_async
 from telegram.utils.helpers import mention_html, escape_markdown
-from Mizuhararobot.modules.helper_funcs.string_handling import extract_time
-from Mizuhararobot.modules.connection import connected
-from Mizuhararobot.modules.helper_funcs.alternate import send_message
+from Mizuki.modules.helper_funcs.string_handling import extract_time
+from Mizuki.modules.connection import connected
+from Mizuki.modules.helper_funcs.alternate import send_message
 FLOOD_GROUP = 3
 
 

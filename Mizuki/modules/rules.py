@@ -1,9 +1,9 @@
 from typing import Optional
 
-import Mizuhararobot.modules.sql.rules_sql as sql
-from Mizuhararobot import dispatcher
-from Mizuhararobot.modules.helper_funcs.chat_status import user_admin
-from Mizuhararobot.modules.helper_funcs.string_handling import markdown_parser
+import Mizuki.modules.sql.rules_sql as sql
+from Mizuki import dispatcher
+from Mizuki.modules.helper_funcs.chat_status import user_admin
+from Mizuki.modules.helper_funcs.string_handling import markdown_parser
 from telegram import (
     InlineKeyboardButton,
     InlineKeyboardMarkup,

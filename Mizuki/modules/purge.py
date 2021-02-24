@@ -1,6 +1,6 @@
-from Mizuhararobot.modules.helper_funcs.telethn.chatstatus import (
+from Mizuki.modules.helper_funcs.telethn.chatstatus import (
     can_delete_messages, user_is_admin)
-from Mizuhararobot import telethn
+from Mizuki import telethn
 import time
 from telethon import events
 

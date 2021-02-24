@@ -2,17 +2,17 @@ import html
 import time
 from datetime import datetime
 from io import BytesIO
-from Mizuhararobot.modules.sql.users_sql import get_user_com_chats
-import Mizuhararobot.modules.sql.global_bans_sql as sql
-from Mizuhararobot import (DEV_USERS, EVENT_LOGS, OWNER_ID, STRICT_GBAN, DRAGONS,
+from Mizuki.modules.sql.users_sql import get_user_com_chats
+import Mizuki.modules.sql.global_bans_sql as sql
+from Mizuki import (DEV_USERS, EVENT_LOGS, OWNER_ID, STRICT_GBAN, DRAGONS,
                           SUPPORT_CHAT, SPAMWATCH_SUPPORT_CHAT, DEMONS, TIGERS,
                           WOLVES, sw, dispatcher)
-from Mizuhararobot.modules.helper_funcs.chat_status import (is_user_admin,
+from Mizuki.modules.helper_funcs.chat_status import (is_user_admin,
                                                            support_plus,
                                                            user_admin)
-from Mizuhararobot.modules.helper_funcs.extraction import (extract_user,
+from Mizuki.modules.helper_funcs.extraction import (extract_user,
                                                           extract_user_and_text)
-from Mizuhararobot.modules.helper_funcs.misc import send_to_list
+from Mizuki.modules.helper_funcs.misc import send_to_list
 from telegram import ParseMode, Update
 from telegram.error import BadRequest, TelegramError
 from telegram.ext import (CallbackContext, CommandHandler, Filters,

@@ -1,6 +1,6 @@
 import threading
 
-from Mizuhararobot.modules.sql import BASE, SESSION
+from Mizuki.modules.sql import BASE, SESSION
 from sqlalchemy import Boolean, Column, UnicodeText
 
 

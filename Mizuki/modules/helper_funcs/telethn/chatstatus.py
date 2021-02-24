@@ -1,5 +1,5 @@
-from Mizuhararobot.modules.helper_funcs.telethn import IMMUNE_USERS, telethn
-from Mizuhararobot import DRAGONS
+from Mizuki.modules.helper_funcs.telethn import IMMUNE_USERS, telethn
+from Mizuki import DRAGONS
 from telethon.tl.types import ChannelParticipantsAdmins
 
 

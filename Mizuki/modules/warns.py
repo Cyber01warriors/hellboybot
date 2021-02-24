@@ -3,21 +3,21 @@ import re
 from typing import Optional
 
 import telegram
-from Mizuhararobot import TIGERS, WOLVES, dispatcher
-from Mizuhararobot.modules.disable import DisableAbleCommandHandler
-from Mizuhararobot.modules.helper_funcs.chat_status import (bot_admin,
+from Mizuki import TIGERS, WOLVES, dispatcher
+from Mizuki.modules.disable import DisableAbleCommandHandler
+from Mizuki.modules.helper_funcs.chat_status import (bot_admin,
                                                            can_restrict,
                                                            is_user_admin,
                                                            user_admin,
                                                            user_admin_no_reply)
-from Mizuhararobot.modules.helper_funcs.extraction import (extract_text,
+from Mizuki.modules.helper_funcs.extraction import (extract_text,
                                                           extract_user,
                                                           extract_user_and_text)
-from Mizuhararobot.modules.helper_funcs.filters import CustomFilters
-from Mizuhararobot.modules.helper_funcs.misc import split_message
-from Mizuhararobot.modules.helper_funcs.string_handling import split_quotes
-from Mizuhararobot.modules.log_channel import loggable
-from Mizuhararobot.modules.sql import warns_sql as sql
+from Mizuki.modules.helper_funcs.filters import CustomFilters
+from Mizuki.modules.helper_funcs.misc import split_message
+from Mizuki.modules.helper_funcs.string_handling import split_quotes
+from Mizuki.modules.log_channel import loggable
+from Mizuki.modules.sql import warns_sql as sql
 from telegram import (CallbackQuery, Chat, InlineKeyboardButton,
                       InlineKeyboardMarkup, Message, ParseMode, Update, User)
 from telegram.error import BadRequest

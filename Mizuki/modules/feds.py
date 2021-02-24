@@ -6,16 +6,16 @@ import time
 import uuid
 from io import BytesIO
 
-import Mizuhararobot.modules.sql.feds_sql as sql
-from Mizuhararobot import (EVENT_LOGS, LOGGER, OWNER_ID, DRAGONS, TIGERS, WOLVES,
+import Mizuki.modules.sql.feds_sql as sql
+from Mizuki import (EVENT_LOGS, LOGGER, OWNER_ID, DRAGONS, TIGERS, WOLVES,
                           dispatcher)
-from Mizuhararobot.modules.disable import DisableAbleCommandHandler
-from Mizuhararobot.modules.helper_funcs.alternate import send_message
-from Mizuhararobot.modules.helper_funcs.chat_status import is_user_admin
-from Mizuhararobot.modules.helper_funcs.extraction import (extract_unt_fedban,
+from Mizuki.modules.disable import DisableAbleCommandHandler
+from Mizuki.modules.helper_funcs.alternate import send_message
+from Mizuki.modules.helper_funcs.chat_status import is_user_admin
+from Mizuki.modules.helper_funcs.extraction import (extract_unt_fedban,
                                                           extract_user,
                                                           extract_user_fban)
-from Mizuhararobot.modules.helper_funcs.string_handling import markdown_parser
+from Mizuki.modules.helper_funcs.string_handling import markdown_parser
 from telegram import (InlineKeyboardButton, InlineKeyboardMarkup, MessageEntity,
                       ParseMode, Update)
 from telegram.error import BadRequest, TelegramError, Unauthorized

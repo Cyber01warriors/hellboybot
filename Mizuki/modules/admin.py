@@ -5,18 +5,18 @@ from telegram.error import BadRequest
 from telegram.ext import CallbackContext, CommandHandler, Filters, run_async
 from telegram.utils.helpers import mention_html
 
-from Mizuhararobot import DRAGONS, dispatcher
-from Mizuhararobot.modules.disable import DisableAbleCommandHandler
-from Mizuhararobot.modules.helper_funcs.chat_status import (bot_admin, can_pin,
+from Mizuki import DRAGONS, dispatcher
+from Mizuki.modules.disable import DisableAbleCommandHandler
+from Mizuki.modules.helper_funcs.chat_status import (bot_admin, can_pin,
                                                            can_promote,
                                                            connection_status,
                                                            user_admin,
                                                            ADMIN_CACHE)
 
-from Mizuhararobot.modules.helper_funcs.extraction import (extract_user,
+from Mizuki.modules.helper_funcs.extraction import (extract_user,
                                                           extract_user_and_text)
-from Mizuhararobot.modules.log_channel import loggable
-from Mizuhararobot.modules.helper_funcs.alternate import send_message
+from Mizuki.modules.log_channel import loggable
+from Mizuki.modules.helper_funcs.alternate import send_message
 
 
 @run_async

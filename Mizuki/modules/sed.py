@@ -2,9 +2,9 @@ import sre_constants
 
 import regex
 import telegram
-from Mizuhararobot import LOGGER, dispatcher
-from Mizuhararobot.modules.disable import DisableAbleMessageHandler
-from Mizuhararobot.modules.helper_funcs.regex_helper import (infinite_loop_check)
+from Mizuki import LOGGER, dispatcher
+from Mizuki.modules.disable import DisableAbleMessageHandler
+from Mizuki.modules.helper_funcs.regex_helper import (infinite_loop_check)
 from telegram import Update
 from telegram.ext import CallbackContext, Filters, run_async
 

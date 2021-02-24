@@ -6,18 +6,18 @@ from telegram.error import BadRequest
 from telegram.ext import CommandHandler, MessageHandler, Filters, run_async
 from telegram.utils.helpers import mention_html
 
-import Mizuhararobot.modules.sql.blacklist_sql as sql
-from Mizuhararobot import dispatcher, LOGGER
-from Mizuhararobot.modules.disable import DisableAbleCommandHandler
-from Mizuhararobot.modules.helper_funcs.chat_status import user_admin, user_not_admin
-from Mizuhararobot.modules.helper_funcs.extraction import extract_text
-from Mizuhararobot.modules.helper_funcs.misc import split_message
-from Mizuhararobot.modules.log_channel import loggable
-from Mizuhararobot.modules.warns import warn
-from Mizuhararobot.modules.helper_funcs.string_handling import extract_time
-from Mizuhararobot.modules.connection import connected
+import Mizuki.modules.sql.blacklist_sql as sql
+from Mizuki import dispatcher, LOGGER
+from Mizuki.modules.disable import DisableAbleCommandHandler
+from Mizuki.modules.helper_funcs.chat_status import user_admin, user_not_admin
+from Mizuki.modules.helper_funcs.extraction import extract_text
+from Mizuki.modules.helper_funcs.misc import split_message
+from Mizuki.modules.log_channel import loggable
+from Mizuki.modules.warns import warn
+from Mizuki.modules.helper_funcs.string_handling import extract_time
+from Mizuki.modules.connection import connected
 
-from Mizuhararobot.modules.helper_funcs.alternate import send_message, typing_action
+from Mizuki.modules.helper_funcs.alternate import send_message, typing_action
 
 BLACKLIST_GROUP = 11
 

@@ -5,8 +5,8 @@ import time
 import urllib
 import os
 
-from Mizuhararobot import telethn as client
-from Mizuhararobot.events import register
+from Mizuki import telethn as client
+from Mizuki.events import register
 
 async def is_register_admin(chat, user):
     if isinstance(chat, (types.InputPeerChannel, types.InputChannel)):

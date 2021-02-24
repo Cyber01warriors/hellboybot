@@ -1,6 +1,6 @@
-from Mizuhararobot.modules.helper_funcs.chat_status import user_admin
-from Mizuhararobot.modules.disable import DisableAbleCommandHandler
-from Mizuhararobot import dispatcher
+from Mizuki.modules.helper_funcs.chat_status import user_admin
+from Mizuki.modules.disable import DisableAbleCommandHandler
+from Mizuki import dispatcher
 
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 from telegram import ParseMode, Update

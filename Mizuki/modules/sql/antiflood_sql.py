@@ -2,7 +2,7 @@ import threading
 
 from sqlalchemy import String, Column, Integer, UnicodeText
 
-from Mizuhararobot.modules.sql import SESSION, BASE
+from Mizuki.modules.sql import SESSION, BASE
 DEF_COUNT = 1
 DEF_LIMIT = 0
 DEF_OBJ = (None, DEF_COUNT, DEF_LIMIT)

@@ -3,8 +3,8 @@ import subprocess
 import sys
 from time import sleep
 
-from Mizuhararobot import dispatcher
-from Mizuhararobot.modules.helper_funcs.chat_status import dev_plus
+from Mizuki import dispatcher
+from Mizuki.modules.helper_funcs.chat_status import dev_plus
 from telegram import TelegramError, Update
 from telegram.ext import CallbackContext, CommandHandler, run_async
 

@@ -1,3 +1,3 @@
-worker: python3 -m Mizuhararobot
-web: python3 -m Mizuhararobot
+worker: python3 -m Mizuki
+web: python3 -m Mizuki
 ps:scale worker=1

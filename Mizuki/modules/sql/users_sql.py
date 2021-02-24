@@ -1,7 +1,7 @@
 import threading
 
-from Mizuhararobot import dispatcher
-from Mizuhararobot.modules.sql import BASE, SESSION
+from Mizuki import dispatcher
+from Mizuki.modules.sql import BASE, SESSION
 from sqlalchemy import (Column, ForeignKey, Integer, String, UnicodeText,
                         UniqueConstraint, func)
 

@@ -3,15 +3,15 @@ from io import BytesIO
 import random
 from typing import Optional
 
-import Mizuhararobot.modules.sql.notes_sql as sql
-from Mizuhararobot import LOGGER, JOIN_LOGGER, SUPPORT_CHAT, dispatcher, DRAGONS
-from Mizuhararobot.modules.disable import DisableAbleCommandHandler
-from Mizuhararobot.modules.helper_funcs.handlers import MessageHandlerChecker
-from Mizuhararobot.modules.helper_funcs.chat_status import user_admin, connection_status
-from Mizuhararobot.modules.helper_funcs.misc import (build_keyboard,
+import Mizuki.modules.sql.notes_sql as sql
+from Mizuki import LOGGER, JOIN_LOGGER, SUPPORT_CHAT, dispatcher, DRAGONS
+from Mizuki.modules.disable import DisableAbleCommandHandler
+from Mizuki.modules.helper_funcs.handlers import MessageHandlerChecker
+from Mizuki.modules.helper_funcs.chat_status import user_admin, connection_status
+from Mizuki.modules.helper_funcs.misc import (build_keyboard,
                                                     revert_buttons)
-from Mizuhararobot.modules.helper_funcs.msg_types import get_note_type
-from Mizuhararobot.modules.helper_funcs.string_handling import escape_invalid_curly_brackets
+from Mizuki.modules.helper_funcs.msg_types import get_note_type
+from Mizuki.modules.helper_funcs.string_handling import escape_invalid_curly_brackets
 from telegram import (MAX_MESSAGE_LENGTH, InlineKeyboardMarkup, Message,
                       ParseMode, Update, InlineKeyboardButton)
 from telegram.error import BadRequest

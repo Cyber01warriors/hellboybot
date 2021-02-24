@@ -1,9 +1,9 @@
 from telegram.ext import run_async
 
-from Mizuhararobot import dispatcher
-from Mizuhararobot.modules.disable import DisableAbleCommandHandler
-from Mizuhararobot.modules.helper_funcs.alternate import send_message
-from Mizuhararobot.modules.helper_funcs.chat_status import user_admin
+from Mizuki import dispatcher
+from Mizuki.modules.disable import DisableAbleCommandHandler
+from Mizuki.modules.helper_funcs.alternate import send_message
+from Mizuki.modules.helper_funcs.chat_status import user_admin
 
 
 @run_async

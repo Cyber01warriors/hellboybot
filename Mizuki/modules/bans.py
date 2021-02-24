@@ -5,7 +5,7 @@ from telegram.error import BadRequest
 from telegram.ext import CallbackContext, CommandHandler, Filters, run_async
 from telegram.utils.helpers import mention_html
 
-from Mizuhararobot import (
+from Mizuki import (
     DEMONS,
     DEV_USERS,
     DRAGONS,
@@ -15,8 +15,8 @@ from Mizuhararobot import (
     WOLVES,
     dispatcher,
 )
-from Mizuhararobot.modules.disable import DisableAbleCommandHandler
-from Mizuhararobot.modules.helper_funcs.chat_status import (
+from Mizuki.modules.disable import DisableAbleCommandHandler
+from Mizuki.modules.helper_funcs.chat_status import (
     bot_admin,
     can_restrict,
     connection_status,
@@ -26,9 +26,9 @@ from Mizuhararobot.modules.helper_funcs.chat_status import (
     user_admin,
     user_can_ban,
 )
-from Mizuhararobot.modules.helper_funcs.extraction import extract_user_and_text
-from Mizuhararobot.modules.helper_funcs.string_handling import extract_time
-from Mizuhararobot.modules.log_channel import gloggable, loggable
+from Mizuki.modules.helper_funcs.extraction import extract_user_and_text
+from Mizuki.modules.helper_funcs.string_handling import extract_time
+from Mizuki.modules.log_channel import gloggable, loggable
 
 
 @run_async

@@ -17,8 +17,8 @@ from youtube_dl.utils import (
     XAttrMetadataError,
 )
 
-from Mizuhararobot.events import register
-from Mizuhararobot.progress import progress
+from Mizuki.events import register
+from Mizuki.progress import progress
 
 try:
 

@@ -2,7 +2,7 @@ import threading
 
 from sqlalchemy import Column, Integer, String
 
-from Mizuhararobot.modules.sql import BASE, SESSION
+from Mizuki.modules.sql import BASE, SESSION
 
 
 class Approvals(BASE):

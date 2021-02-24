@@ -1,9 +1,9 @@
 from time import sleep
 
-import Mizuhararobot.modules.sql.global_bans_sql as gban_sql
-import Mizuhararobot.modules.sql.users_sql as user_sql
-from Mizuhararobot import DEV_USERS, OWNER_ID, dispatcher
-from Mizuhararobot.modules.helper_funcs.chat_status import dev_plus
+import Mizuki.modules.sql.global_bans_sql as gban_sql
+import Mizuki.modules.sql.users_sql as user_sql
+from Mizuki import DEV_USERS, OWNER_ID, dispatcher
+from Mizuki.modules.helper_funcs.chat_status import dev_plus
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update
 from telegram.error import BadRequest, Unauthorized
 from telegram.ext import (CallbackContext, CallbackQueryHandler, CommandHandler,

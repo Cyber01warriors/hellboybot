@@ -1,7 +1,7 @@
 from typing import List, Optional
 
-from Mizuhararobot import LOGGER
-from Mizuhararobot.modules.users import get_user_id
+from Mizuki import LOGGER
+from Mizuki.modules.users import get_user_id
 from telegram import Message, MessageEntity
 from telegram.error import BadRequest
 

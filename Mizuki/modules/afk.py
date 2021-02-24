@@ -1,10 +1,10 @@
 import random, html
 
-from Mizuhararobot import dispatcher
-from Mizuhararobot.modules.disable import (DisableAbleCommandHandler,
+from Mizuki import dispatcher
+from Mizuki.modules.disable import (DisableAbleCommandHandler,
                                           DisableAbleMessageHandler)
-from Mizuhararobot.modules.sql import afk_sql as sql
-from Mizuhararobot.modules.users import get_user_id
+from Mizuki.modules.sql import afk_sql as sql
+from Mizuki.modules.users import get_user_id
 from telegram import MessageEntity, Update
 from telegram.error import BadRequest
 from telegram.ext import CallbackContext, Filters, MessageHandler, run_async

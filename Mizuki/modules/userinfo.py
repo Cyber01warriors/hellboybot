@@ -14,17 +14,17 @@ from telegram.ext.dispatcher import run_async
 from telegram.error import BadRequest
 from telegram.utils.helpers import escape_markdown, mention_html
 
-from Mizuhararobot import (DEV_USERS, OWNER_ID, DRAGONS, DEMONS, TIGERS, WOLVES,
+from Mizuki import (DEV_USERS, OWNER_ID, DRAGONS, DEMONS, TIGERS, WOLVES,
                           INFOPIC, dispatcher, sw)
-from Mizuhararobot.__main__ import STATS, TOKEN, USER_INFO
-import Mizuhararobot.modules.sql.userinfo_sql as sql
-from Mizuhararobot.modules.disable import DisableAbleCommandHandler
-from Mizuhararobot.modules.sql.global_bans_sql import is_user_gbanned
-from Mizuhararobot.modules.sql.afk_sql import is_afk, check_afk_status
-from Mizuhararobot.modules.sql.users_sql import get_user_num_chats
-from Mizuhararobot.modules.helper_funcs.chat_status import sudo_plus
-from Mizuhararobot.modules.helper_funcs.extraction import extract_user
-from Mizuhararobot import telethn as SaitamaTelethonClient, TIGERS, DRAGONS, DEMONS
+from Mizuki.__main__ import STATS, TOKEN, USER_INFO
+import Mizuki.modules.sql.userinfo_sql as sql
+from Mizuki.modules.disable import DisableAbleCommandHandler
+from Mizuki.modules.sql.global_bans_sql import is_user_gbanned
+from Mizuki.modules.sql.afk_sql import is_afk, check_afk_status
+from Mizuki.modules.sql.users_sql import get_user_num_chats
+from Mizuki.modules.helper_funcs.chat_status import sudo_plus
+from Mizuki.modules.helper_funcs.extraction import extract_user
+from Mizuki import telethn as SaitamaTelethonClient, TIGERS, DRAGONS, DEMONS
 
 
 def no_by_per(totalhp, percentage):

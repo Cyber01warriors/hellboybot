@@ -4,21 +4,21 @@ import re
 import time
 from functools import partial
 
-import Mizuhararobot.modules.sql.welcome_sql as sql
-from Mizuhararobot import (DEV_USERS, LOGGER, OWNER_ID, DRAGONS, DEMONS, TIGERS,
+import Mizuki.modules.sql.welcome_sql as sql
+from Mizuki import (DEV_USERS, LOGGER, OWNER_ID, DRAGONS, DEMONS, TIGERS,
                           WOLVES, sw, dispatcher, JOIN_LOGGER)
-from Mizuhararobot.modules.helper_funcs.chat_status import (
+from Mizuki.modules.helper_funcs.chat_status import (
     is_user_ban_protected,
     user_admin,
 )
-from Mizuhararobot.modules.helper_funcs.misc import build_keyboard, revert_buttons
-from Mizuhararobot.modules.helper_funcs.msg_types import get_welcome_type
-from Mizuhararobot.modules.helper_funcs.string_handling import (
+from Mizuki.modules.helper_funcs.misc import build_keyboard, revert_buttons
+from Mizuki.modules.helper_funcs.msg_types import get_welcome_type
+from Mizuki.modules.helper_funcs.string_handling import (
     escape_invalid_curly_brackets,
     markdown_parser,
 )
-from Mizuhararobot.modules.log_channel import loggable
-from Mizuhararobot.modules.sql.global_bans_sql import is_user_gbanned
+from Mizuki.modules.log_channel import loggable
+from Mizuki.modules.sql.global_bans_sql import is_user_gbanned
 from telegram import (
     ChatPermissions,
     InlineKeyboardButton,

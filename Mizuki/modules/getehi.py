@@ -1,11 +1,11 @@
 import html
 import random
 import time
-import Mizuhararobot.modules.fun_strings as fun_strings
-from Mizuhararobot import dispatcher
-from Mizuhararobot.modules.disable import DisableAbleCommandHandler
-from Mizuhararobot.modules.helper_funcs.chat_status import is_user_admin
-from Mizuhararobot.modules.helper_funcs.extraction import extract_user
+import Mizuki.modules.fun_strings as fun_strings
+from Mizuki import dispatcher
+from Mizuki.modules.disable import DisableAbleCommandHandler
+from Mizuki.modules.helper_funcs.chat_status import is_user_admin
+from Mizuki.modules.helper_funcs.extraction import extract_user
 from telegram import ChatPermissions, ParseMode, Update
 from telegram.error import BadRequest
 from telegram.ext import CallbackContext, run_async

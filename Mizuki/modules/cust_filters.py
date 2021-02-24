@@ -15,25 +15,25 @@ from telegram.ext import (
 )
 from telegram.utils.helpers import mention_html, escape_markdown
 
-from Mizuhararobot import dispatcher, LOGGER, DRAGONS
-from Mizuhararobot.modules.disable import DisableAbleCommandHandler
-from Mizuhararobot.modules.helper_funcs.handlers import MessageHandlerChecker
-from Mizuhararobot.modules.helper_funcs.chat_status import user_admin
-from Mizuhararobot.modules.helper_funcs.extraction import extract_text
-from Mizuhararobot.modules.helper_funcs.filters import CustomFilters
-from Mizuhararobot.modules.helper_funcs.misc import build_keyboard_parser
-from Mizuhararobot.modules.helper_funcs.msg_types import get_filter_type
-from Mizuhararobot.modules.helper_funcs.string_handling import (
+from Mizuki import dispatcher, LOGGER, DRAGONS
+from Mizuki.modules.disable import DisableAbleCommandHandler
+from Mizuki.modules.helper_funcs.handlers import MessageHandlerChecker
+from Mizuki.modules.helper_funcs.chat_status import user_admin
+from Mizuki.modules.helper_funcs.extraction import extract_text
+from Mizuki.modules.helper_funcs.filters import CustomFilters
+from Mizuki.modules.helper_funcs.misc import build_keyboard_parser
+from Mizuki.modules.helper_funcs.msg_types import get_filter_type
+from Mizuki.modules.helper_funcs.string_handling import (
     split_quotes,
     button_markdown_parser,
     escape_invalid_curly_brackets,
     markdown_to_html,
 )
-from Mizuhararobot.modules.sql import cust_filters_sql as sql
+from Mizuki.modules.sql import cust_filters_sql as sql
 
-from Mizuhararobot.modules.connection import connected
+from Mizuki.modules.connection import connected
 
-from Mizuhararobot.modules.helper_funcs.alternate import send_message, typing_action
+from Mizuki.modules.helper_funcs.alternate import send_message, typing_action
 
 HANDLER_GROUP = 10
 

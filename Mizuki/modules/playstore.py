@@ -2,8 +2,8 @@ import requests
 import bs4 
 import re
 from telethon import *
-from Mizuhararobot import telethn as client
-from Mizuhararobot.events import register
+from Mizuki import telethn as client
+from Mizuki.events import register
 
 
 async def is_register_admin(chat, user):

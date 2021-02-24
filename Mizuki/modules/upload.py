@@ -4,10 +4,10 @@ import time
 import datetime
 import asyncio
 import aiohttp
-from Mizuhararobot.uputils import progress, humanbytes, time_formatter, convert_from_bytes
+from Mizuki.uputils import progress, humanbytes, time_formatter, convert_from_bytes
 import traceback
-from Mizuhararobot import telethn as bot
-from Mizuhararobot.modules.urluploader import download_file
+from Mizuki import telethn as bot
+from Mizuki.modules.urluploader import download_file
 
 def get_date_in_two_weeks():
     """
