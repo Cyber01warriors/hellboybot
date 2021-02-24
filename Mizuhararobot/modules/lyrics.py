@@ -4,7 +4,7 @@ from tswift import Song
 from typing import Optional, List
 from Mizuhararobot.modules.helper_funcs.alternate import send_action, typing_action
 from telegram import Bot, Update, Message, Chat
-from telegram.ext import run_async, MessageHandler, Filters
+from telegram.ext import run_async, MessageHandler, Filters, CallbackContext
 
 from Mizuhararobot import dispatcher
 from Mizuhararobot.modules.disable import DisableAbleCommandHandler
