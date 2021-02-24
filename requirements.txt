@@ -34,4 +34,4 @@ hachoir
 asyncio
 gtts
 bs4
-
+tswift
