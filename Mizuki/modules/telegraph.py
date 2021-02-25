@@ -17,7 +17,7 @@ r = telegraph.create_account(short_name="Mizuki")
 auth_url = r["auth_url"]
 
 
-@borg.on(pattern="^/telegraph (media|text) ?(.*)")
+@borg(pattern="^/telegraph (media|text) (.*)")
 async def telegraph(event):
     if not os.path.isdir(DOWNLOADPATH):
         os.makedirs(DOWNLOADPATH)
