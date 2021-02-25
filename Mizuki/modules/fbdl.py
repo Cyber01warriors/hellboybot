@@ -5,7 +5,7 @@ from datetime import datetime
 import requests
 from telethon import events
 
-from Mizuki import telethn as Mizuki
+from Mizuki.events import register as Mizuki
 
 
 def main(url, filename):
@@ -17,7 +17,7 @@ def main(url, filename):
 
 def download_video(quality, url, filename):
     html = requests.get(url).content.decode("utf-8")
-    video_url = re.search(rf'{quality.lower()}_src:"(.+?)"', html)
+    video_url = re.search(rf'{quality.lower()}_src:"(.+?)"', html).group(1)
     file_size_request = requests.get(video_url, stream=True)
     int(file_size_request.headers["Content-Length"])
     block_size = 1024
@@ -27,11 +27,10 @@ def download_video(quality, url, filename):
     print("\nVideo downloaded successfully.")
 
 
-@Mizuki.on(events.NewMessage(pattern="/fbdl"))
-async def _(event):
-    if event.fwd_from:
-        return
-    url = event.pattern_match
+@Mizuki(pattern="^/fbdl (.*)")
+async def fbdl(fdl):
+  
+    url = fdl.pattern_match.group(1)
     x = re.match(r"^(https:|)[/][/]www.([^/]+[.])*facebook.com", url)
 
     if x:
