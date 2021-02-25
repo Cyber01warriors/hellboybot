@@ -6,13 +6,8 @@ import time
 import spamwatch
 import telegram.ext as tg
 from telethon import TelegramClient
-from telethon.sessions import StringSession
 
 StartTime = time.time()
-
-CMD_LIST = {}
-CMD_HELP = {}
-LOAD_PLUG = {}
 
 # enable logging
 logging.basicConfig(
@@ -89,10 +84,7 @@ if ENV:
     SPAMWATCH_SUPPORT_CHAT = os.environ.get("SPAMWATCH_SUPPORT_CHAT", None)
     SPAMWATCH_API = os.environ.get("SPAMWATCH_API", None)
     TEMP_DOWNLOAD_DIRECTORY = os.environ.get("TEMP_DOWNLOAD_DIRECTORY", "./")
-    MONGO_DB_URI = os.environ.get("MONGO_DB_URI", None)
-    STRING_SESSION = os.environ.get("STRING_SESSION", None)
-    BOT_ID = int(os.environ.get("BOT_ID", None))
-
+    
     try:
         BL_CHATS = set(int(x) for x in os.environ.get("BL_CHATS", "").split())
     except ValueError:
@@ -157,8 +149,6 @@ else:
     SPAMWATCH_SUPPORT_CHAT = Config.SPAMWATCH_SUPPORT_CHAT
     SPAMWATCH_API = Config.SPAMWATCH_API
     INFOPIC = Config.INFOPIC
-    BOT_ID = Config.BOT_ID
-    STRING_SESSION = Config.STRING_SESSION
 
     try:
         BL_CHATS = set(int(x) for x in Config.BL_CHATS or [])
@@ -174,21 +164,9 @@ if not SPAMWATCH_API:
 else:
     sw = spamwatch.Client(SPAMWATCH_API)
 
-if STRING_SESSION:
-    ubot = TelegramClient(StringSession(STRING_SESSION), API_ID, API_HASH)
-else:
-    sys.exit(1)
-
-try:
-    ubot.start()
-except BaseException:
-    print("Network Error !")
-    sys.exit(1)
-
 updater = tg.Updater(TOKEN, workers=WORKERS, use_context=True)
 telethn = TelegramClient("mizuki", API_ID, API_HASH)
 dispatcher = updater.dispatcher
-tbot = telethn
 
 DRAGONS = list(DRAGONS) + list(DEV_USERS)
 DEV_USERS = list(DEV_USERS)
