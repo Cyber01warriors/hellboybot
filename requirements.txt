@@ -35,4 +35,3 @@ asyncio
 gtts
 bs4
 tswift
-telegraph
