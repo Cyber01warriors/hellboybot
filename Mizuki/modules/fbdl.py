@@ -17,7 +17,7 @@ def main(url, filename):
 
 def download_video(quality, url, filename):
     html = requests.get(url).content.decode("utf-8")
-    video_url = re.search(rf'{quality.lower()}_src:"(.+?)"', html).group(1)
+    video_url = re.search(rf'{quality.lower()}_src:"(.+?)"', html)
     file_size_request = requests.get(video_url, stream=True)
     int(file_size_request.headers["Content-Length"])
     block_size = 1024
@@ -31,7 +31,7 @@ def download_video(quality, url, filename):
 async def _(event):
     if event.fwd_from:
         return
-    url = event.pattern_match.group(1)
+    url = event.pattern_match
     x = re.match(r"^(https:|)[/][/]www.([^/]+[.])*facebook.com", url)
 
     if x:
