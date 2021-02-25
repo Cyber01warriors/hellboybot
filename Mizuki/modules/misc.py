@@ -96,6 +96,9 @@ __help__ = """
  • `/wiki <query>`*:* Wikipedia your query
 *Wallpapers:*
  • `/wall <query>`*:* Get a wallpaper from wall.alphacoders.com
+*Covid Stats*:*
+ • `/covid`*:* Get global totals of covid stats
+ • `/covid <country>`*:* Get covid stats of country you want
 *EHI Files:*
  • `/ehi`*:* Get latest ehi files (for sl users)
 *Currency converter:* 
