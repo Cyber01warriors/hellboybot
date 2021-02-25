@@ -10,6 +10,10 @@ from telethon.sessions import StringSession
 
 StartTime = time.time()
 
+CMD_LIST = {}
+CMD_HELP = {}
+LOAD_PLUG = {}
+
 # enable logging
 logging.basicConfig(
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
