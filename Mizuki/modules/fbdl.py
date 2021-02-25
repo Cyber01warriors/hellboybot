@@ -1,10 +1,11 @@
 import os
 import re
 from datetime import datetime
-
+from telethon import events
+import telethon
 import requests
 
-from Mizuki.events import register as Mizuki
+from Mizuki import telethn as Mizuki
 
 
 def main(url, filename):
@@ -25,8 +26,7 @@ def download_video(quality, url, filename):
             f.write(data)
     print("\nVideo downloaded successfully.")
 
-
-@Mizuki(pattern="^/fbdl (.*)")
+@Mizuki.on(events.NewMessage(pattern="/fbdl"))
 async def _(event):
     if event.fwd_from:
         return
