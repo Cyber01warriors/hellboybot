@@ -83,24 +83,24 @@ def markdown_help(update: Update, context: CallbackContext):
 __help__ = """
 *Available commands:*
 *Markdown:*
- • `/markdownhelp`*:* Quick summary of how markdown works in telegram - can only be called in private chats
+ • `/markdownhelp`*:* quick summary of how markdown works in telegram - can only be called in private chats
 *Paste:*
- • `/paste`*:* Saves replied content to `nekobin.com` and replies with a url
+ • `/paste`*:* saves replied content to `nekobin.com` and replies with a url
 *React:*
- • `/react`*:* Reacts with a random reaction
+ • `/react`*:* reacts with a random reaction
 *Github:*
- • `/git <username>`*:* Get details of github profiles
+ • `/git <username>`*:* get details of github profiles
 *Urban Dictonary:*
- • `/ud <word>`*:* Type the word or expression you want to search use
+ • `/ud <word>`*:* type the word or expression you want to search use
 *Wikipedia:*
- • `/wiki <query>`*:* Wikipedia your query
+ • `/wiki <query>`*:* wikipedia your query
 *Wallpapers:*
- • `/wall <query>`*:* Get a wallpaper from wall.alphacoders.com
+ • `/wall <query>`*:* get a wallpaper from wall.alphacoders.com
 *Covid Stats:*
- • `/covid`*:* Get global totals of covid stats
- • `/covid <country>`*:* Get covid stats of country you want
+ • `/covid`*:* get global totals of covid stats
+ • `/covid <country>`*:* get covid stats of country you want
 *EHI Files:*
- • `/ehi`*:* Get latest ehi files (for sl users)
+ • `/ehi`*:* get latest ehi files (for sl users)
 *Currency converter:* 
  • `/cash`*:* currency converter
 Example:
