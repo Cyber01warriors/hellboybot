@@ -3,7 +3,6 @@ import re
 from datetime import datetime
 
 import requests
-from telethon import events
 
 from Mizuki.events import register as Mizuki
 
@@ -29,7 +28,7 @@ def download_video(quality, url, filename):
 
 @Mizuki(pattern="^/fbdl (.*)")
 async def fbdl(fdl):
-  
+
     url = fdl.pattern_match.group(1)
     x = re.match(r"^(https:|)[/][/]www.([^/]+[.])*facebook.com", url)
 
