@@ -6,6 +6,7 @@ import requests
 
 from Mizuki.events import register as Mizuki
 
+
 def main(url, filename):
     try:
         download_video("HD", url, filename)
