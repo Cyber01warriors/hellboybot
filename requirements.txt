@@ -35,3 +35,7 @@ asyncio
 gtts
 bs4
 tswift
+pybase64
+pySmartDL
+pymongo==3.11.0
+
