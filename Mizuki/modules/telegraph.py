@@ -8,7 +8,7 @@ from datetime import datetime
 from PIL import Image
 from telegraph import Telegraph, exceptions, upload_file
 
-from Mizuki.events import register as borg
+from Mizuki import telethn as borg
 
 DOWNLOADPATH = "Downloads/"
 
@@ -17,7 +17,7 @@ r = telegraph.create_account(short_name="Mizuki")
 auth_url = r["auth_url"]
 
 
-@borg(pattern="^/telegraph (media|text) (.*)")
+@borg.on(events.NewMessage(pattern="/telegraph (media|text)"))
 async def telegraph(event):
     if not os.path.isdir(DOWNLOADPATH):
         os.makedirs(DOWNLOADPATH)
