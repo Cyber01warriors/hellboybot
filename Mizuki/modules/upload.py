@@ -6,7 +6,7 @@ import traceback
 
 import aiohttp
 from telethon import events
-
+from download_from_url import download_file
 from Mizuki import telethn as bot
 from Mizuki.uputils import humanbytes, progress
 
