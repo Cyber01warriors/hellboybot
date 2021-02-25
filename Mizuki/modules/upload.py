@@ -5,7 +5,7 @@ import time
 import traceback
 
 import aiohttp
-from download_from_url import download_file
+from Mizuki.modules.urluploader import download_file
 from telethon import events
 
 from Mizuki import telethn as bot
