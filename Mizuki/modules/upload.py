@@ -5,10 +5,10 @@ import time
 import traceback
 
 import aiohttp
-from Mizuki.modules.urluploader import download_file
 from telethon import events
 
 from Mizuki import telethn as bot
+from Mizuki.modules.urluploader import download_file
 from Mizuki.uputils import humanbytes, progress
 
 DOWNLOADPATH = "Downloads/"
