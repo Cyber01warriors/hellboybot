@@ -1,9 +1,9 @@
 import os
 import re
 from datetime import datetime
-from telethon import events
-import telethon
+
 import requests
+from telethon import events
 
 from Mizuki import telethn as Mizuki
 
@@ -25,6 +25,7 @@ def download_video(quality, url, filename):
         for data in file_size_request.iter_content(block_size):
             f.write(data)
     print("\nVideo downloaded successfully.")
+
 
 @Mizuki.on(events.NewMessage(pattern="/fbdl"))
 async def _(event):
