@@ -4,6 +4,7 @@ Available Commands:
 /telegraph text as reply to a large text"""
 import os
 from datetime import datetime
+from telethon import events
 
 from PIL import Image
 from telegraph import Telegraph, exceptions, upload_file
