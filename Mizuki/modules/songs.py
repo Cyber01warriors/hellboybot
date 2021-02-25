@@ -147,7 +147,6 @@ async def download_video(v_url):
             ),
         )
         os.remove(f"{rip_data['id']}.mp4")
-        await rkp.delete()
 
 
 @register(pattern="^/video (.*)")
