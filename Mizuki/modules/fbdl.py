@@ -25,7 +25,7 @@ def download_video(quality, url, filename):
     print("\nVideo downloaded successfully.")
 
 
-@Mizuki(pattern="^/fbdl (.*)"))
+@Mizuki(pattern="^/fbdl (.*)")
 async def _(event):
     if event.fwd_from:
         return
