@@ -114,8 +114,10 @@ def revert_buttons(buttons):
 
     return res
 
+
 def is_module_loaded(name):
     return (not LOAD or name in LOAD) and name not in NO_LOAD
+
 
 def build_keyboard_alternate(buttons):
     keyb = []
@@ -126,6 +128,7 @@ def build_keyboard_alternate(buttons):
             keyb.append([InlineKeyboardButton(btn[0], url=btn[1])])
 
     return keyb
+
 
 def build_keyboard_parser(bot, chat_id, buttons):
     keyb = []
