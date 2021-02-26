@@ -38,13 +38,9 @@ def send_rules(update, chat_id, from_pm=False):
     except BadRequest as excp:
         if excp.message == "Chat not found" and from_pm:
             bot.send_message(
-                user.id,
-                tl(
-                    update.effective_message,
-                    "Pintasan aturan untuk obrolan ini belum diatur dengan benar! Mintalah admin untuk "
-                    "perbaiki ini.",
-                ),
-            )
+                user.id, "The rules shortcut for this chat hasn't been set properly! Ask admins to"
+                    "fix this."
+                )
             return
         else:
             raise
@@ -57,17 +53,11 @@ def send_rules(update, chat_id, from_pm=False):
 
     rules, buttons = button_markdown_parser(sql.get_rules(chat_id))
     try:
-        text = tl(
-            update.effective_message, "Peraturan untuk *{}* adalah:\n\n{}"
-        ).format(escape_markdown(chat.title), rules)
+        text = "Peraturan untuk *{}* adalah:\n\n{}".format(escape_markdown(chat.title), rules)
     except TypeError:
         send_message(
-            update.effective_message,
-            tl(
-                update.effective_message,
-                "Anda bisa lakukan command ini pada grup, bukan pada PM",
-            ),
-        )
+                "Anda bisa lakukan command ini pada grup, bukan pada PM"
+            )
         return ""
 
     is_private = sql.get_private_rules(chat_id)
@@ -83,22 +73,16 @@ def send_rules(update, chat_id, from_pm=False):
         if conn:
             bot.send_message(
                 user.id,
-                tl(
-                    update.effective_message,
                     "Admin grup belum menetapkan aturan apa pun untuk *{}*. "
-                    "Bukan berarti obrolan ini tanpa hukum...!",
-                ).format(chat_name),
+                    "Bukan berarti obrolan ini tanpa hukum...!".format(chat_name),
                 parse_mode="markdown",
             )
         else:
             bot.send_message(
                 user.id,
-                tl(
-                    update.effective_message,
                     "Admin grup belum menetapkan aturan apa pun untuk obrolan ini. "
-                    "Bukan berarti obrolan ini tanpa hukum...!",
-                ),
-            )
+                    "Bukan berarti obrolan ini tanpa hukum...!"
+                )
     elif rules:
         if (
             update.effective_message.chat.type == "private" or not is_private
@@ -123,10 +107,7 @@ def send_rules(update, chat_id, from_pm=False):
                 )
         else:
             send_message(
-                update.effective_message,
-                tl(
-                    update.effective_message,
-                    "Hubungi saya di PM untuk mendapatkan aturan grup ini",
+                    "Hubungi saya di PM untuk mendapatkan aturan grup ini"
                 ),
                 reply_markup=InlineKeyboardMarkup(
                     [
@@ -143,21 +124,14 @@ def send_rules(update, chat_id, from_pm=False):
         if conn:
             send_message(
                 update.effective_message,
-                tl(
-                    update.effective_message,
                     "Admin grup belum menetapkan aturan apa pun untuk *{}*. "
-                    "Bukan berarti obrolan ini tanpa hukum...!",
-                ).format(chat_name),
+                    "Bukan berarti obrolan ini tanpa hukum...!".format(chat_name),
                 parse_mode="markdown",
             )
         else:
             send_message(
-                update.effective_message,
-                tl(
-                    update.effective_message,
                     "Admin grup belum menetapkan aturan apa pun untuk obrolan ini. "
-                    "Bukan berarti obrolan ini tanpa hukum...!",
-                ),
+                    "Bukan berarti obrolan ini tanpa hukum...!"
             )
 
 
@@ -179,12 +153,8 @@ def set_rules(update, context):
     else:
         if update.effective_message.chat.type == "private":
             send_message(
-                update.effective_message,
-                tl(
-                    update.effective_message,
-                    "Anda bisa lakukan command ini pada grup, bukan pada PM",
-                ),
-            )
+                    "Anda bisa lakukan command ini pada grup, bukan pada PM"
+                )
             return ""
         chat = update.effective_chat
         chat_id = update.effective_chat.id
@@ -200,18 +170,11 @@ def set_rules(update, context):
         sql.set_rules(chat_id, markdown_rules)
         if conn:
             send_message(
-                update.effective_message,
-                tl(
-                    update.effective_message, "Berhasil mengatur aturan untuk *{}*."
-                ).format(chat_name),
+                "Berhasil mengatur aturan untuk *{}*.".format(chat_name),
                 parse_mode="markdown",
             )
         else:
-            send_message(
-                update.effective_message,
-                tl(
-                    update.effective_message, "Berhasil mengatur aturan untuk grup ini."
-                ),
+            send_message("Berhasil mengatur aturan untuk grup ini."
             )
 
     elif msg.reply_to_message and len(args) == 1:
@@ -223,20 +186,13 @@ def set_rules(update, context):
 
         sql.set_rules(chat_id, markdown_rules)
         if conn:
-            send_message(
-                update.effective_message,
-                tl(
-                    update.effective_message, "Berhasil mengatur aturan untuk *{}*."
-                ).format(chat_name),
+            send_message("Berhasil mengatur aturan untuk *{}*."
+                .format(chat_name),
                 parse_mode="markdown",
             )
         else:
-            send_message(
-                update.effective_message,
-                tl(
-                    update.effective_message, "Berhasil mengatur aturan untuk grup ini."
-                ),
-            )
+            send_message("Berhasil mengatur aturan untuk grup ini."
+                )
 
 
 @run_async
@@ -254,11 +210,7 @@ def clear_rules(update, context):
     else:
         if update.effective_message.chat.type == "private":
             send_message(
-                update.effective_message,
-                tl(
-                    update.effective_message,
-                    "Anda bisa lakukan command ini pada grup, bukan pada PM",
-                ),
+                    "Anda bisa lakukan command ini pada grup, bukan pada PM"
             )
             return ""
         chat = update.effective_chat
@@ -268,9 +220,7 @@ def clear_rules(update, context):
     chat_id = update.effective_chat.id
     sql.set_rules(chat_id, "")
     send_message(
-        update.effective_message,
-        tl(update.effective_message, "Berhasil membersihkan aturan!"),
-    )
+        "Berhasil membersihkan aturan!")
 
 
 @run_async
@@ -294,23 +244,17 @@ def private_rules(update, context):
         if args[0] in ("yes", "on", "ya"):
             sql.private_rules(str(chat_id), True)
             send_message(
-                update.effective_message,
-                tl(
-                    update.effective_message,
-                    "Private Rules di *aktifkan*, pesan peraturan akan di kirim di PM.",
-                ),
-                parse_mode="markdown",
-            )
+                    "Private Rules di *aktifkan*, pesan peraturan akan di kirim di PM."
+                )
+                parse_mode="markdown"
+            
         elif args[0] in ("no", "off"):
             sql.private_rules(str(chat_id), False)
             send_message(
-                update.effective_message,
-                tl(
-                    update.effective_message,
-                    "Private Rules di *non-aktifkan*, pesan peraturan akan di kirim di grup.",
+                    "Private Rules di *non-aktifkan*, pesan peraturan akan di kirim di grup."
                 ),
-                parse_mode="markdown",
-            )
+                parse_mode="markdown"
+            
         else:
             send_message(
                 update.effective_message,
