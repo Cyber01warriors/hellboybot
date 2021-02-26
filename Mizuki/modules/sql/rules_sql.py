@@ -1,8 +1,7 @@
 import threading
 
-from sqlalchemy import Boolean, Column, String, UnicodeText, distinct, func
-
 from Mizuki.modules.sql import BASE, SESSION
+from sqlalchemy import Column, String, UnicodeText, distinct, func
 
 
 class Rules(BASE):
@@ -17,25 +16,9 @@ class Rules(BASE):
         return "<Chat {} rules: {}>".format(self.chat_id, self.rules)
 
 
-class PrivateRules(BASE):
-    __tablename__ = "rules_private"
-
-    chat_id = Column(UnicodeText, primary_key=True)
-    is_private = Column(Boolean, default=True)
-
-    def __init__(self, chat_id, is_private=True):
-        self.chat_id = chat_id
-        self.is_private = is_private
-
-    def __repr__(self):
-        return "rules_private for {}".format(self.chat_id)
-
-
 Rules.__table__.create(checkfirst=True)
-PrivateRules.__table__.create(checkfirst=True)
 
 INSERTION_LOCK = threading.RLock()
-PR_INSERTION_LOCK = threading.RLock()
 
 
 def set_rules(chat_id, rules_text):
@@ -57,26 +40,6 @@ def get_rules(chat_id):
 
     SESSION.close()
     return ret
-
-
-def private_rules(chat_id, is_private):
-    with PR_INSERTION_LOCK:
-        curr = SESSION.query(PrivateRules).get(str(chat_id))
-        if curr:
-            SESSION.delete(curr)
-
-        curr = PrivateRules(str(chat_id), is_private)
-
-        SESSION.add(curr)
-        SESSION.commit()
-
-
-def get_private_rules(chat_id):
-    curr = SESSION.query(PrivateRules).get(str(chat_id))
-    if curr:
-        return curr.is_private
-    else:
-        return True
 
 
 def num_chats():
