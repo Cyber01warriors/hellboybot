@@ -114,6 +114,7 @@ def revert_buttons(buttons):
 
     return res
 
+
 def build_keyboard_parser(bot, chat_id, buttons):
     keyb = []
     for btn in buttons:
