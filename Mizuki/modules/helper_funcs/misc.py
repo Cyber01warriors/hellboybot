@@ -3,7 +3,7 @@ from typing import Dict, List
 from telegram import MAX_MESSAGE_LENGTH, Bot, InlineKeyboardButton, ParseMode
 from telegram.error import TelegramError
 
-from Mizuki import LOAD, NO_LOAD
+from Mizuki import NO_LOAD
 
 
 class EqInlineKeyboardButton(InlineKeyboardButton):
@@ -113,22 +113,6 @@ def revert_buttons(buttons):
             res += "\n[{}](buttonurl://{})".format(btn.name, btn.url)
 
     return res
-
-
-def is_module_loaded(name):
-    return (not LOAD or name in LOAD) and name not in NO_LOAD
-
-
-def build_keyboard_alternate(buttons):
-    keyb = []
-    for btn in buttons:
-        if btn[2] and keyb:
-            keyb[-1].append(InlineKeyboardButton(btn[0], url=btn[1]))
-        else:
-            keyb.append([InlineKeyboardButton(btn[0], url=btn[1])])
-
-    return keyb
-
 
 def build_keyboard_parser(bot, chat_id, buttons):
     keyb = []
