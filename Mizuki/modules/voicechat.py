@@ -1,12 +1,14 @@
 __help__ = """
-Telegram Voice Chat Music Player ❤
+*Telegram Voice Chat Music Player ❤*
 
-Commands:
+[Setup](https://telegra.ph/file/27c56f30ddd16975eaf9f.mp4)
 
-/play <yt link> - play song
-/skip or /next - skip song
-/pause - pause music streaming
-/end - stop music streaming
+*Commands*
+
+`/play <yt link>` - play song
+`/skip` or `/next` - skip song
+`/pause` - pause music streaming
+`/end` - stop music streaming
 
 © @TheMizukiBot 👸"""
 
