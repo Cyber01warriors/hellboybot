@@ -1,7 +1,7 @@
 __help__ = """
 *Telegram Voice Chat Music Player ❤*
 
-[Setup](https://telegra.ph/file/27c56f30ddd16975eaf9f.mp4)
+[👉 Setup Tutorial 👈](https://t.me/Infinity_BOTs/511)
 
 *Commands*
 
