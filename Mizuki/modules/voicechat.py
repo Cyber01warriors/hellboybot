@@ -10,6 +10,7 @@ __help__ = """
 `/skip` or `/next` - skip song
 `/pause` - pause music streaming
 `/end` - stop music streaming
+`/yt` - search inline for youtube video
 
 © @TheMizukiBot 👸"""
 
