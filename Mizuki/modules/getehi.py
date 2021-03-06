@@ -4,7 +4,7 @@ from telegram.ext import CallbackContext, run_async
 from Mizuki import dispatcher
 from Mizuki.modules.disable import DisableAbleCommandHandler
 
-EHI_STRINGS = "Here, latest ehi files by @TheMizukiBot 👸\n\n👉 https://da.gd/pKZZ"
+EHI_STRINGS = "Here, new ehi files by @TheMizukiBot 👸\n\n👉 https://da.gd/yn1NQ"
 
 
 @run_async
