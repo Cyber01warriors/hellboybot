@@ -2,36 +2,35 @@ import os
 
 import requests
 from pyrogram import filters
-from Mizuki import pbot
 
-OCR_SPACE_API_KEY = 'b13af5d79b88957'
+OCR_SPACE_API_KEY = "b13af5d79b88957"
 
 
 async def ocr_space_file(
-    filename, overlay=False, api_key=OCR_SPACE_API_KEY, language='eng'
+    filename, overlay=False, api_key=OCR_SPACE_API_KEY, language="eng"
 ):
     payload = {
-        'isOverlayRequired': overlay,
-        'apikey': api_key,
-        'language': language,
+        "isOverlayRequired": overlay,
+        "apikey": api_key,
+        "language": language,
     }
-    with open(filename, 'rb') as f:
+    with open(filename, "rb") as f:
         r = requests.post(
-            'https://api.ocr.space/parse/image',
+            "https://api.ocr.space/parse/image",
             files={filename: f},
             data=payload,
         )
     return r.json()
 
 
-@app.on_message(filters.command('ocr'))
+@app.on_message(filters.command("ocr"))
 async def ocr(client, message):
     cmd = message.command
-    lang_code = ''
+    lang_code = ""
     if len(cmd) > 1:
-        lang_code = ' '.join(cmd[1:])
+        lang_code = " ".join(cmd[1:])
     elif len(cmd) == 1:
-        lang_code = 'eng'
+        lang_code = "eng"
     replied = message.reply_to_message
     if not replied:
         await message.delete()
@@ -54,20 +53,20 @@ async def ocr(client, message):
         reply_p = replied.sticker
     downloaded_file_name = await client.download_media(
         reply_p,
-        'nana/cache/file.png',
+        "nana/cache/file.png",
     )
     test_file = await ocr_space_file(
         filename=downloaded_file_name,
         language=lang_code,
     )
     try:
-        ParsedText = test_file['ParsedResults'][0]['ParsedText']
+        ParsedText = test_file["ParsedResults"][0]["ParsedText"]
     except BaseException as e:
         await message.reply(message, text=e)
     else:
-        if ParsedText == 'ParsedResults':
+        if ParsedText == "ParsedResults":
             await message.delete()
             return
         else:
-            await message.reply(message, text=f'`{ParsedText}`')
+            await message.reply(message, text=f"`{ParsedText}`")
     os.remove(downloaded_file_name)
