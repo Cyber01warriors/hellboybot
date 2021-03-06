@@ -36,8 +36,8 @@ from Mizuki import (
     WEBHOOK,
     StartTime,
     dispatcher,
-    telethn,
     pbot,
+    telethn,
     updater,
 )
 
