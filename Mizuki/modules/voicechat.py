@@ -6,6 +6,7 @@ __help__ = """
 *Commands*
 
 `/play <yt link>` - play song
+`/play <reply to audio file>` - play song
 `/skip` or `/next` - skip song
 `/pause` - pause music streaming
 `/end` - stop music streaming
