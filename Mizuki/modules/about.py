@@ -13,4 +13,4 @@ Developer @ImJanindu 🇱🇰
 
 Github [ImJanindu](https://github.com/ImJanindu)"""
 
-__mod_name__ = "About ✅"
+__mod_name__ = "About 🇱🇰"
