@@ -16,4 +16,4 @@ __help__ = """
 
 © @TheMizukiBot 👸"""
 
-__mod_name__ = "🎶 Music Play 🎶"
+__mod_name__ = "🎵 Group Music Play 🎶"
