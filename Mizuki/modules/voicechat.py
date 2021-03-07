@@ -3,6 +3,8 @@ __help__ = """
 
 [👉 Setup Tutorial 👈](https://t.me/Infinity_BOTs/511)
 
+[👉 Sample Music Play 👈](https://t.me/Infinity_BOTs/535)
+
 *Commands*
 
 `/play <yt link>` - play song
@@ -14,4 +16,4 @@ __help__ = """
 
 © @TheMizukiBot 👸"""
 
-__mod_name__ = "Music Play 🎶"
+__mod_name__ = "🎶 Music Play 🎶"
