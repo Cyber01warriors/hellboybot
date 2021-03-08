@@ -78,12 +78,12 @@ def ban(update: Update, context: CallbackContext) -> str:
             return log_message
         elif user_id in DEMONS:
             message.reply_text(
-                "Bring an order from Heroes association to fight a Demon disaster."
+                "Bring an order from Mizuki association to fight a Demon disaster."
             )
             return log_message
         elif user_id in TIGERS:
             message.reply_text(
-                "Bring an order from Heroes association to fight a Tiger disaster."
+                "Bring an order from Mizuki association to fight a Tiger disaster."
             )
             return log_message
         elif user_id in WOLVES:
