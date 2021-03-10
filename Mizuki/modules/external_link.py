@@ -24,9 +24,10 @@ from Mizuki.utils.anydl_trans import Translation
 
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
+from Mizuki import pbot as bot
 from Mizuki.utils.chatbase import TRChatBase
 from Mizuki.utils.display_progress import progress_for_pyrogram
-from Mizuki import pbot as bot
+
 
 @bot.on_message(pyrogram.filters.command(["getlink"]))
 async def get_link(bot, update):
