@@ -88,7 +88,7 @@ async def virusscan(event):
     try:
         virus = c.file.name
         await event.client.download_file(c, virus)
-        gg = await event.reply("Scanning the file ...")
+        gg = await event.reply("Scanning the file...")
         fsize = c.file.size
         if not fsize <= 3145700:  # MAX = 3MB
             await gg.edit("File size exceeds 3MB")
@@ -110,10 +110,3 @@ async def virusscan(event):
         os.remove(virus)
         await gg.edit("Some error occurred.")
         return
-
-
-__help__ = """
- • `/scanit`*:* Scan a file for virus (MAX SIZE = 3MB)
-"""
-
-__mod_name__ = "Anti-Virus 🐞"
