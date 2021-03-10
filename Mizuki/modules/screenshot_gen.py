@@ -12,9 +12,9 @@ import time
 
 # the secret configuration specific things
 if bool(os.environ.get("WEBHOOK", False)):
-    from Mizuki import DOWNLOAD_LOCATION, DEF_WATER_MARK_FILE
+    from Mizuki import DEF_WATER_MARK_FILE, DOWNLOAD_LOCATION
 else:
-    from Mizuki import DOWNLOAD_LOCATION, DEF_WATER_MARK_FILE
+    from Mizuki import DEF_WATER_MARK_FILE, DOWNLOAD_LOCATION
 
 # the Strings used for this "thing"
 import pyrogram
