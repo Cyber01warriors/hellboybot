@@ -51,7 +51,7 @@ Send /me to know current plan details"""
     )
     REPLY_TO_DOC_FOR_SCSS = "<b>Reply to a Telegram media to get screenshots 👻</b>"
     REPLY_TO_DOC_FOR_RENAME_FILE = "<b>Reply to a Telegram media with new file name</b> \n<i>eg: /rename NewFile.mp4</i>"
-    AFTER_GET_DL_LINK = "<b>Direct Link Generated. \nLink 👉 {} \nThis link valid for {} days. \n© @AnyDLProIBot</b>"
+    AFTER_GET_DL_LINK = "<b>Direct Link Generated. \nLink 👉 {} \nThis link valid for {} days. \n~ @TheMizukiBot 👸</b>"
     FF_MPEG_RO_BOT_RE_SURRECT_ED = """<b>Syntax: /trim HH:MM:SS [HH:MM:SS]</b>"""
     FF_MPEG_RO_BOT_STEP_TWO_TO_ONE = "<b>First send /downloadmedia to any media so that it can be downloaded to my local. \nSend /storageinfo to know the media, that is currently downloaded.</b>"
     FF_MPEG_RO_BOT_STOR_AGE_INFO = "<b>Video Duration: {}\nSend /clearffmpegmedia to delete this media, from my storage.\nSend /trim HH:MM:SS [HH:MM:SS] to cu[l]t a small photo / video, from the above media.</b>"
