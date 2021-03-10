@@ -6,8 +6,12 @@ import time
 import spamwatch
 import telegram.ext as tg
 from pyrogram import Client, errors
+from telethon.sessions import StringSession
 from telethon import TelegramClient
 
+CMD_LIST = {}
+CMD_HELP = {}
+LOAD_PLUG = {}
 StartTime = time.time()
 
 # enable logging
@@ -85,6 +89,8 @@ if ENV:
     SPAMWATCH_SUPPORT_CHAT = os.environ.get("SPAMWATCH_SUPPORT_CHAT", None)
     SPAMWATCH_API = os.environ.get("SPAMWATCH_API", None)
     TEMP_DOWNLOAD_DIRECTORY = os.environ.get("TEMP_DOWNLOAD_DIRECTORY", "./")
+    MONGO_DB_URI = os.environ.get("MONGO_DB_URI", None)
+    STRING_SESSION = os.environ.get("STRING_SESSION", None)
 
     try:
         BL_CHATS = set(int(x) for x in os.environ.get("BL_CHATS", "").split())
@@ -132,6 +138,7 @@ else:
     CERT_PATH = Config.CERT_PATH
     API_ID = Config.API_ID
     API_HASH = Config.API_HASH
+    STRING_SESSION = Config.STRING_SESSION
 
     DB_URI = Config.SQLALCHEMY_DATABASE_URI
     DONATION_LINK = Config.DONATION_LINK
@@ -169,6 +176,7 @@ updater = tg.Updater(TOKEN, workers=WORKERS, use_context=True)
 telethn = TelegramClient("mizuki", API_ID, API_HASH)
 pbot = Client("mizukiPyro", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
 dispatcher = updater.dispatcher
+tbot = telethn
 
 DRAGONS = list(DRAGONS) + list(DEV_USERS)
 DEV_USERS = list(DEV_USERS)
