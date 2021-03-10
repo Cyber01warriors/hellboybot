@@ -1,10 +1,8 @@
-import os
-
 import dateparser
 from pymongo import MongoClient
 from telethon import *
 
-from Mizuki import CMD_HELP, MONGO_DB_URI, tbot
+from Mizuki import MONGO_DB_URI, tbot
 from Mizuki.events import register
 
 client = MongoClient()
