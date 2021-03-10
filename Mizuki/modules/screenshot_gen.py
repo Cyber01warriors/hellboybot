@@ -53,7 +53,7 @@ async def generate_screen_shot(bot, update):
                 message_id=a.message_id,
             )
             tmp_directory_for_each_user = (
-                Config.DOWNLOAD_LOCATION + "/" + str(update.from_user.id)
+                DOWNLOAD_LOCATION + "/" + str(update.from_user.id)
             )
             if not os.path.isdir(tmp_directory_for_each_user):
                 os.makedirs(tmp_directory_for_each_user)
