@@ -6,7 +6,7 @@ from pyrogram.filters import create
 from pyrogram.types import Message
 
 from Mizuki import Command
-from Mizuki.utils.botinfo import BOT_USERNAME
+BOT_USERNAME = "@TheMizukiBot"
 
 
 def command(
