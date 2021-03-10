@@ -22,7 +22,9 @@ URL | filename | username | password"""
     CUSTOM_CAPTION_UL_FILE = ""
     NO_CUSTOM_THUMB_NAIL_FOUND = "<b>No Custom ThumbNail found 🤷‍♂️</b>"
     NO_VOID_FORMAT_FOUND = "<b>Do not fcuk !! 🤣\nYouTubeDL</b> said: {}"
-    USER_ADDED_TO_DB = "<b>User <a href='tg://user?id={}'>{}</a> added to {} till {}.</b>"
+    USER_ADDED_TO_DB = (
+        "<b>User <a href='tg://user?id={}'>{}</a> added to {} till {}.</b>"
+    )
     CURENT_PLAN_DETAILS = """<u>Current plan details</u>
 
 Telegram ID: <code>{}</code>
@@ -41,8 +43,12 @@ Expires on: {}"""
 👉 <a href="https://t.me/SpEcHlDe/660">Get a Telegram sticker as a Telegram downloadable media</a>
 
 Send /me to know current plan details"""
-    REPLY_TO_DOC_GET_LINK = "<b>Reply to a Telegram media or file to get slow download link 😬</b>"
-    REPLY_TO_DOC_FOR_C2V = "<b>Reply to a Telegram media to convert that video to streamable 😌</b>"
+    REPLY_TO_DOC_GET_LINK = (
+        "<b>Reply to a Telegram media or file to get slow download link 😬</b>"
+    )
+    REPLY_TO_DOC_FOR_C2V = (
+        "<b>Reply to a Telegram media to convert that video to streamable 😌</b>"
+    )
     REPLY_TO_DOC_FOR_SCSS = "<b>Reply to a Telegram media to get screenshots 👻</b>"
     REPLY_TO_DOC_FOR_RENAME_FILE = "<b>Reply to a Telegram media with new file name</b> \n<i>eg: /rename NewFile.mp4</i>"
     AFTER_GET_DL_LINK = "<b>Direct Link Generated. \nLink 👉 {} \nThis link valid for {} days. \n© @AnyDLProIBot</b>"
@@ -50,14 +56,22 @@ Send /me to know current plan details"""
     FF_MPEG_RO_BOT_STEP_TWO_TO_ONE = "<b>First send /downloadmedia to any media so that it can be downloaded to my local. \nSend /storageinfo to know the media, that is currently downloaded.</b>"
     FF_MPEG_RO_BOT_STOR_AGE_INFO = "<b>Video Duration: {}\nSend /clearffmpegmedia to delete this media, from my storage.\nSend /trim HH:MM:SS [HH:MM:SS] to cu[l]t a small photo / video, from the above media.</b>"
     FF_MPEG_RO_BOT_STOR_AGE_ALREADY_EXISTS = "<b>A saved media already exists. Please send /storageinfo to know the current media details.</b>"
-    USER_DELETED_FROM_DB = "<b>User <a href='tg://user?id={}'>{}</a> deleted from DataBase.</b>"
-    REPLY_TO_DOC_OR_LINK_FOR_RARX_SRT = "<b>Reply to a Telegram media (MKV), to extract embedded streams</b>"
-    REPLY_TO_MEDIA_ALBUM_TO_GEN_THUMB = "<b>Send your custom thumbail as compressed image. that enough 😜</b>"
+    USER_DELETED_FROM_DB = (
+        "<b>User <a href='tg://user?id={}'>{}</a> deleted from DataBase.</b>"
+    )
+    REPLY_TO_DOC_OR_LINK_FOR_RARX_SRT = (
+        "<b>Reply to a Telegram media (MKV), to extract embedded streams</b>"
+    )
+    REPLY_TO_MEDIA_ALBUM_TO_GEN_THUMB = (
+        "<b>Send your custom thumbail as compressed image. that enough 😜</b>"
+    )
     ERR_ONLY_TWO_MEDIA_IN_ALBUM = "<b>Media Album should contain only two photos. Please re-send the media album, and then try again, or send only two photos in an album.</b>"
     INVALID_UPLOAD_BOT_URL_FORMAT = "<b>URL format is incorrect. make sure your url starts with either http:// or https://. You can set custom file name using the format link | file_name.extension</b>"
     ABUSIVE_USERS = "<b>Admins blocked you. 😂 Contact @ImJanindu</b>"
     FF_MPEG_RO_BOT_AD_VER_TISE_MENT = "https://telegram.dog/FFMpegRoBot"
-    EXTRACT_ZIP_INTRO_ONE = "<b>Send a compressed file first, Then reply /unzip command to the file.</b>"
+    EXTRACT_ZIP_INTRO_ONE = (
+        "<b>Send a compressed file first, Then reply /unzip command to the file.</b>"
+    )
     EXTRACT_ZIP_INTRO_THREE = "<b>Analyzing received file. ⚠️ This might take some time. Please be patient.</b>"
     UNZIP_SUPPORTED_EXTENSIONS = ("zip", "rar")
     EXTRACT_ZIP_ERRS_OCCURED = "<b>Sorry. Errors occurred while processing compressed file. 🤒 Please check everything again twice, and if the issue persists, report this to <a href='https://telegram.dog/ImJanindu'>Janindu</a></b>"
