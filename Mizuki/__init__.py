@@ -92,6 +92,8 @@ if ENV:
     MONGO_DB_URI = os.environ.get("MONGO_DB_URI", None)
     STRING_SESSION = os.environ.get("STRING_SESSION", None)
     VIRUS_API_KEY = os.environ.get("VIRUS_API_KEY", None)
+    DOWNLOAD_LOCATION = "Downloads/"
+    CHAT_BASE_TOKEN = os.environ.get("CHAT_BASE_TOKEN", "")
 
     try:
         BL_CHATS = set(int(x) for x in os.environ.get("BL_CHATS", "").split())
@@ -140,6 +142,8 @@ else:
     API_ID = Config.API_ID
     API_HASH = Config.API_HASH
     STRING_SESSION = Config.STRING_SESSION
+    DOWNLOAD_LOCATION = "Downloads/"
+    CHAT_BASE_TOKEN = os.environ.get("CHAT_BASE_TOKEN", "")
 
     DB_URI = Config.SQLALCHEMY_DATABASE_URI
     DONATION_LINK = Config.DONATION_LINK
