@@ -80,7 +80,7 @@ async def generate_screen_shot(bot, update):
                     if os.path.exists(image):
                         if i == 0:
                             media_album_p.append(
-                                InputMediaPhoto(
+                                pyrogram.types.InputMediaPhoto(
                                     media=image, caption=caption, parse_mode="html"
                                 )
                             )
