@@ -111,6 +111,7 @@ async def generate_screen_shot(bot, update):
             reply_to_message_id=update.message_id,
         )
 
+
 __help__ = """
  • `/genss`*:* reply to a video to get some screen shots of it
 
