@@ -4,7 +4,7 @@ from pyrogram.types import Message
 from pyrogram import filters
 from requests import get
 from Mizuki import pbot as app
-from Mizuki.utils import cust_filter
+from Mizuki.utils import more_filter
 from Mizuki.utils.errors import capture_err
 
 @app.on_message(cust_filter.command(commands=("ud")) & ~filters.edited)
