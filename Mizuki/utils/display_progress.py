@@ -14,7 +14,9 @@ import time
 
 # the secret configuration specific things
 if bool(os.environ.get("WEBHOOK", False)):
-from Mizuki import CHAT_BASE_TOKEN  
+  from Mizuki import CHAT_BASE_TOKEN
+else:
+  from Mizuki import CHAT_BASE_TOKEN
 
 # the Strings used for this "thing"
 from Mizuki.utils.anydl_trans import Translation
