@@ -18,7 +18,6 @@ else:
 
 # the Strings used for this "thing"
 import pyrogram
-from pyrogram.types import InputMediaPhoto
 
 from Mizuki.utils.anydl_trans import Translation
 
