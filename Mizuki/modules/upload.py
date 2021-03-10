@@ -183,7 +183,7 @@ if __name__ == "__main__":
 __help__ = """
  ⦁ `/transfersh`*:* reply to a telegram file to upload it on transfersh and get direct download link
  ⦁ `/tmpninja`*:* reply to a telegram file to upload it on tmpninja and get direct download link
- • `/getlink`*:* reply to telegram file to get direct download link quickly
+ ⦁ `/getlink`*:* reply to telegram file to get direct download link quickly
 
 © @TheMizukiBot 👸
 """
