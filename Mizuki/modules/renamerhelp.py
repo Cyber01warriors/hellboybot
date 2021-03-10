@@ -1,10 +1,7 @@
 __help__ = """
-*Telegram file renamer ❤
+*Telegram file renamer ❤*
 
-Just reply to file with below commands*
-
-• `/rename newfilename.extension` - rename media in as file
-• `/rename_video newfilename.extension` - rename media as streamable video
+• `/rename newfilename.extension`*:* rename any media file
 
 © @TheMizukiBot 👸"""
 
