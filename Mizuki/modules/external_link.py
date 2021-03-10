@@ -26,9 +26,9 @@ logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
 from Mizuki.utils.chatbase import TRChatBase
 from Mizuki.utils.display_progress import progress_for_pyrogram
+from Mizuki import pbot as bot
 
-
-@pyrogram.Client.on_message(pyrogram.filters.command(["getlink"]))
+@bot.on_message(pyrogram.filters.command(["getlink"]))
 async def get_link(bot, update):
     TRChatBase(update.from_user.id, update.text, "getlink")
     logger.info(update.from_user)
