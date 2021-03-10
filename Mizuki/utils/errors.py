@@ -1,7 +1,7 @@
 import sys
 import traceback
 from functools import wraps
-from Mizuki import pbot, LOG_GROUP_ID
+from Mizuki import pbot, EVENT_LOGS
 
 def split_limits(text):
     if len(text) < 2048:
@@ -41,7 +41,7 @@ def capture_err(func):
             )
             for x in error_feedback:
                 await app.send_message(
-                    LOG_GROUP_ID,
+                    EVENT_LOGS,
                     x
                 )
             raise err
