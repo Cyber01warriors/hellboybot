@@ -1,10 +1,11 @@
-from Mizuki import tbot
-from telethon import *
-from pymongo import MongoClient
-from Mizuki import MONGO_DB_URI, CMD_HELP
-from Mizuki.events import register
+import os
+
 import dateparser
-import os, asyncio
+from pymongo import MongoClient
+from telethon import *
+
+from Mizuki import CMD_HELP, MONGO_DB_URI, tbot
+from Mizuki.events import register
 
 client = MongoClient()
 client = MongoClient(MONGO_DB_URI)
@@ -32,7 +33,7 @@ def get_reason(id, time, user):
 @register(pattern="^/setalarm (.*)")
 async def _(event):
     if event.fwd_from:
-        return    
+        return
     approved_userss = approved_users.find({})
     for ch in approved_userss:
         iid = ch["id"]
@@ -111,8 +112,8 @@ async def _(event):
 
 @tbot.on(events.NewMessage(pattern=None))
 async def tikclock(event):
-    if event.is_private: 
-        return 
+    if event.is_private:
+        return
     chats = alarms.find({})
     for c in chats:
         # print(c)
