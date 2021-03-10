@@ -79,12 +79,12 @@ async def generate_screen_shot(bot, update):
                     if os.path.exists(image):
                         if i == 0:
                             media_album_p.append(
-                                pyrogram.types.InputMediaPhoto(
+                                InputMediaPhoto(
                                     media=image, caption=caption, parse_mode="html"
                                 )
                             )
                         else:
-                            media_album_p.append(pyrogram.InputMediaPhoto(media=image))
+                            media_album_p.append(InputMediaPhoto(media=image))
                         i = i + 1
             await bot.send_media_group(
                 chat_id=update.chat.id,
