@@ -18,7 +18,7 @@ else:
 
 # the Strings used for this "thing"
 import pyrogram
-
+from pyrogram.types import InputMediaPhoto
 from Mizuki.utils.anydl_trans import Translation
 
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
@@ -79,7 +79,7 @@ async def generate_screen_shot(bot, update):
                     if os.path.exists(image):
                         if i == 0:
                             media_album_p.append(
-                                pyrogram.InputMediaPhoto(
+                                InputMediaPhoto(
                                     media=image, caption=caption, parse_mode="html"
                                 )
                             )
