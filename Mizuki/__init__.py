@@ -95,6 +95,7 @@ if ENV:
     DOWNLOAD_LOCATION = "Downloads/"
     CHAT_BASE_TOKEN = os.environ.get("CHAT_BASE_TOKEN", "")
     DEF_WATER_MARK_FILE = ""
+    Command = config.get("prefix", "prefixes").split()
 
     try:
         BL_CHATS = set(int(x) for x in os.environ.get("BL_CHATS", "").split())
@@ -146,6 +147,7 @@ else:
     DOWNLOAD_LOCATION = "Downloads/"
     CHAT_BASE_TOKEN = os.environ.get("CHAT_BASE_TOKEN", "")
     DEF_WATER_MARK_FILE = ""
+    Command = config.get("prefix", "prefixes").split()
 
     DB_URI = Config.SQLALCHEMY_DATABASE_URI
     DONATION_LINK = Config.DONATION_LINK
