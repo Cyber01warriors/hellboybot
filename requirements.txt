@@ -39,3 +39,5 @@ pyrogram
 tgcrypto
 pymongo==3.11.0
 dnspython
+cloudmersive-ocr-api-client==3.0.1
+cloudmersive_virus_api_client==3.0.1
