@@ -117,4 +117,4 @@ __help__ = """
 
 © @TheMizukiBot 👸"""
 
-__mod_name__ = "Screenshots 📸"
+__mod_name__ = "Gen SS 📸"
