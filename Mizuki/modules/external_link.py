@@ -24,10 +24,10 @@ from Mizuki.utils.anydl_trans import Translation
 
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
+from Mizuki import DOWNLOAD_LOCATION
 from Mizuki import pbot as bot
 from Mizuki.utils.chatbase import TRChatBase
 from Mizuki.utils.display_progress import progress_for_pyrogram
-from Mizuki import CHAT_BASE_TOKEN, DOWNLOAD_LOCATION
 
 
 @bot.on_message(pyrogram.filters.command(["getlink"]))
