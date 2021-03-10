@@ -1,7 +1,9 @@
 # the logging things
 import logging
-logging.basicConfig(level=logging.DEBUG,
-                    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+
+logging.basicConfig(
+    level=logging.DEBUG, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+)
 logger = logging.getLogger(__name__)
 
 import os
@@ -14,23 +16,26 @@ else:
     from Mizuki import DOWNLOAD_LOCATION
 
 # the Strings used for this "thing"
+import pyrogram
+
 from Mizuki.utils.anydl_trans import Translation
 
-import pyrogram
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
-
-from Mizuki.utils.chatbase import TRChatBase
-from Mizuki.utils.display_progress import progress_for_pyrogram
 
 from hachoir.metadata import extractMetadata
 from hachoir.parser import createParser
+
 # https://stackoverflow.com/a/37631799/4723940
 from PIL import Image
+
 from Mizuki import pbot as bot
+from Mizuki.utils.chatbase import TRChatBase
+from Mizuki.utils.display_progress import progress_for_pyrogram
+
 
 @bot.on_message(pyrogram.filters.command(["rename"]))
 async def rename_doc(bot, update):
-    
+
     TRChatBase(update.from_user.id, update.text, "rename")
     if (" " in update.text) and (update.reply_to_message is not None):
         cmd, file_name = update.text.split(" ", 1)
@@ -39,30 +44,26 @@ async def rename_doc(bot, update):
         a = await bot.send_message(
             chat_id=update.chat.id,
             text=Translation.DOWNLOAD_START,
-            reply_to_message_id=update.message_id
+            reply_to_message_id=update.message_id,
         )
         c_time = time.time()
         the_real_download_location = await bot.download_media(
             message=update.reply_to_message,
             file_name=download_location,
             progress=progress_for_pyrogram,
-            progress_args=(
-                Translation.DOWNLOAD_START,
-                a,
-                c_time
-            )
+            progress_args=(Translation.DOWNLOAD_START, a, c_time),
         )
         if the_real_download_location is not None:
             await bot.edit_message_text(
                 text=Translation.SAVED_RECVD_DOC_FILE,
                 chat_id=update.chat.id,
-                message_id=a.message_id
+                message_id=a.message_id,
             )
             if "IndianMovie" in the_real_download_location:
                 await bot.edit_message_text(
                     text=Translation.RENAME_403_ERR,
                     chat_id=update.chat.id,
-                    message_id=a.message_id
+                    message_id=a.message_id,
                 )
                 return
             new_file_name = download_location + file_name
@@ -70,18 +71,19 @@ async def rename_doc(bot, update):
             await bot.edit_message_text(
                 text=Translation.UPLOAD_START,
                 chat_id=update.chat.id,
-                message_id=a.message_id
+                message_id=a.message_id,
             )
             logger.info(the_real_download_location)
-            thumb_image_path = DOWNLOAD_LOCATION + "/" + str(update.from_user.id) + ".jpg"
+            thumb_image_path = (
+                DOWNLOAD_LOCATION + "/" + str(update.from_user.id) + ".jpg"
+            )
             if not os.path.exists(thumb_image_path):
                 thumb_image_path = None
             else:
-                width = 0
                 height = 0
                 metadata = extractMetadata(createParser(thumb_image_path))
                 if metadata.has("width"):
-                    width = metadata.get("width")
+                    metadata.get("width")
                 if metadata.has("height"):
                     height = metadata.get("height")
                 # resize image
@@ -103,11 +105,7 @@ async def rename_doc(bot, update):
                 # reply_markup=reply_markup,
                 reply_to_message_id=update.reply_to_message.message_id,
                 progress=progress_for_pyrogram,
-                progress_args=(
-                    Translation.UPLOAD_START,
-                    a, 
-                    c_time
-                )
+                progress_args=(Translation.UPLOAD_START, a, c_time),
             )
             try:
                 os.remove(new_file_name)
@@ -118,11 +116,11 @@ async def rename_doc(bot, update):
                 text=Translation.AFTER_SUCCESSFUL_UPLOAD_MSG,
                 chat_id=update.chat.id,
                 message_id=a.message_id,
-                disable_web_page_preview=True
+                disable_web_page_preview=True,
             )
     else:
         await bot.send_message(
             chat_id=update.chat.id,
             text=Translation.REPLY_TO_DOC_FOR_RENAME_FILE,
-            reply_to_message_id=update.message_id
+            reply_to_message_id=update.message_id,
         )
