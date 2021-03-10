@@ -12,9 +12,9 @@ import time
 
 # the secret configuration specific things
 if bool(os.environ.get("WEBHOOK", False)):
-    from Mizuki import DOWNLOAD_LOCATION
+    from Mizuki import DOWNLOAD_LOCATION, DEF_WATER_MARK_FILE
 else:
-    from Mizuki import DOWNLOAD_LOCATION
+    from Mizuki import DOWNLOAD_LOCATION, DEF_WATER_MARK_FILE
 
 # the Strings used for this "thing"
 import pyrogram
@@ -61,7 +61,7 @@ async def generate_screen_shot(bot, update):
                 the_real_download_location,
                 tmp_directory_for_each_user,
                 False,
-                Config.DEF_WATER_MARK_FILE,
+                DEF_WATER_MARK_FILE,
                 5,
                 9,
             )
@@ -74,7 +74,7 @@ async def generate_screen_shot(bot, update):
             media_album_p = []
             if images is not None:
                 i = 0
-                caption = "© @AnyDLProIBot"
+                caption = "© @TheMizukiBot"
                 for image in images:
                     if os.path.exists(image):
                         if i == 0:
