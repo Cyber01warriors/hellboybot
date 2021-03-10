@@ -172,6 +172,17 @@ if not SPAMWATCH_API:
 else:
     sw = spamwatch.Client(SPAMWATCH_API)
 
+if STRING_SESSION:
+    ubot = TelegramClient(StringSession(STRING_SESSION), API_ID, API_HASH)
+else:
+    sys.exit(1)
+
+try:
+    ubot.start()
+except BaseException:
+    print("Network Error!")
+    sys.exit(1)
+
 updater = tg.Updater(TOKEN, workers=WORKERS, use_context=True)
 telethn = TelegramClient("mizuki", API_ID, API_HASH)
 pbot = Client("mizukiPyro", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
