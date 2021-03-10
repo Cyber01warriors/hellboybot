@@ -4,24 +4,12 @@ from pyrogram.types import Message
 from pyrogram import filters
 from requests import get
 from Mizuki import pbot as app
-from Mizuki.utils import more_filter
 from Mizuki.utils.errors import capture_err
-
-@app.on_message(cust_filter.command(commands=("ud")) & ~filters.edited)
-@capture_err
-async def urbandict(_, message: Message):
-    if len(message.command) < 2:
-        await message.reply_text('"/ud" Needs An Argument.')
-        return
-    text = message.text.split(None, 1)[1]
-    api = "http://api.urbandictionary.com/v0/define?term="
-
-    try:
 
 # google
 
 
-@app.on_message(cust_filter.command(commands=("google")) & ~filters.edited)
+@app.on_message(pyrogram.filters.command(["google"]))
 @capture_err
 async def google(_, message: Message):
     try:
@@ -48,7 +36,7 @@ async def google(_, message: Message):
 # StackOverflow [This is also a google search with some added args]
 
 
-@app.on_message(cust_filter.command(commands=("so")) & ~filters.edited)
+@app.on_message(pyrogram.filters.command(["so"]))
 @capture_err
 async def stack(_, message: Message):
     try:
@@ -76,7 +64,7 @@ async def stack(_, message: Message):
 # Github [This is also a google search with some added args]
 
 
-@app.on_message(cust_filter.command(commands=("gh")) & ~filters.edited)
+@app.on_message(pyrogram.filters.command(["gh"]))
 @capture_err
 async def github(_, message: Message):
     try:
@@ -104,7 +92,7 @@ async def github(_, message: Message):
 # YouTube
 
 
-@app.on_message(cust_filter.command(commands=("yt")) & ~filters.edited)
+@app.on_message(pyrogram.filters.command(["yts"]))
 @capture_err
 async def ytsearch(_, message: Message):
     try:
