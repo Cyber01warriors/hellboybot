@@ -29,7 +29,7 @@ from Mizuki.utils.display_progress import progress_for_pyrogram
 from Mizuki.utils.help_Nekmo_ffmpeg import generate_screen_shots
 
 
-@bot.on_message(pyrogram.filters.command(["gen_ss"]))
+@bot.on_message(pyrogram.filters.command(["genss"]))
 async def generate_screen_shot(bot, update):
     TRChatBase(update.from_user.id, update.text, "generatescss")
     if update.reply_to_message is not None:
@@ -110,3 +110,10 @@ async def generate_screen_shot(bot, update):
             text=Translation.REPLY_TO_DOC_FOR_SCSS,
             reply_to_message_id=update.message_id,
         )
+
+__help__ = """
+ • `/genss`*:* reply to a video to get some screen shots of it
+
+© @TheMizukiBot 👸"""
+
+__mod_name__ = "Screenshots 📸"
