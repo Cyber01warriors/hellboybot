@@ -35,7 +35,7 @@ async def get_link(bot, update):
     logger.info(update.from_user)
     if update.reply_to_message is not None:
         reply_message = update.reply_to_message
-        download_location = Config.DOWNLOAD_LOCATION + "/"
+        download_location = DOWNLOAD_LOCATION + "/"
         datetime.now()
         a = await bot.send_message(
             chat_id=update.chat.id,
