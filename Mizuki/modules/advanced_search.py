@@ -1,16 +1,20 @@
+# the logging things
+import logging
+
 from pyrogram.types import Message
 from search_engine_parser import GoogleSearch
 from youtube_search import YoutubeSearch
 
 from Mizuki import pbot as app
 from Mizuki.utils.errors import capture_err
-# the logging things
-import logging
-logging.basicConfig(level=logging.DEBUG,
-                    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+
+logging.basicConfig(
+    level=logging.DEBUG, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+)
 logger = logging.getLogger(__name__)
 
 import pyrogram
+
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
 # google
