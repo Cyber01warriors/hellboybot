@@ -1,8 +1,7 @@
-from youtube_search import YoutubeSearch
-from search_engine_parser import GoogleSearch
 from pyrogram.types import Message
-from pyrogram import filters
-from requests import get
+from search_engine_parser import GoogleSearch
+from youtube_search import YoutubeSearch
+
 from Mizuki import pbot as app
 from Mizuki.utils.errors import capture_err
 
