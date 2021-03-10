@@ -208,6 +208,9 @@ __help__ = f"""
 *Commands:* 
 • `/app <app name>`*:* Get details of play store apps.
 • `/phone <phone no>`*:* Get details of phone numbers.
+• `/yts <query>`*:* Search for a youtube video link and details.
+• `/so <query>`*:* Search solutions for a problem in stack overflow.
+• `/gh <query>`*:* Search github repos and users.
 • `/reverse`*:* Does a *reverse image search* of the media which it was replied to.
 
 Reports bugs at @InfinityJE
