@@ -27,7 +27,7 @@ from Mizuki import pbot as bot
 from Mizuki.utils.chatbase import TRChatBase
 from Mizuki.utils.display_progress import progress_for_pyrogram
 from Mizuki.utils.help_Nekmo_ffmpeg import generate_screen_shots
-
+from pyrogram.types import InputMediaPhoto
 
 @bot.on_message(pyrogram.filters.command(["genss"]))
 async def generate_screen_shot(bot, update):
