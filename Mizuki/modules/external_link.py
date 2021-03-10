@@ -13,9 +13,9 @@ from datetime import datetime
 
 # the secret configuration specific things
 if bool(os.environ.get("WEBHOOK", False)):
-  from Mizuki import CHAT_BASE_TOKEN, DOWNLOAD_LOCATION
+    pass
 else:
-  from Mizuki import CHAT_BASE_TOKEN, DOWNLOAD_LOCATION
+    pass
 
 # the Strings used for this "thing"
 import pyrogram
