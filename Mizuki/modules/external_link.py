@@ -13,9 +13,9 @@ from datetime import datetime
 
 # the secret configuration specific things
 if bool(os.environ.get("WEBHOOK", False)):
-    from Mizuki.utils.conf import Config
+  from Mizuki import CHAT_BASE_TOKEN, DOWNLOAD_LOCATION
 else:
-    from Mizuki.utils.conf import Config
+  from Mizuki import CHAT_BASE_TOKEN, DOWNLOAD_LOCATION
 
 # the Strings used for this "thing"
 import pyrogram
@@ -24,8 +24,8 @@ from Mizuki.utils.anydl_trans import Translation
 
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
-from helper_funcs.chat_base import TRChatBase
-from helper_funcs.display_progress import progress_for_pyrogram
+from Mizuki.utils.chatbase import TRChatBase
+from Mizuki.utils.display_progress import progress_for_pyrogram
 
 
 @pyrogram.Client.on_message(pyrogram.filters.command(["getlink"]))
