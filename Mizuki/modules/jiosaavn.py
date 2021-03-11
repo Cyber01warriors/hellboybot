@@ -9,40 +9,39 @@
 #    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
 #    General Public License for more details.
 
+
 import os
-
+import re
 import requests
+import time
 import wget
-from pyrogram import filters
+from pyrogram import filters, types
+from pyrogram.types import Message
+import speedtest
+import psutil
+from Mizuki import pbot as app
 
-from Mizuki import pbot as Jebot
 
-
-@Jebot.on_message(filters.command("saavn"))
-async def song(client, message):
-    message.chat.id
-    message.from_user["id"]
-    # args = get_arg(message) + " " + "song"
-    # if args.startswith(" "):
-    # await message.reply("<b>Enter a song name❗\n\nExample: `/saavn guleba`</b>")
-    # return ""
-    args = message.text.split(None, 1)
-    args = str(args)
-    args = args + " " + "song"
-    m = await message.reply_text(
-        "<b>Downloading your song, Plz wait 🥺\n\nPowered by @Infinity_BOTs 🇱🇰</b>"
-    )
+@app.on_message(filters.command("saavn"))
+async def saavn(_, message: Message):
+    if len(message.command) < 2:
+        await message.reply_text("/saavn requires an argument.")
+        return
+    text = message.text.split(None, 1)[1]
+    query = text.replace(" ", "%20")
+    m = await message.reply_text("Searching, Plz Wait...\n\n~ @Infinity_BOTs")
     try:
-        r = requests.get(f"https://snobybuddymusic.herokuapp.com/result/?query={args}")
+        r = requests.get(f"https://snobybuddymusic.herokuapp.com/result/?query={query}")
     except Exception as e:
         await m.edit(str(e))
         return
-    sname = r.json()[0]["song"]
-    slink = r.json()[0]["media_url"]
-    ssingers = r.json()[0]["singers"]
+    sname = r.json()[0]['song']
+    slink = r.json()[0]['media_url']
+    ssingers = r.json()[0]['singers']
     file = wget.download(slink)
     ffile = file.replace("mp4", "m4a")
     os.rename(file, ffile)
-    await message.reply_audio(audio=ffile, title=sname, performer=ssingers)
+    await message.reply_audio(audio=ffile, title=sname,
+                              performer=ssingers)
     os.remove(ffile)
     await m.delete()
