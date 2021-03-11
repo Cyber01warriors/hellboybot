@@ -105,7 +105,7 @@ async def _(event):
             "reason": reason,
         }
     )
-    await event.reply("Alarm set successfully !")
+    await event.reply("Alarm set successfully!")
 
 
 @tbot.on(events.NewMessage(pattern=None))
