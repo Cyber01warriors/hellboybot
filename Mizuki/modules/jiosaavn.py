@@ -27,7 +27,7 @@ async def song(client, message):
     if args.startswith(" "):
         await message.reply("<b>Enter song name❗</b>")
         return ""
-    status = await message.reply_text(
+    m = await message.reply_text(
         "<b>Downloading your song, Plz wait 🥺\n\n~ @Infinity_BOTs</b>"
     )
     try:
