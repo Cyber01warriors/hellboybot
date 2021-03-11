@@ -14,6 +14,7 @@ import os
 import requests
 import wget
 from pyrogram import filters
+from Mizuki import pbot as Jebot
 
 
 @Jebot.on_message(filters.command("saavn"))
