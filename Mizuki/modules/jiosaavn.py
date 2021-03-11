@@ -11,14 +11,12 @@
 
 
 import os
-import re
+
 import requests
-import time
 import wget
-from pyrogram import filters, types
+from pyrogram import filters
 from pyrogram.types import Message
-import speedtest
-import psutil
+
 from Mizuki import pbot as app
 
 
@@ -35,13 +33,12 @@ async def saavn(_, message: Message):
     except Exception as e:
         await m.edit(str(e))
         return
-    sname = r.json()[0]['song']
-    slink = r.json()[0]['media_url']
-    ssingers = r.json()[0]['singers']
+    sname = r.json()[0]["song"]
+    slink = r.json()[0]["media_url"]
+    ssingers = r.json()[0]["singers"]
     file = wget.download(slink)
     ffile = file.replace("mp4", "m4a")
     os.rename(file, ffile)
-    await message.reply_audio(audio=ffile, title=sname,
-                              performer=ssingers)
+    await message.reply_audio(audio=ffile, title=sname, performer=ssingers)
     os.remove(ffile)
     await m.delete()
