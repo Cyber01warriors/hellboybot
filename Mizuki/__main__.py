@@ -76,10 +76,10 @@ def get_readable_time(seconds: int) -> str:
     return ping_time
 
 
-PM_START_TEXT = """Hi there, my name is [Mizuki](https://telegra.ph/file/514eb46c796cbfd7f6da6.jpg) 👸\n\nI'm a next gen powerful group manager bot.\n\nHit /help to find my list of available commands."""
+PM_START_TEXT = """Hey there, my name is [Mizuki](https://telegra.ph/file/514eb46c796cbfd7f6da6.jpg) 👸\n\nI'm a next gen powerful group manager bot.\n\nHit /help to find my list of available commands."""
 buttons = [
     [
-        InlineKeyboardButton(text="💫 INFO 💫", url="t.me/imjanindu"),
+        InlineKeyboardButton(text="💫 Support 💫", url="https://t.me/Infinity_BOTs"),
     ],
     [
         InlineKeyboardButton(text="❓Help & Commands❓", callback_data="help_back"),
