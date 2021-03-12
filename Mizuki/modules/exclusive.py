@@ -13,6 +13,9 @@ __help__ = """
 *✖ File Renamer ✖*
  ⦁ `/rename newfilename.extension`*:* rename any telegram media file.
 
+*✖ Virus Scan ✖*
+ ⦁ `/scanit`*:* Scan a file for virus (MAX SIZE = 3MB)
+
 *© @TheMizukiBot 👸*"""
 
 __mod_name__ = "🧨 Exclusive 🧩"
