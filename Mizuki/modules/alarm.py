@@ -5,4 +5,4 @@ __help__ = """
 Please turn on notifications(PM/Group Chat) otherwise you will not get notification for the alarm !
 """
 
-__mod_name__ = "Alarm ⏰"
+__mod_name__ = "Alarm 🕒"
