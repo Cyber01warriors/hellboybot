@@ -5,6 +5,7 @@ import aiohttp
 from pyrogram import filters
 
 from Mizuki import BOT_ID as bot_id
+from Mizuki import OWNER_ID as owner_id
 from Mizuki import pbot as luna
 
 blacklisted = []
