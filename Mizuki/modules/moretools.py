@@ -14,6 +14,12 @@ __help__ = """
  ⦁ `/getsticker`*:* reply to a sticker to me to upload its raw PNG file.
  ⦁ `/kang`*:* reply to a sticker to add it to your pack.
  ⦁ `/stickers`*:* Find stickers for given term on combot sticker catalogue.
+
+*Time:*
+ ⦁ `/time <query>`*:* gives information about a timezone.
+
+*Available queries:* Country Code/Country Name/Timezone Name
+• 🕒 [Timezones list](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)
 """
 
 __mod_name__ = "More Tools 💡"
