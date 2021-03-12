@@ -1,8 +1,10 @@
-import aiohttp
 import asyncio
 import re
+
+import aiohttp
+from pyrogram import filters
+
 from Mizuki import BOT_ID as bot_id
-from pyrogram import Client, filters
 from Mizuki import pbot as luna
 
 blacklisted = []
@@ -15,6 +17,7 @@ async def getresp(query):
             res = await res.json()
             text = res["response"]
             return text
+
 
 @luna.on_message(filters.command("black") & filters.user(owner_id))
 async def blacklist(_, message):
@@ -51,8 +54,8 @@ async def whitelist(_, message):
 
 
 @luna.on_message(
-    ~filters.private &
-    ~filters.command("black")
+    ~filters.private
+    & ~filters.command("black")
     & ~filters.command("help")
     & ~filters.command("start")
     & ~filters.command("donate")
@@ -98,7 +101,7 @@ async def chat(_, message):
     & ~filters.command("black")
     & ~filters.command("help")
     & ~filters.command("start")
-    & ~filters.command("donate") 
+    & ~filters.command("donate")
 )
 async def chatpm(_, message):
     if message.from_user.id in blacklisted:
