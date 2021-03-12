@@ -91,6 +91,7 @@ def gettime(update: Update, context: CallbackContext):
         result, parse_mode=ParseMode.HTML, disable_web_page_preview=True
     )
 
+
 TIME_HANDLER = DisableAbleCommandHandler("time", gettime)
 
 dispatcher.add_handler(TIME_HANDLER)
