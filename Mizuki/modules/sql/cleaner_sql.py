@@ -1,7 +1,8 @@
 import threading
 
-from Mizuki.modules.sql import BASE, SESSION
 from sqlalchemy import Boolean, Column, UnicodeText
+
+from Mizuki.modules.sql import BASE, SESSION
 
 
 class CleanerBlueTextChatSettings(BASE):
