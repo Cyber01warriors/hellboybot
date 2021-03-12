@@ -10,6 +10,9 @@ __help__ = """
 *✖ Screenshot Gen ✖*
  ⦁ `/genss`*:* reply to a video to get some screen shots of it.
 
-© @TheMizukiBot 👸"""
+*✖ File Renamer ✖*
+ ⦁ `/rename newfilename.extension`*:* rename any telegram media file.
 
-__mod_name__ = "Exclusive 🧩"
+*© @TheMizukiBot 👸*"""
+
+__mod_name__ = "🧨 Exclusive 🧩"
