@@ -96,6 +96,7 @@ if ENV:
     CHAT_BASE_TOKEN = os.environ.get("CHAT_BASE_TOKEN", "")
     DEF_WATER_MARK_FILE = ""
     BOT_ID = int(os.environ.get("BOT_ID", None))
+    OPENWEATHERMAP_ID = os.environ.get("OPENWEATHERMAP_ID", None)
 
     try:
         BL_CHATS = set(int(x) for x in os.environ.get("BL_CHATS", "").split())
@@ -148,6 +149,7 @@ else:
     CHAT_BASE_TOKEN = os.environ.get("CHAT_BASE_TOKEN", "")
     DEF_WATER_MARK_FILE = ""
     BOT_ID = Config.BOT_ID
+    OPENWEATHERMAP_ID = Config.OPENWEATHERMAP_ID
 
     DB_URI = Config.SQLALCHEMY_DATABASE_URI
     DONATION_LINK = Config.DONATION_LINK
