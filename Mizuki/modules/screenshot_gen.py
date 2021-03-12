@@ -112,11 +112,3 @@ async def generate_screen_shot(bot, update):
             text=Translation.REPLY_TO_DOC_FOR_SCSS,
             reply_to_message_id=update.message_id,
         )
-
-
-__help__ = """
- • `/genss`*:* reply to a video to get some screen shots of it
-
-© @TheMizukiBot 👸"""
-
-__mod_name__ = "Gen SS 📸"
