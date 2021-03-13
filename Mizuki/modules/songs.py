@@ -4,6 +4,8 @@ import json
 import os
 import time
 
+from LaraCroftRobot.event import register
+from LaraCroftRobot.utils import progress
 from telethon.tl.types import DocumentAttributeAudio
 from youtube_dl import YoutubeDL
 from youtube_dl.utils import (
@@ -16,9 +18,6 @@ from youtube_dl.utils import (
     UnavailableVideoError,
     XAttrMetadataError,
 )
-
-from LaraCroftRobot.event import register
-from LaraCroftRobot.utils import progress
 
 try:
 
@@ -148,6 +147,7 @@ async def download_video(v_url):
         )
         os.remove(f"{rip_data['id']}.mp4")
         await rkp.delete()
+
 
 __help__ = """
  • `/song <song name>`*:* uploads the song on best quality available.
