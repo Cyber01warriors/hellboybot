@@ -19,6 +19,6 @@ __help__ = """
 *✖ Virus Scan ✖*
  ⦁ `/scanit`*:* Scan a file for virus (MAX SIZE = 3MB)
 
-*© @TheMizukiBot 👸*"""
+*~ @TheMizukiBot 👸*"""
 
 __mod_name__ = "🧨 Exclusive 🧩"
