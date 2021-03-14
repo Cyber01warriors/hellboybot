@@ -1,7 +1,9 @@
 # the logging things
 import logging
-logging.basicConfig(level=logging.DEBUG,
-                    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+
+logging.basicConfig(
+    level=logging.DEBUG, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+)
 logger = logging.getLogger(__name__)
 
 import os
@@ -15,24 +17,27 @@ else:
     from Mizuki import DOWNLOAD_LOCATION
 
 # the Strings used for this "thing"
+import pyrogram
+
 from Mizuki.utils.anydl_trans import Translation
 
-import pyrogram
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
+from hachoir.metadata import extractMetadata
+from hachoir.parser import createParser
+
+# https://stackoverflow.com/a/37631799/4723940
+from PIL import Image
+
+from Mizuki import pbot as bot
 from Mizuki.utils.chat_base import TRChatBase
 from Mizuki.utils.display_progress import progress_for_pyrogram
 from Mizuki.utils.help_Nekmo_ffmpeg import take_screen_shot
 
-from hachoir.metadata import extractMetadata
-from hachoir.parser import createParser
-# https://stackoverflow.com/a/37631799/4723940
-from PIL import Image
-from Mizuki import pbot as bot
 
 @bot.on_message(pyrogram.filters.command(["c2v"]))
 async def convert_to_video(bot, update):
-    
+
     TRChatBase(update.from_user.id, update.text, "converttovideo")
     if update.reply_to_message is not None:
         description = Translation.CUSTOM_CAPTION_UL_FILE
@@ -40,31 +45,27 @@ async def convert_to_video(bot, update):
         a = await bot.send_message(
             chat_id=update.chat.id,
             text=Translation.DOWNLOAD_START,
-            reply_to_message_id=update.message_id
+            reply_to_message_id=update.message_id,
         )
         c_time = time.time()
         the_real_download_location = await bot.download_media(
             message=update.reply_to_message,
             file_name=download_location,
             progress=progress_for_pyrogram,
-            progress_args=(
-                Translation.DOWNLOAD_START,
-                a,
-                c_time
-            )
+            progress_args=(Translation.DOWNLOAD_START, a, c_time),
         )
         if the_real_download_location is not None:
             bot.edit_message_text(
                 text=Translation.SAVED_RECVD_DOC_FILE,
                 chat_id=update.chat.id,
-                message_id=a.message_id
+                message_id=a.message_id,
             )
             # don't care about the extension
-           # await bot.edit_message_text(
-              #  text=Translation.UPLOAD_START,
-             #   chat_id=update.chat.id,
+            # await bot.edit_message_text(
+            #  text=Translation.UPLOAD_START,
+            #   chat_id=update.chat.id,
             #    message_id=a.message_id
-          #  )
+            #  )
             logger.info(the_real_download_location)
             # get the correct width, height, and duration for videos greater than 10MB
             # ref: message from @BotSupport
@@ -73,16 +74,15 @@ async def convert_to_video(bot, update):
             duration = 0
             metadata = extractMetadata(createParser(the_real_download_location))
             if metadata.has("duration"):
-                duration = metadata.get('duration').seconds
-            thumb_image_path = DOWNLOAD_LOCATION + "/" + str(update.from_user.id) + ".jpg"
+                duration = metadata.get("duration").seconds
+            thumb_image_path = (
+                DOWNLOAD_LOCATION + "/" + str(update.from_user.id) + ".jpg"
+            )
             if not os.path.exists(thumb_image_path):
                 thumb_image_path = await take_screen_shot(
                     the_real_download_location,
                     os.path.dirname(the_real_download_location),
-                    random.randint(
-                        0,
-                        duration - 1
-                    )
+                    random.randint(0, duration - 1),
                 )
             logger.info(thumb_image_path)
             # 'thumb_image_path' will be available now
@@ -116,26 +116,22 @@ async def convert_to_video(bot, update):
                 thumb=thumb_image_path,
                 reply_to_message_id=update.reply_to_message.message_id,
                 progress=progress_for_pyrogram,
-                progress_args=(
-                    Translation.UPLOAD_START,
-                    a,
-                    c_time
-                )
+                progress_args=(Translation.UPLOAD_START, a, c_time),
             )
             try:
                 os.remove(the_real_download_location)
-              #  os.remove(thumb_image_path)
+            #  os.remove(thumb_image_path)
             except:
                 pass
             await bot.edit_message_text(
                 text=Translation.AFTER_SUCCESSFUL_UPLOAD_MSG,
                 chat_id=update.chat.id,
                 message_id=a.message_id,
-                disable_web_page_preview=True
+                disable_web_page_preview=True,
             )
     else:
         await bot.send_message(
             chat_id=update.chat.id,
             text=Translation.REPLY_TO_DOC_FOR_C2V,
-            reply_to_message_id=update.message_id
+            reply_to_message_id=update.message_id,
         )
