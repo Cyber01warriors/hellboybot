@@ -13,6 +13,9 @@ __help__ = """
 *✖ File Renamer ✖*
  ⦁ `/rename newfilename.extension`*:* rename any telegram media file.
 
+*✖ Convert To Video ✖*
+ ⦁ `/c2v`*:* reply to video file to convert it as streamable video.
+
 *✖ Virus Scan ✖*
  ⦁ `/scanit`*:* Scan a file for virus (MAX SIZE = 3MB)
 
