@@ -151,6 +151,8 @@ __help__ = """
  • `/song <song name>`*:* uploads the song in the best quality available.
  • `/saavn <song name>`*:* uploads the song from Jio Saavn in best quality.
  • `/lyrics <song name>`*:* provides the lyrics of the song you want.
+
+Your downloaded songs are stored @MizukiSongs channel!
 """
 
 __mod_name__ = "Songs 🎵"
