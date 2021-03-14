@@ -1,12 +1,15 @@
-import time
-import os
 import json
+import os
+import time
+
+from pymongo import MongoClient
+from telethon import types
+from telethon.tl import functions
 from telethon.tl.types import DocumentAttributeAudio
 from youtube_dl import YoutubeDL
-
 from youtube_dl.utils import (
-    DownloadError,
     ContentTooShortError,
+    DownloadError,
     ExtractorError,
     GeoRestrictedError,
     MaxDownloadsReached,
@@ -14,14 +17,10 @@ from youtube_dl.utils import (
     UnavailableVideoError,
     XAttrMetadataError,
 )
-
-from Mizuki import tbot
-from telethon import types
-from telethon.tl import functions
-from Mizuki.events import register
 from youtubesearchpython import SearchVideos
-from pymongo import MongoClient
-from Mizuki import MONGO_DB_URI
+
+from Mizuki import MONGO_DB_URI, tbot
+from Mizuki.events import register
 
 client = MongoClient()
 client = MongoClient(MONGO_DB_URI)
@@ -91,7 +90,6 @@ async def download_song(v_url):
             "quiet": True,
             "logtostderr": False,
         }
-        video = False
         song = True
     try:
         await rkp.edit("**Searching song, please wait 😁**")
@@ -126,7 +124,7 @@ async def download_song(v_url):
     except Exception as e:
         await rkp.edit(f"{str(type(e)): {str(e)}}")
         return
-    c_time = time.time()
+    time.time()
     if song:
         await rkp.edit(f"**Sending the song 🤗**")
 
