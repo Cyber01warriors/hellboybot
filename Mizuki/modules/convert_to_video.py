@@ -30,7 +30,7 @@ from hachoir.parser import createParser
 from PIL import Image
 
 from Mizuki import pbot as bot
-from Mizuki.utils.chat_base import TRChatBase
+from Mizuki.utils.chatbase import TRChatBase
 from Mizuki.utils.display_progress import progress_for_pyrogram
 from Mizuki.utils.help_Nekmo_ffmpeg import take_screen_shot
 
