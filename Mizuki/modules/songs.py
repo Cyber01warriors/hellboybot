@@ -57,7 +57,7 @@ async def download_song(v_url):
         else:
             return
     url = v_url.pattern_match.group(1)
-    rkp = await v_url.reply("**Processing**")
+    rkp = await v_url.reply("**Processing...**")
     if not url:
         await rkp.edit("**No!**\nUsage`/song <song name>`")
     search = SearchVideos(url, offset=1, mode="json", max_results=1)
