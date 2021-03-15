@@ -13,6 +13,7 @@ spongemock
 aiofiles
 zalgo-text
 geopy
+ffmpeg
 nltk
 psutil
 psycopg2-binary
