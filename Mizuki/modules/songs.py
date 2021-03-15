@@ -149,7 +149,8 @@ async def download_song(v_url):
 
 __help__ = """
  • `/song <song name>`*:* uploads the song in the best quality available.
- • `/saavn <song name>`*:* uploads the song from Jio Saavn in best quality.
+ • `/deezer <song name>`*:* uploads the song from deezer in best quality available.
+ • `/saavn <song name>`*:* uploads the song from Jio Saavn in best quality available.
  • `/lyrics <song name>`*:* provides the lyrics of the song you want.
 
 Your downloaded songs are stored @MizukiSongs channel!
