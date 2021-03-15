@@ -15,6 +15,6 @@ __help__ = """
 `/yt`*:* search inline for youtube video
 `/yts <query>`*:* search for youtube video and details
 
-© @TheMizukiBot 👸"""
+~ @TheMizukiBot 👸"""
 
 __mod_name__ = "🎵 Group Music Play 🎶"
