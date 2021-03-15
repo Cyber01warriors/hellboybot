@@ -1,7 +1,7 @@
 ![Mizuki](https://telegra.ph/file/2cdd052cf883e8ace4ffa.jpg)
 # Mizuki Bot
 
-A Telegram Python bot running on python3 forked with saitama with a sqlalchemy database and an entirely themed persona to make chizuru fun and good management for you in your groups.
+A Telegram Python bot running on python3 forked with saitama with a sqlalchemy database and an entirely themed persona to make fun and good management for you in your groups.
 
 Can be found on telegram as [Mizuki](https://t.me/TheMizukiBot)
 
