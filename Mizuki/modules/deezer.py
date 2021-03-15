@@ -14,7 +14,7 @@ async def deezer(_, message):
         return
     text = message.text.split(None, 1)[1]
     query = text.replace(" ", "%20")
-    m = await message.reply_text("Searching...")
+    m = await message.reply_text("Searching the song by @Infinity_BOTs 🤗")
     try:
         r = await fetch(f"{ARQ}deezer?query={query}&count=1")
         title = r[0]["title"]
@@ -23,9 +23,9 @@ async def deezer(_, message):
     except Exception as e:
         await m.edit(str(e))
         return
-    await m.edit("Downloading")
+    await m.edit("Downloading 😁")
     song = await download_song(url)
-    await m.edit("Uploading")
+    await m.edit("Uploading, Plz wait 😍")
     await message.reply_audio(audio=song, title=title, performer=artist)
     os.remove(song)
     await m.delete()
