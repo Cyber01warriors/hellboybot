@@ -84,6 +84,11 @@ buttons = [
     ],
     [
         InlineKeyboardButton(
+            text="🤗 Source Code", url="https://github.com/ImJanindu/Mizuki"
+        ),
+    ],
+    [
+        InlineKeyboardButton(
             text="➕ Add me to your group ➕", url="t.me/TheMizukiBot?startgroup=true"
         ),
     ],
