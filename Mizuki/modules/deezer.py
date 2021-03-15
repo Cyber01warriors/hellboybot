@@ -1,12 +1,21 @@
 import os
 
 from pyrogram import filters
-
+from random import randint
 from Mizuki import pbot as app
 from Mizuki.utils.fetch import fetch
 
 ARQ = "https://thearq.tech/"
 
+async def download_song(url):
+    song_name = f"{randint(6969, 6999)}.mp3"
+    async with aiohttp.ClientSession() as session:
+        async with session.get(url) as resp:
+            if resp.status == 200:
+                f = await aiofiles.open(song_name, mode='wb')
+                await f.write(await resp.read())
+                await f.close()
+    return song_name
 
 @app.on_message(filters.command("deezer"))
 async def deezer(_, message):
