@@ -1,7 +1,7 @@
 import os
 
 from pyrogram import filters
-
+from urllib.parse import urlparse
 from Mizuki import pbot as app
 from Mizuki.utils.fetch import fetch
 
