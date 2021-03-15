@@ -6,7 +6,7 @@ from Mizuki.modules.sql import BASE, SESSION
 
 
 class Rules(BASE):
-    __tablename__ = "ruless"
+    __tablename__ = "rulessss"
     chat_id = Column(String(14), primary_key=True)
     rules = Column(UnicodeText, default="")
 
