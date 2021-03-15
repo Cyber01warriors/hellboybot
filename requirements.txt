@@ -51,7 +51,3 @@ search_engine_parser
 wget
 future
 youtube-search-python==1.4.0
-imutils==0.5.3
-scikit-image==0.17.2
-fontTools
-PyYAML>=5.3.1
