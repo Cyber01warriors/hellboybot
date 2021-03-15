@@ -10,7 +10,7 @@ The Support group can be reached out to at [Infinity JE](https://t.me/InfinityJE
 
 Updates channel as at [Infinity BOTs](https://t.me/Infinity_BOTs)
 
-## How to setup or deploy.
+## How to setup or deploy
 
 ### Read these notes carefully before proceeding 
  - This bot is forked from saitama which is based on marie
