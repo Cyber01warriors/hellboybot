@@ -99,8 +99,6 @@ __help__ = """
 *Covid Stats:*
  • `/covid`*:* get global totals of covid stats
  • `/covid <country>`*:* get covid stats of country you want
-*EHI Files:*
- • `/ehi`*:* get latest ehi files (for sl users)
 *Currency converter:* 
  • `/cash`*:* currency converter
 Example:
