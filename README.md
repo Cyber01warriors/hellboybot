@@ -28,7 +28,7 @@ Now send the bot /start, If it doesn't respond go to https://dashboard.heroku.co
 ```
 
   [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/ImJanindu/Mizuki.git)
-
+</details>
 ## How to setup on Heroku 
 For starters click on this button 
 
