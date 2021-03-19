@@ -1,13 +1,6 @@
 {
-      "name": "Mizuki Bot",
-      "description": "An Anime themed Telegram group management bot.",
-      "keywords": [
-         "telegram",
-         "anime",
-         "group",
-         "manager",
-         "Saitama"
-      ],   
+   "name": "Mizuki Bot",
+   "description": "An Anime themed Telegram group management bot.",
    "repository": "https://github.com/ImJanindu/Mizuki",
    "addons": [
       {
@@ -182,7 +175,7 @@
       "description": "Make your bot talk using Intellivoid's chatbot API, get your key from https://coffeehouse.intellivoid.net/",
          "required": false,
          "value": ""
-   },      
+      },      
       "BAN_STICKER": {
          "description": "ID of the sticker you want to use when banning people.",
          "required": false,
