@@ -41,8 +41,8 @@ asyncio
 gtts
 bs4
 tswift
-pyrogram
-tgcrypto
+pyrogram>=1.0.7
+tgCrypto>=1.2.2
 pymongo==3.11.0
 dnspython
 cloudmersive-ocr-api-client==3.0.1
