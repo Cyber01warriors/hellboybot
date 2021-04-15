@@ -39,6 +39,7 @@ async def is_register_admin(chat, user):
     if isinstance(chat, types.InputPeerUser):
         return True
 
+
 @register(pattern="^/song (.*)")
 async def download_song(v_url):
     approved_userss = approved_users.find({})
