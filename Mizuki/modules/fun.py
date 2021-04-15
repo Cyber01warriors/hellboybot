@@ -310,7 +310,7 @@ __help__ = """
  • `/shout <keyword>`*:* write anything you want to give loud shout
  • `/send <text>`*:* sends the text you given to the group by Mizuki
  • `/weebify <text>`*:* returns a weebified text
- • `/sanitize`*:* always use this before `/pat` or any contact
+ • `/sanitize`*:* always use this command before `/pat` or any contact
  • `/pat`*:* pats a user, or get patted
  • `/truth`*:* for random truth
  • `/dare`*:* for random dare
