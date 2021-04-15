@@ -53,3 +53,4 @@ search_engine_parser
 wget
 future
 youtube-search-python==1.4.0
+telegraph
