@@ -3,7 +3,10 @@ __help__ = """
 ⦁ `/tts <text>`*:* convert text to speech.
 
 *Telegraph:*
-• `/telegraph <reply to photo>`: uploads photo to telegraph and give permanent url.
+• `/telegraph <reply to photo>`*:* uploads photo to telegraph and give permanent url.
+
+*Nekobin:*
+• `/paste <reply to text>`*:* paste given text on nekobin and give url.
 
 *Zipper:*
 ⦁ `/zip`*:* reply to a telegram file to compress it in .zip format.
