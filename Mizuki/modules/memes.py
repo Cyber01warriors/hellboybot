@@ -13,8 +13,9 @@ async def memes(client, message):
 
 
 __help__ = """
-<b>Mizuki gives you memes randomly gained through meme API</b>
-- /memes: get very interesting and funny memes randomly.
+*Mizuki gives you memes randomly gained through meme API*
+
+• `/memes`*:* get very interesting and funny memes randomly.
 """
 
 __mod_name__ = "Memes"
