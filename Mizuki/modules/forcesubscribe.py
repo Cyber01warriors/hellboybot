@@ -8,7 +8,8 @@ from telethon.tl.functions.channels import EditBannedRequest
 from telethon.tl.types import ChatBannedRights
 
 import Mizuki.modules.sql.fsub_sql as sql
-from Mizuki import BOT_ID, telethn as tbot
+from Mizuki import BOT_ID
+from Mizuki import telethn as tbot
 from Mizuki.events import register
 from Mizuki.utils import is_admin
 
