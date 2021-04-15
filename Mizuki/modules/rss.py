@@ -280,12 +280,12 @@ __help__ = """
  • `/addrss <link>`*:* add an RSS link to the subscriptions.
  • `/removerss <link>`*:* removes the RSS link from the subscriptions.
  • `/rss <link>`*:* shows the link's data and the last entry, for testing purposes.
- • `/listrss`*:* shows the list of rss feeds that the chat is currently subscribed to.
+ • `/listrss`*:* shows the list of rss feeds that the chat is currently subscribed.
 
-*NOTE:* In groups, only admins can add/remove RSS links to the group's subscription
+*NOTE:* In groups, only admins can add/remove RSS links to the group's subscription.
 """
 
-__mod_name__ = "RSS Feed"
+__mod_name__ = "RSS Feed ✉️"
 
 job = updater.job_queue
 
