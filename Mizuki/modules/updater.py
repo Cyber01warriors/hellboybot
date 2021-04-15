@@ -183,6 +183,6 @@ async def upstream(ups):
             repo.git.reset("--hard", "FETCH_HEAD")
         await updateme_requirements()
         await lol.edit("`Successfully Updated!\n" "Restarting...`")
-        args = [sys.executable, "-m", "DaisyX"]
+        args = [sys.executable, "-m", "Mizuki"]
         execle(sys.executable, *args, environ)
         return
