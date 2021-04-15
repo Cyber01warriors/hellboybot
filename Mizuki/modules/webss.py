@@ -5,12 +5,10 @@ import time
 from pyrogram import filters
 
 from Mizuki import pbot
-from Mizuki.utils.errors import capture_err
 from Mizuki.utils.fetch import fetch
 
 
 @pbot.on_message(filters.command("webss"))
-@capture_err
 async def take_ss(_, message):
     if len(message.command) != 2:
         await message.reply_text("Give A Url To Fetch Screenshot.")
