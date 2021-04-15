@@ -1,3 +1,9 @@
 ## Updates going on 😏
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/ImJanindu/Mizuki)
+## Deploy to heroku 💤
+
+- Fork this repo, create heroku new app and connect forked repo.
+- Then get all vars from [here.](https://github.com/ImJanindu/Mizuki/blob/main/vars)
+- Simply set all vars from heroku app settings.
+- Add heroku-postgresql resource to heroku app.
+- Finally deploy the bot.
