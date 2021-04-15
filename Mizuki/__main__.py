@@ -24,7 +24,6 @@ from telegram.ext.dispatcher import DispatcherHandlerStop, run_async
 from telegram.utils.helpers import escape_markdown
 
 from Mizuki import (
-    ALLOW_EXCL,
     CERT_PATH,
     DONATION_LINK,
     LOGGER,
