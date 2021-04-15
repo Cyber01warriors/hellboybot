@@ -1,5 +1,6 @@
-import time
 import asyncio
+import time
+
 from telethon import events
 
 from Mizuki import telethn
