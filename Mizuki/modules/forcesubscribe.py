@@ -6,7 +6,7 @@ from telethon.errors import ChannelInvalidError
 from telethon.tl import types
 from telethon.tl.functions.channels import EditBannedRequest
 from telethon.tl.types import ChatBannedRights
-from telethon import *
+
 import Mizuki.modules.sql.fsub_sql as sql
 from Mizuki import BOT_ID
 from Mizuki import telethn as tbot
