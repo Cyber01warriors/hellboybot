@@ -1,24 +1,21 @@
 __help__ = """
-*✖ URL Upload ✖*
- ⦁ `/up`*:* reply to a direct download link to upload it to telegram as files.
+*𝐔𝐑𝐋 𝐔𝐩𝐥𝐨𝐚𝐝*
+ ⦁ `/upload`*:* reply to a direct download link to upload it to telegram as files.
 
-*✖ File To Link ✖*
+*𝐅𝐢𝐥𝐞 𝐓𝐨 𝐋𝐢𝐧𝐤*
  ⦁ `/transfersh`*:* reply to a telegram file to upload it on transfersh and get direct download link.
- ⦁ `/tmpninja`*:* reply to a telegram file to upload it on tmpninja and get direct download link.
  ⦁ `/getlink`*:* reply to telegram file to get direct download link quickly.
 
-*✖ Screenshot Gen ✖*
+*𝐒𝐜𝐫𝐞𝐞𝐧𝐬𝐡𝐨𝐭 𝐆𝐞𝐧*
  ⦁ `/genss`*:* reply to a video to get some screen shots of it.
 
-*✖ File Renamer ✖*
+*𝐅𝐢𝐥𝐞 𝐑𝐞𝐧𝐚𝐦𝐞𝐫*
  ⦁ `/rename newfilename.extension`*:* rename any telegram media file.
 
-*✖ Convert To Video ✖*
+*𝐂𝐨𝐧𝐯𝐞𝐫𝐭 𝐓𝐨 𝐕𝐢𝐝𝐞𝐨*
  ⦁ `/c2v`*:* reply to video file to convert it as streamable video.
 
-*✖ Virus Scan ✖*
- ⦁ `/scanit`*:* Scan a file for virus (MAX SIZE = 3MB)
+*𝐕𝐢𝐫𝐮𝐬 𝐒𝐜𝐚𝐧*
+ ⦁ `/scanit`*:* Scan a file for virus (MAX SIZE = 3MB)"""
 
-*~ @TheMizukiBot 👸*"""
-
-__mod_name__ = "🧨 Exclusive 🧩"
+__mod_name__ = "Exclusive #⃣"
