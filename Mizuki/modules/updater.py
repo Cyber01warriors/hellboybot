@@ -58,8 +58,8 @@ async def upstream(ups):
     force_update = False
 
     try:
-        txt = "`Oops! Updater cannot continue.`"
-        txt += "please add heroku apikey, name`\n\n**LOGTRACE:**\n"
+        txt = "`Oops! Updater cannot continue.` "
+        txt += "Please add heroku apikey, name`\n\n**LOGTRACE:**\n"
         repo = Repo()
     except NoSuchPathError as error:
         await lol.edit(f"{txt}\n`directory {error} is not found`")
@@ -182,7 +182,7 @@ async def upstream(ups):
         except GitCommandError:
             repo.git.reset("--hard", "FETCH_HEAD")
         await updateme_requirements()
-        await lol.edit("`Successfully Updated!\n" "restarting......`")
+        await lol.edit("`Successfully Updated!\n" "Restarting...`")
         args = [sys.executable, "-m", "DaisyX"]
         execle(sys.executable, *args, environ)
         return
