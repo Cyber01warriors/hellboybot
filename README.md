@@ -7,3 +7,5 @@
 - Simply set all vars from heroku app settings.
 - Add heroku-postgresql resource to heroku app.
 - Finally deploy the bot.
+
+### Can be found on telegram as [@MizukiDevRobot](https://t.me/MizukiDevRobot)
