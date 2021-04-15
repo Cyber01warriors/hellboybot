@@ -12,7 +12,7 @@ from Mizuki import DEV_USERS, DRAGONS, OWNER_ID, dispatcher
 from Mizuki.modules.disable import DisableAbleCommandHandler
 
 info_btn = "More Information"
-kaizoku_btn = "Kaizoku ☠️"
+kaizoku_btn = "Infinity 💤"
 kayo_btn = "Kayo 🏴‍☠️"
 prequel_btn = "⬅️ Back"
 sequel_btn = "Next ➡️"
@@ -607,7 +607,7 @@ dispatcher.add_handler(KAIZOKU_SEARCH_HANDLER)
 dispatcher.add_handler(KAYO_SEARCH_HANDLER)
 dispatcher.add_handler(UPCOMING_HANDLER)
 
-__mod_name__ = "Anime 👸"
+__mod_name__ = "Anime"
 __command_list__ = [
     "anime",
     "manga",
