@@ -16,6 +16,10 @@ __help__ = """
  ⦁ `/c2v`*:* reply to video file to convert it as streamable video.
 
 *𝐕𝐢𝐫𝐮𝐬 𝐒𝐜𝐚𝐧*
- ⦁ `/scanit`*:* Scan a file for virus (MAX SIZE = 3MB)"""
+ ⦁ `/scanit`*:* Scan a file for virus (MAX SIZE = 3MB)
+
+*𝐖𝐞𝐛𝐒𝐒*
+ ⦁ `/webss <website url>`*:* take screenshot of given website and gives it.
+ """
 
 __mod_name__ = "Exclusive"
