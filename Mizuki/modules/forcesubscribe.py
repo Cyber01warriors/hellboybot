@@ -10,7 +10,6 @@ from telethon.tl.types import ChatBannedRights
 import Mizuki.modules.sql.fsub_sql as sql
 from Mizuki import BOT_ID
 from Mizuki import telethn as tbot
-from Mizuki.events import register
 from Mizuki.utils import is_admin
 
 MUTE_RIGHTS = ChatBannedRights(until_date=None, send_messages=True)
