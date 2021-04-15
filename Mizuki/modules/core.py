@@ -1,18 +1,15 @@
 # Lel
 
-from Mizuki import telethn as tbot
-from Mizuki.events import register
-import os
 import asyncio
 import os
-import time
-from datetime import datetime
+
 from Mizuki import OWNER_ID
-from Mizuki import TEMP_DOWNLOAD_DIRECTORY as path
-from Mizuki import TEMP_DOWNLOAD_DIRECTORY
-from datetime import datetime
-water = './Mizuki/resources/InfinityBots.jpg'
+from Mizuki import telethn as tbot
+from Mizuki.events import register
+
+water = "./Mizuki/resources/InfinityBots.jpg"
 client = tbot
+
 
 @register(pattern=r"^/send ?(.*)")
 async def Prof(event):
@@ -25,24 +22,25 @@ async def Prof(event):
     input_str = event.pattern_match.group(1)
     the_plugin_file = "./Mizuki/modules/{}.py".format(input_str)
     if os.path.exists(the_plugin_file):
-     message_id = event.message.id
-     await event.client.send_file(
-             event.chat_id,
-             the_plugin_file,
-             force_document=True,
-             allow_cache=False,
-             thumb=thumb,
-             reply_to=message_id,
-         )
+        message_id = event.message.id
+        await event.client.send_file(
+            event.chat_id,
+            the_plugin_file,
+            force_document=True,
+            allow_cache=False,
+            thumb=thumb,
+            reply_to=message_id,
+        )
     else:
         await event.reply("No File Found!")
 
 
-from Mizuki.events import load_module
 import asyncio
 import os
-from datetime import datetime
 from pathlib import Path
+
+from Mizuki.events import load_module
+
 
 @register(pattern="^/install")
 async def install(event):
@@ -54,23 +52,23 @@ async def install(event):
         return
     if event.reply_to_msg_id:
         try:
-            downloaded_file_name = (
-                await event.client.download_media( 
-                    await event.get_reply_message(),
-                    "Mizuki/modules/", 
-                )
+            downloaded_file_name = await event.client.download_media(
+                await event.get_reply_message(),
+                "Mizuki/modules/",
             )
             if "(" not in downloaded_file_name:
                 path1 = Path(downloaded_file_name)
                 shortname = path1.stem
                 load_module(shortname.replace(".py", ""))
-                await event.reply("Installed 💤\n\nModule > `{}`".format(
+                await event.reply(
+                    "Installed 💤\n\nModule > `{}`".format(
                         os.path.basename(downloaded_file_name)
                     ),
                 )
             else:
                 os.remove(downloaded_file_name)
-                k = await event.reply("**Error, cannot install!**\n\n📂 File not supported or pre installed maybe 😏",
+                k = await event.reply(
+                    "**Error, cannot install!**\n\n📂 File not supported or pre installed maybe 😏",
                 )
                 await asyncio.sleep(2)
                 await k.delete()
@@ -82,21 +80,16 @@ async def install(event):
     await asyncio.sleep(3)
     await event.delete()
 
-from Mizuki import telethn as tbot, OWNER_ID, DEV_USERS
+
+import asyncio
+import os
+
+from Mizuki import OWNER_ID
+from Mizuki import telethn as tbot
 from Mizuki.events import register
-import os
-import asyncio
-import os
-import time
-from datetime import datetime
-from Mizuki import TEMP_DOWNLOAD_DIRECTORY as path
-from Mizuki import TEMP_DOWNLOAD_DIRECTORY
-from datetime import datetime
-import asyncio
-import os
-import time
-from datetime import datetime as dt
+
 opn = []
+
 
 @register(pattern="/open")
 async def _(event):
@@ -126,15 +119,9 @@ async def _(event):
     else:
         return await event.reply("Reply to a readable file.")
 
+
 client = tbot
-import time
-from io import BytesIO
 from pathlib import Path
-from Mizuki import telethn as borg
-from telethon import functions, types
-from telethon.errors import PhotoInvalidDimensionsError
-from telethon.errors.rpcerrorlist import YouBlockedUserError
-from telethon.tl.functions.messages import SendMediaRequest
 
 
 @register(pattern="^/make ?(.*)")
