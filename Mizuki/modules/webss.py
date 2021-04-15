@@ -1,10 +1,12 @@
 # Credits for thehamkercat's Willam Butcher Bot
 
+import time
+
+from pyrogram import filters
+
 from Mizuki import pbot as app
 from Mizuki.utils.errors import capture_err
 from Mizuki.utils.fetch import fetch
-from pyrogram import filters
-import time
 
 
 @app.on_message(filters.command("webss"))
@@ -20,8 +22,8 @@ async def take_ss(_, message):
     await m.edit("**Uploading**")
     end_time = time.time()
     await app.send_photo(
-            message.chat.id,
-            photo=screenshot['url'],
-            caption=(f"{url}\n__Took {round(end_time - start_time)} Seconds.__")
-            )
+        message.chat.id,
+        photo=screenshot["url"],
+        caption=(f"{url}\n__Took {round(end_time - start_time)} Seconds.__"),
+    )
     await m.delete()
