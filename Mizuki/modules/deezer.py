@@ -29,7 +29,7 @@ async def deezer(_, message):
         return
     text = message.text.split(None, 1)[1]
     query = text.replace(" ", "%20")
-    m = await message.reply_text("Searching the song by @Infinity_BOTs 🤗")
+    m = await message.reply_text("Searching...")
     try:
         r = await fetch(f"{ARQ}deezer?query={query}&count=1")
         title = r[0]["title"]
