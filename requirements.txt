@@ -1,6 +1,7 @@
 future
 emoji
 lxml
+git
 beautifulsoup4
 git+git://github.com/google/chatbase-python.git
 requests
