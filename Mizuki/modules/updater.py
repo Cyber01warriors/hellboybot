@@ -1,4 +1,4 @@
-# Mizuki Bot 
+# Mizuki Bot
 # ImJanindu
 
 import asyncio
