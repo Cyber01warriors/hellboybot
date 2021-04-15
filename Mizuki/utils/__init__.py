@@ -1,10 +1,11 @@
 # Lel
 
-from telethon.tl import functions
-from telethon.tl import types
-from Mizuki import tbot
 import telethon
 from telethon import events
+from telethon.tl import functions, types
+
+from Mizuki import tbot
+
 
 async def is_admin(event, user):
     try:
@@ -17,6 +18,7 @@ async def is_admin(event, user):
         is_mod = False
     return is_mod
 
+
 async def is_register_admin(chat, user):
     if isinstance(chat, (types.InputPeerChannel, types.InputChannel)):
         return isinstance(
@@ -27,6 +29,7 @@ async def is_register_admin(chat, user):
         )
     if isinstance(chat, types.InputPeerUser):
         return True
+
 
 async def can_approve_users(message):
     result = await tbot(
@@ -39,6 +42,7 @@ async def can_approve_users(message):
     return isinstance(p, types.ChannelParticipantCreator) or (
         isinstance(p, types.ChannelParticipantAdmin) and p.admin_rights.add_admins
     )
+
 
 async def can_change_info(message):
     result = await tbot(
