@@ -7,7 +7,7 @@ import sys
 
 import git
 
-from Mizuki import HEROKU_API_KEY, HEROKU_APP_NAME, UPSTREAM_REPO, OWNER_ID
+from Mizuki import HEROKU_API_KEY, HEROKU_APP_NAME, OWNER_ID, UPSTREAM_REPO
 from Mizuki.events import register as borg
 
 IS_SELECTED_DIFFERENT_BRANCH = (
@@ -37,7 +37,7 @@ async def updater(message):
     check = message.message.sender_id
     OK = int(OWNER_ID)
     if int(check) != OK:
-        return 
+        return
     try:
         repo = git.Repo()
     except git.exc.InvalidGitRepositoryError as e:
