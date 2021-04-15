@@ -94,7 +94,7 @@ async def profanity(event):
                 await event.reply("Night Mode is Already Turned ON for this Chat.")
                 return
             add_nightmode(str(event.chat_id))
-            await event.reply("NightMode turned on for this chat.")
+            await event.reply("Night Mode turned on for this chat.")
     if "off" in input:
         if event.is_group:
             if not is_nightmode_indb(str(event.chat_id)):
