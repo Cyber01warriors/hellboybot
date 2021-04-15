@@ -77,4 +77,4 @@ __help__ = """
  • `/purge <integer X>`: deletes the replied message, and X messages following it if replied to a message.
 """
 
-__mod_name__ = "Purges 🚿"
+__mod_name__ = "Purges"
