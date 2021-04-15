@@ -41,7 +41,7 @@ async def rights(event):
     )
 
 
-@register(pattern="^/fsub ?(.*)")
+@tbot.on(events.NewMessage(pattern="/transfersh ?(.*)"))
 async def fs(event):
     permissions = await tbot.get_permissions(event.chat_id, event.sender_id)
     if not permissions.is_creator:
