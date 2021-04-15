@@ -12,4 +12,4 @@
 
 ## Devs
 
-- [ImJanindu](https://t.me/ImJanindu)
+- [Janindu](https://t.me/ImJanindu)
