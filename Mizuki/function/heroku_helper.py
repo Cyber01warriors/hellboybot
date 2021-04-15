@@ -2,7 +2,7 @@
 
 import heroku3
 
-from Mizuki import HEROKU_API_KEY, HEROKU_APP_NAME
+from Mizuki import HEROKU_API_KEY
 
 herokuclient = heroku3.from_key(HEROKU_API_KEY)
 
@@ -28,6 +28,6 @@ class HerokuHelper:
 
     def restart(self):
         return self.app.restart()
-    
+
     def shutdown(self):
         return self.app.process_formation()["worker.1"].scale(0)
