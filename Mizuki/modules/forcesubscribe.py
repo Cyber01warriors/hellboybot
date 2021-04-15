@@ -53,7 +53,7 @@ async def fs(event):
     channel = args.replace("@", "")
     if args in ("off", "no", "disable"):
         sql.disapprove(event.chat_id)
-        await event.reply("❌ **Force Subscribe is Disabled Successfully.**")
+        await event.reply("❌ *Force Subscribe is Disabled Successfully.*")
     else:
         try:
             k = functions.channels.GetChannelsRequest(id=["channel"])
@@ -66,7 +66,7 @@ async def fs(event):
                 link_preview=False,
             )
         sql.add_channel(event.chat_id, str(channel))
-        await event.reply(f"✅ **Force Subscribe is Enabled** to @{channel}.")
+        await event.reply(f"✅ *Force Subscribe is Enabled* to @{channel}.")
 
 
 @tbot.on(events.NewMessage(pattern=None))
