@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Numeric, String
 
-from . import BASE, SESSION
+from Mizuki.modules.sql import BASE, SESSION
 
 
 class forceSubscribe(BASE):
