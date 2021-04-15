@@ -28,6 +28,7 @@ async def is_admin(event, user):
         is_mod = False
     return is_mod
 
+
 async def check_him(channel, uid):
     try:
         result = await tbot(
