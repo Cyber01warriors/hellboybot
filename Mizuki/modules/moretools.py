@@ -25,4 +25,4 @@ __help__ = """
 ⦁ 🕒 [Timezones list](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)
 """
 
-__mod_name__ = "More Tools"
+__mod_name__ = "Tools"
