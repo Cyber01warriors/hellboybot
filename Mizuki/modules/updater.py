@@ -1,10 +1,11 @@
 import asyncio
 import os
 import sys
-import heroku3
+
 import git
+
+from Mizuki import HEROKU_API_KEY, HEROKU_APP_NAME, UPSTREAM_REPO
 from Mizuki import telethn as borg
-from Mizuki import UPSTREAM_REPO, HEROKU_APP_NAME, HEROKU_API_KEY
 
 IS_SELECTED_DIFFERENT_BRANCH = (
     "looks like a custom branch {branch_name} "
@@ -13,17 +14,13 @@ IS_SELECTED_DIFFERENT_BRANCH = (
     "Please check out to an official branch, and restart the updater."
 )
 OFFICIAL_UPSTREAM_REPO = UPSTREAM_REPO
-BOT_IS_UP_TO_DATE = (
-    ">> Mizuki is up-to-date <<"
-)
+BOT_IS_UP_TO_DATE = ">> Mizuki is up-to-date <<"
 NEW_BOT_UP_DATE_FOUND = (
     "New update found for {branch_name}\n"
     "ChangeLog: \n\n{changelog}\n"
     "Do update for Mizuki now..."
 )
-NEW_UP_DATE_FOUND = (
-    "Alert! New Update here @ {branch_name}\n" "`Updating Mizuki...`"
-)
+NEW_UP_DATE_FOUND = "Alert! New Update here @ {branch_name}\n" "`Updating Mizuki...`"
 REPO_REMOTE_NAME = "temponame"
 IFFUCI_ACTIVE_BRANCH_NAME = "master"
 DIFF_MARKER = "HEAD..{remote_name}/{branch_name}"
