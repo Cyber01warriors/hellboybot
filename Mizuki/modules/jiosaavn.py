@@ -27,11 +27,11 @@ async def song(client, message):
     if args.startswith(" "):
         await message.reply("<b>What is the song you want?</b>")
         return ""
-    m = await message.reply_text(
-        "<b>Downloading...</b>"
-    )
+    m = await message.reply_text("<b>Downloading...</b>")
     try:
-        r = requests.get(f"https://jevcplayerbot-saavndl.herokuapp.com/result/?query={args}")
+        r = requests.get(
+            f"https://jevcplayerbot-saavndl.herokuapp.com/result/?query={args}"
+        )
     except Exception as e:
         await m.edit(str(e))
         return
