@@ -5,6 +5,7 @@ from functools import wraps
 from Mizuki import EVENT_LOGS
 from Mizuki import pbot as app
 
+
 def split_limits(text):
     if len(text) < 2048:
         return [text]
