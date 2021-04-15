@@ -4,4 +4,4 @@ __help__ = """
  • `/wttr` moon*:* Get the current status of moon
 """
 
-__mod_name__ = "Weather ⛈️"
+__mod_name__ = "Weather"
