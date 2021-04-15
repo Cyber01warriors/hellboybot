@@ -16,7 +16,7 @@ __help__ = """
 ⦁ `/stickers`*:* Find stickers for given term on combot sticker catalogue.
 
 *Cricket:*
-• /cs*:* get latest live cricket matches scores from cricinfo.
+• `/cs`*:* get latest live cricket matches scores from cricinfo.
 
 *Time:*
 ⦁ `/time <query>`*:* gives information about a timezone.
