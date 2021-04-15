@@ -21,7 +21,7 @@ async def take_ss(_, message):
     end_time = time.time()
     await pbot.send_photo(
         message.chat.id,
-        photo=screenshot["url"],
+        photo=screenshot,
         caption=(f"{url}\n__Took {round(end_time - start_time)} Seconds.__"),
     )
     await m.delete()
