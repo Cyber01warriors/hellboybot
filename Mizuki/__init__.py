@@ -95,6 +95,8 @@ if ENV:
     DOWNLOAD_LOCATION = "Downloads/"
     CHAT_BASE_TOKEN = os.environ.get("CHAT_BASE_TOKEN", "")
     DEF_WATER_MARK_FILE = ""
+    HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY", None)
+    HEROKU_APP_NAME = os.environ.get("HEROKU_APP_NAME", None)
     BOT_ID = int(os.environ.get("BOT_ID", None))
     OPENWEATHERMAP_ID = os.environ.get("OPENWEATHERMAP_ID", None)
 
@@ -141,6 +143,8 @@ else:
     WEBHOOK = Config.WEBHOOK
     URL = Config.URL
     PORT = Config.PORT
+    HEROKU_API_KEY = Config.HEROKU_API_KEY
+    HEROKU_APP_NAME = Config.HEROKU_APP_NAME
     CERT_PATH = Config.CERT_PATH
     API_ID = Config.API_ID
     API_HASH = Config.API_HASH
