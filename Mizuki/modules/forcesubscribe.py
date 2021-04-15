@@ -134,12 +134,12 @@ async def start_again(event):
 
 
 __help__ = """
-**I can force group members to join your channel**
+*I can force group members to join your channel*
 
-**Commands**
+*Commands*
 • `/forcesubscribe <@channelusername>`*:* enable force subscribe to given channel.
 
-**NOTE**: You can use `/fsub` instead of `/forcesubscribe`
+*NOTE*: You can use `/fsub` instead of `/forcesubscribe`
 """
 
 __mod_name__ = "Force Sub"
