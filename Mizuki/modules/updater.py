@@ -133,7 +133,7 @@ async def upstream(ups):
     if force_update:
         await lol.edit("`Force-Syncing to latest main bot code, please wait...`")
     else:
-        await lol.edit("`Still Running....`")
+        await lol.edit("`Still Running...`")
     if conf == "deploy":
         if HEROKU_API_KEY is not None:
             heroku = heroku3.from_key(HEROKU_API_KEY)
