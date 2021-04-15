@@ -3,10 +3,10 @@ __help__ = """
 ⦁ `/tts <text>`*:* convert text to speech.
 
 *Telegraph:*
-• `/telegraph <reply to photo>`*:* uploads photo to telegraph and give permanent url.
+⦁ `/telegraph <reply to photo>`*:* uploads photo to telegraph and give permanent url.
 
 *Nekobin:*
-• `/paste <reply to text>`*:* paste given text on nekobin and give url.
+⦁ `/paste <reply to text>`*:* paste given text on nekobin and give url.
 
 *Zipper:*
 ⦁ `/zip`*:* reply to a telegram file to compress it in .zip format.
@@ -22,7 +22,7 @@ __help__ = """
 ⦁ `/stickers`*:* Find stickers for given term on combot sticker catalogue.
 
 *Cricket:*
-• `/cs`*:* get latest live cricket matches scores from cricinfo.
+⦁ `/cs`*:* get latest live cricket matches scores from cricinfo.
 
 *Time:*
 ⦁ `/time <query>`*:* gives information about a timezone.
