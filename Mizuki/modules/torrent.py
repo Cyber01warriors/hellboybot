@@ -81,7 +81,7 @@ async def tor_search(event):
         pass
     msg = (
         "**Torrent Search By Mizu**\n\nQuery: `{}`".format(search_str)
-        + "\n\n**Results**\n"
+        + "\n\n**Results👇**\n\n"
     )
     counter = 0
     while counter != len(titles):
