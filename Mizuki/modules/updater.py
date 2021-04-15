@@ -8,9 +8,10 @@ import heroku3
 from git import Repo
 from git.exc import GitCommandError, InvalidGitRepositoryError, NoSuchPathError
 
-from Mizuki import OWNER_ID, HEROKU_APP_NAME, HEROKU_API_KEY, UPSTREAM_REPO as UPSTREAM_REPO_URL
-from Mizuki.events import register
+from Mizuki import HEROKU_API_KEY, HEROKU_APP_NAME, OWNER_ID
+from Mizuki import UPSTREAM_REPO as UPSTREAM_REPO_URL
 from Mizuki import telethn as update
+from Mizuki.events import register
 
 if not UPSTREAM_REPO_URL:
     UPSTREAM_REPO_URL = "https://github.com/ImJanindu/Mizuki"
