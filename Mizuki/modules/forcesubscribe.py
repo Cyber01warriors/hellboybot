@@ -8,14 +8,25 @@ from telethon.tl.functions.channels import EditBannedRequest
 from telethon.tl.types import ChatBannedRights
 
 import Mizuki.modules.sql.fsub_sql as sql
-from Mizuki import BOT_ID
 from Mizuki import telethn as tbot
-from Mizuki.utils import is_admin
+
+BOT_ID = 1737913061
 
 MUTE_RIGHTS = ChatBannedRights(until_date=None, send_messages=True)
 
 UNMUTE_RIGHTS = ChatBannedRights(until_date=None, send_messages=False)
 
+
+async def is_admin(event, user):
+    try:
+        sed = await event.client.get_permissions(event.chat_id, user)
+        if sed.is_admin:
+            is_mod = True
+        else:
+            is_mod = False
+    except:
+        is_mod = False
+    return is_mod
 
 async def check_him(channel, uid):
     try:
@@ -40,7 +51,7 @@ async def rights(event):
     )
 
 
-@tbot.on(events.NewMessage(pattern="/transfersh ?(.*)"))
+@register(pattern="^/(fsub|forcesubscribe) ?(.*)")
 async def fs(event):
     permissions = await tbot.get_permissions(event.chat_id, event.sender_id)
     if not permissions.is_creator:
