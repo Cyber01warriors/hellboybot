@@ -1,7 +1,7 @@
 import aiohttp
 
 from Mizuki import pbot
-
+from pyrogram import filters, Client
 
 @pbot.on_message(filters.command("memes"))
 async def memes(client, message):
