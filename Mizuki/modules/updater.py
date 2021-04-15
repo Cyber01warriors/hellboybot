@@ -52,13 +52,13 @@ async def upstream(ups):
     OK = int(OWNER_ID)
     if int(check) != OK:
         return
-    lol = await ups.reply("`Checking for updates, please wait....`")
+    lol = await ups.reply("`Checking for updates, please wait...`")
     conf = ups.pattern_match.group(1)
     off_repo = UPSTREAM_REPO_URL
     force_update = False
 
     try:
-        txt = "`Oops.. Updater cannot continue "
+        txt = "`Oops! Updater cannot continue.`"
         txt += "please add heroku apikey, name`\n\n**LOGTRACE:**\n"
         repo = Repo()
     except NoSuchPathError as error:
