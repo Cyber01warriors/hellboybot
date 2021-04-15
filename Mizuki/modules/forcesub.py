@@ -11,14 +11,13 @@ from pyrogram.errors.exceptions.bad_request_400 import (
     UserNotParticipant,
 )
 from pyrogram.types import ChatPermissions, InlineKeyboardButton, InlineKeyboardMarkup
+
 from Mizuki import pbot
 from Mizuki.modules.sql import fsub_sql as sql
 
 logging.basicConfig(level=logging.INFO)
 
-static_data_filter = filters.create(
-    lambda _, __, query: query.data == "LelJE"
-)
+static_data_filter = filters.create(lambda _, __, query: query.data == "LelJE")
 
 
 @pbot.on_callback_query(static_data_filter)
@@ -73,9 +72,9 @@ def _check_member(client, message):
     chat_db = sql.fs_settings(chat_id)
     if chat_db:
         user_id = message.from_user.id
-        if (
-            not client.get_chat_member(chat_id, user_id).status
-            in ("administrator", "creator")
+        if not client.get_chat_member(chat_id, user_id).status in (
+            "administrator",
+            "creator",
         ):
             channel = chat_db.channel
             try:
