@@ -139,7 +139,9 @@ __help__ = """
 *Commands*
 • `/forcesubscribe <@channelusername>`*:* enable force subscribe to given channel.
 
-*NOTE*: You can use `/fsub` instead of `/forcesubscribe`
+*NOTE*: 
+- You can use `/fsub` instead of `/forcesubscribe` 
+- You need to be group creator to activate force sub.
 """
 
 __mod_name__ = "Force Sub"
