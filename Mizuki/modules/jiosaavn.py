@@ -25,13 +25,13 @@ async def song(client, message):
     message.from_user["id"]
     args = get_arg(message) + " " + "song"
     if args.startswith(" "):
-        await message.reply("<b>Enter song name❗</b>")
+        await message.reply("<b>What is the song you want?</b>")
         return ""
     m = await message.reply_text(
-        "<b>Downloading your song, Plz wait 🥺\n\n~ @Infinity_BOTs</b>"
+        "<b>Downloading...</b>"
     )
     try:
-        r = requests.get(f"https://snobybuddymusic.herokuapp.com/result/?query={args}")
+        r = requests.get(f"https://jevcplayerbot-saavndl.herokuapp.com/result/?query={args}")
     except Exception as e:
         await m.edit(str(e))
         return
@@ -41,6 +41,7 @@ async def song(client, message):
     file = wget.download(slink)
     ffile = file.replace("mp4", "m4a")
     os.rename(file, ffile)
+    await m.edit("Uploading...")
     await message.reply_audio(audio=ffile, title=sname, performer=ssingers)
     os.remove(ffile)
     await m.delete()
