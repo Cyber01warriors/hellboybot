@@ -2,6 +2,9 @@ __help__ = """
 *Text To Speech:*
 ⦁ `/tts <text>`*:* convert text to speech.
 
+*Telegraph:*
+• `/telegraph <reply to photo>`: uploads photo to telegraph and give permanent url.
+
 *Zipper:*
 ⦁ `/zip`*:* reply to a telegram file to compress it in .zip format.
 ⦁ `/unzip`*:* reply to a telegram file to decompress it from the .zip format.
