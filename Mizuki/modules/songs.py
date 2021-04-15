@@ -39,10 +39,6 @@ async def is_register_admin(chat, user):
     if isinstance(chat, types.InputPeerUser):
         return True
 
-
-MIZUKISONG = "@MizukiSongs"
-
-
 @register(pattern="^/song (.*)")
 async def download_song(v_url):
     approved_userss = approved_users.find({})
@@ -126,9 +122,9 @@ async def download_song(v_url):
         return
     time.time()
     if song:
-        await rkp.edit(f"**Sending the song 🤗**")
+        await rkp.edit(f"**Sending the song...**")
 
-        y = await v_url.client.send_file(
+        lel = await v_url.client.send_file(
             v_url.chat_id,
             f"{rip_data['id']}.mp3",
             supports_streaming=False,
@@ -142,18 +138,15 @@ async def download_song(v_url):
                 )
             ],
         )
-        await y.forward_to(MIZUKISONG)
         os.system("rm -rf *.mp3")
         os.system("rm -rf *.webp")
 
 
 __help__ = """
- • `/song <song name>`*:* uploads the song in the best quality available.
- • `/deezer <song name>`*:* uploads the song from deezer in best quality available.
- • `/saavn <song name>`*:* uploads the song from Jio Saavn in best quality available.
+ • `/song <song name>`*:* uploads the song from YouTube in the best quality available.
+ • `/deezer <song name>`*:* uploads the song from Deezer in best quality available.
+ • `/saavn <song name>`*:* uploads the song from JioSaavn in best quality available.
  • `/lyrics <song name>`*:* provides the lyrics of the song you want.
-
-Your downloaded songs are stored @MizukiSongs channel!
 """
 
 __mod_name__ = "Songs 🎵"
