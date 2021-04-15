@@ -43,8 +43,9 @@ async def purge_messages(event):
     await event.client.delete_messages(event.chat_id, messages)
     time_ = time.perf_counter() - start
     text = f"Purged Successfully in {time_:0.2f} Second(s)"
-    await event.respond(text, parse_mode="markdown")
-    await text.delete()
+    lel = await event.respond(text, parse_mode="markdown")
+    await asyncio.sleep(5)
+    await lel.delete()
 
 
 @telethn.on(events.NewMessage(pattern="^[!/]del$"))
