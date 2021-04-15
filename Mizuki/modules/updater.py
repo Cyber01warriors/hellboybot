@@ -1,3 +1,6 @@
+# Mizuki Bot 
+# ImJanindu
+
 import asyncio
 import os
 import sys
@@ -5,7 +8,7 @@ import sys
 import git
 
 from Mizuki import HEROKU_API_KEY, HEROKU_APP_NAME, UPSTREAM_REPO
-from Mizuki import telethn as borg
+from Mizuki.events import register as borg
 
 IS_SELECTED_DIFFERENT_BRANCH = (
     "looks like a custom branch {branch_name} "
@@ -29,7 +32,7 @@ HEROKU_GIT_REF_SPEC = "HEAD:refs/heads/master"
 RESTARTING_APP = "`Restarting Mizuki...`"
 
 
-@borg.on(events.NewMessage(pattern="^/update ?(.*)"))
+@borg(pattern="^/update(?: |$)(.*)")
 async def updater(message):
     try:
         repo = git.Repo()
