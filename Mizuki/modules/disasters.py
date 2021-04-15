@@ -584,9 +584,9 @@ Group admins/group owners do not need these commands.
  ╠ `/runmute user group`*:* Remote un-mute
  ╚ `/ginfo username/link/ID`*:* Pulls info panel for entire group
 
- ╔ *Windows self hosted only:*
- ╠ `/reboot`*:* Restarts the bots service
- ╚ `/gitpull`*:* Pulls the repo and then restarts the bots service
+ ╔ *Control heroku app*
+ ╠ `/restart`*:* Restarts the bots service
+ ╚ `/update`*:* Pulls the repo update and then restarts the bots service
 
  ╔ *Chatbot:* 
  ╚ `/listaichats`*:* Lists the chats the chatmode is enabled in
