@@ -17,6 +17,9 @@ __help__ = """
 
 *𝐕𝐢𝐫𝐮𝐬 𝐒𝐜𝐚𝐧*
  ⦁ `/scanit`*:* Scan a file for virus (MAX SIZE = 3MB)
+
+*𝐓𝐨𝐫𝐫𝐞𝐧𝐭*
+ ⦁ `/torrent <query>`*:* search available torrents for your query.
 """
 
 __mod_name__ = "Exclusive"
