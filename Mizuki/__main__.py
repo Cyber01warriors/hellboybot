@@ -84,7 +84,7 @@ buttons = [
     ],
     [
         InlineKeyboardButton(
-            text="🤗 Source Code", url="https://github.com/ImJanindu/Mizuki"
+            text="#⃣ Source Code", url="https://github.com/ImJanindu/Mizuki"
         ),
     ],
     [
