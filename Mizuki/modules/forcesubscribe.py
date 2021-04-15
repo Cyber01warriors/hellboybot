@@ -6,7 +6,7 @@ from telethon.errors import ChannelInvalidError
 from telethon.tl import types
 from telethon.tl.functions.channels import EditBannedRequest
 from telethon.tl.types import ChatBannedRights
-
+from telethon import *
 import Mizuki.modules.sql.fsub_sql as sql
 from Mizuki import BOT_ID
 from Mizuki import telethn as tbot
@@ -41,7 +41,7 @@ async def rights(event):
     )
 
 
-@register(pattern="^/(fsub|forcesubscribe) ?(.*)")
+@register(pattern="^/fsub ?(.*)")
 async def fs(event):
     permissions = await tbot.get_permissions(event.chat_id, event.sender_id)
     if not permissions.is_creator:
@@ -54,7 +54,7 @@ async def fs(event):
     channel = args.replace("@", "")
     if args in ("off", "no", "disable"):
         sql.disapprove(event.chat_id)
-        await event.reply("❌ *Force Subscribe is Disabled Successfully.*")
+        await event.reply("❌ **Force Subscribe is Disabled Successfully.**")
     else:
         try:
             k = functions.channels.GetChannelsRequest(id=["channel"])
@@ -67,7 +67,7 @@ async def fs(event):
                 link_preview=False,
             )
         sql.add_channel(event.chat_id, str(channel))
-        await event.reply(f"✅ *Force Subscribe is Enabled* to @{channel}.")
+        await event.reply(f"✅ **Force Subscribe is Enabled** to @{channel}.")
 
 
 @tbot.on(events.NewMessage(pattern=None))
@@ -138,11 +138,9 @@ __help__ = """
 *I can force group members to join your channel*
 
 *Commands:*
-• `/forcesubscribe <@channelusername>`*:* enable force subscribe to given channel.
+• `/fsub <@channelusername>`*:* enable force subscribe to given channel.
 
-*NOTE*: 
-- You can use `/fsub` instead of `/forcesubscribe` 
-- You need to be group creator to activate force sub.
+*NOTE*: You need to be group creator to activate force sub.
 """
 
 __mod_name__ = "Force Sub"
