@@ -183,7 +183,7 @@ __help__ = """
 
 *Setup:*
 × First of all add me in the group as admin with ban users permission and in the channel as admin.
-Note: Only creator of the group can setup me and i will not allow force subscribe again if not done so.
+Note: Only creator of the group can setup me and I will not allow force subscribe again if not done so.
  
 *Commmands:*
 • `/forcesubscribe`*:* To get the current settings.
