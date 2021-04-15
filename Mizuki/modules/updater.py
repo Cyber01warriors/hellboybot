@@ -1,154 +1,187 @@
-# Mizuki Bot
-# ImJanindu
+# I'm Bad
 
 import asyncio
-import os
 import sys
+from os import environ, execle, path, remove
 
-import git
+import heroku3
+from git import Repo
+from git.exc import GitCommandError, InvalidGitRepositoryError, NoSuchPathError
 
-from Mizuki import HEROKU_API_KEY, HEROKU_APP_NAME, OWNER_ID, UPSTREAM_REPO
-from Mizuki.events import register as borg
+from Mizuki import OWNER_ID, HEROKU_APP_NAME, HEROKU_API_KEY, UPSTREAM_REPO as UPSTREAM_REPO_URL
+from Mizuki.events import register
+from Mizuki import telethn as update
 
-IS_SELECTED_DIFFERENT_BRANCH = (
-    "looks like a custom branch {branch_name} "
-    "is being used:\n"
-    "In this case, updater is unable to identify the branch to be updated. "
-    "Please check out to an official branch, and restart the updater."
+if not UPSTREAM_REPO_URL:
+    UPSTREAM_REPO_URL = "https://github.com/ImJanindu/Mizuki"
+
+requirements_path = path.join(
+    path.dirname(path.dirname(path.dirname(__file__))), "requirements.txt"
 )
-OFFICIAL_UPSTREAM_REPO = UPSTREAM_REPO
-BOT_IS_UP_TO_DATE = ">> Mizuki is up-to-date <<"
-NEW_BOT_UP_DATE_FOUND = (
-    "New update found for {branch_name}\n"
-    "ChangeLog: \n\n{changelog}\n"
-    "Do update for Mizuki now..."
-)
-NEW_UP_DATE_FOUND = "Alert! New Update here @ {branch_name}\n" "`Updating Mizuki...`"
-REPO_REMOTE_NAME = "temponame"
-IFFUCI_ACTIVE_BRANCH_NAME = "master"
-DIFF_MARKER = "HEAD..{remote_name}/{branch_name}"
-NO_HEROKU_APP_CFGD = "No heroku application found, but a key given? 😕"
-HEROKU_GIT_REF_SPEC = "HEAD:refs/heads/master"
-RESTARTING_APP = "`Restarting Mizuki...`"
 
 
-@borg(pattern="^/update(?: |$)(.*)")
-async def updater(message):
-    check = message.message.sender_id
+async def gen_chlog(repo, diff):
+    ch_log = ""
+    d_form = "%d/%m/%y"
+    for c in repo.iter_commits(diff):
+        ch_log += (
+            f"•[{c.committed_datetime.strftime(d_form)}]: {c.summary} by <{c.author}>\n"
+        )
+    return ch_log
+
+
+async def updateme_requirements():
+    reqs = str(requirements_path)
+    try:
+        process = await asyncio.create_subprocess_shell(
+            " ".join([sys.executable, "-m", "pip", "install", "-r", reqs]),
+            stdout=asyncio.subprocess.PIPE,
+            stderr=asyncio.subprocess.PIPE,
+        )
+        await process.communicate()
+        return process.returncode
+    except Exception as e:
+        return repr(e)
+
+
+@register(pattern="^/update(?: |$)(.*)")
+async def upstream(ups):
+    global UPSTREAM_REPO_URL
+    check = ups.message.sender_id
     OK = int(OWNER_ID)
     if int(check) != OK:
         return
-    try:
-        repo = git.Repo()
-    except git.exc.InvalidGitRepositoryError as e:
-        repo = git.Repo.init()
-        origin = repo.create_remote(REPO_REMOTE_NAME, OFFICIAL_UPSTREAM_REPO)
-        origin.fetch()
-        repo.create_head(IFFUCI_ACTIVE_BRANCH_NAME, origin.refs.master)
-        repo.heads.master.checkout(True)
-
-    active_branch_name = repo.active_branch.name
-    if active_branch_name != IFFUCI_ACTIVE_BRANCH_NAME:
-        await message.edit(
-            IS_SELECTED_DIFFERENT_BRANCH.format(branch_name=active_branch_name)
-        )
-        return False
+    lol = await ups.reply("`Checking for updates, please wait....`")
+    conf = ups.pattern_match.group(1)
+    off_repo = UPSTREAM_REPO_URL
+    force_update = False
 
     try:
-        repo.create_remote(REPO_REMOTE_NAME, OFFICIAL_UPSTREAM_REPO)
-    except Exception as e:
-        print(e)
-
-    temp_upstream_remote = repo.remote(REPO_REMOTE_NAME)
-    temp_upstream_remote.fetch(active_branch_name)
-
-    changelog = generate_change_log(
-        repo,
-        DIFF_MARKER.format(
-            remote_name=REPO_REMOTE_NAME, branch_name=active_branch_name
-        ),
-    )
-
-    if not changelog:
-        await message.edit(
-            "`No Update AvaiLAbLe if still you want to check just restart bot`"
-        )
+        txt = "`Oops.. Updater cannot continue "
+        txt += "please add heroku apikey, name`\n\n**LOGTRACE:**\n"
+        repo = Repo()
+    except NoSuchPathError as error:
+        await lol.edit(f"{txt}\n`directory {error} is not found`")
+        repo.__del__()
         return
-    if message.text[8:] != "now":
-        message_one = NEW_BOT_UP_DATE_FOUND.format(
-            branch_name=active_branch_name, changelog=changelog
-        )
-        message_two = NEW_UP_DATE_FOUND.format(branch_name=active_branch_name)
-
-        if len(message_one) > 4095:
-            with open("change.log", "w+", encoding="utf8") as out_file:
-                out_file.write(str(message_one))
-            await tgbot.send_message(
-                message.chat_id, document="change.log", caption=message_two
+    except GitCommandError as error:
+        await lol.edit(f"{txt}\n`Early failure! {error}`")
+        repo.__del__()
+        return
+    except InvalidGitRepositoryError as error:
+        if conf != "now":
+            await lol.edit(
+                f"**Unfortunately, the directory {error} does not seem to be a git repository.\
+            \nBut we can fix that by force updating the bot using** `/update now`"
             )
-            os.remove("change.log")
-        else:
-            await message.edit(message_one)
-        await message.respond(f"Do `/update now` to update Mizuki.")
+            return
+        repo = Repo.init()
+        origin = repo.create_remote("upstream", off_repo)
+        origin.fetch()
+        force_update = True
+        repo.create_head("main", origin.refs.main)
+        repo.heads.main.set_tracking_branch(origin.refs.main)
+        repo.heads.main.checkout(True)
+
+    ac_br = repo.active_branch.name
+    if ac_br != "main":
+        await lol.edit(
+            f"**[UPDATER]:**` Looks like you are using your own custom branch ({ac_br}). "
+            "in that case, Updater is unable to identify "
+            "which branch is to be merged. "
+            "please checkout to any official branch`"
+        )
+        repo.__del__()
         return
-    temp_upstream_remote.fetch(active_branch_name)
-    repo.git.reset("--hard", "FETCH_HEAD")
 
-    if Var.HEROKU_API_KEY is not None:
-        import heroku3
+    try:
+        repo.create_remote("upstream", off_repo)
+    except BaseException:
+        pass
 
-        heroku = heroku3.from_key(HEROKU_API_KEY)
-        heroku_applications = heroku.apps()
-        if len(heroku_applications) >= 1:
-            if HEROKU_APP_NAME is not None:
-                heroku_app = None
-                for i in heroku_applications:
-                    if i.name == HEROKU_APP_NAME:
-                        heroku_app = i
-                if heroku_app is None:
-                    await message.edit(
-                        "Invalid APP Name. Please set the name of your bot in heroku in the var `HEROKU_APP_NAME`"
-                    )
-                    return
-                heroku_git_url = heroku_app.git_url.replace(
-                    "https://", "https://api:" + Var.HEROKU_API_KEY + "@"
-                )
-                if "heroku" in repo.remotes:
-                    remote = repo.remote("heroku")
-                    remote.set_url(heroku_git_url)
-                else:
-                    remote = repo.create_remote("heroku", heroku_git_url)
-                asyncio.get_event_loop().create_task(
-                    deploy_start(tgbot, message, HEROKU_GIT_REF_SPEC, remote)
-                )
+    ups_rem = repo.remote("upstream")
+    ups_rem.fetch(ac_br)
 
-            else:
-                await message.edit(
-                    "Please create the var `HEROKU_APP_NAME` as the key and the name of your bot in heroku as your value."
-                )
-                return
+    changelog = await gen_chlog(repo, f"HEAD..upstream/{ac_br}")
+
+    if not changelog and not force_update:
+        await lol.edit("\nYour Mizuki >>  **up-to-date**  \n")
+        repo.__del__()
+        return
+
+    if conf != "now" and not force_update:
+        changelog_str = (
+            f"**New UPDATE available for {ac_br}\n\nCHANGELOG:**\n`{changelog}`"
+        )
+        if len(changelog_str) > 4096:
+            await lol.edit("`Changelog is too big, view the file to see it.`")
+            file = open("output.txt", "w+")
+            file.write(changelog_str)
+            file.close()
+            await update.send_file(
+                ups.chat_id,
+                "output.txt",
+                reply_to=ups.id,
+            )
+            remove("output.txt")
         else:
-            await message.edit(NO_HEROKU_APP_CFGD)
+            await lol.edit(changelog_str)
+        await ups.respond("**Do** `/update now` **to update**")
+        return
+
+    if force_update:
+        await lol.edit("`Force-Syncing to latest main bot code, please wait...`")
     else:
-        await message.edit("No heroku api key found in `HEROKU_API_KEY` var.")
-
-
-def generate_change_log(git_repo, diff_marker):
-    out_put_str = ""
-    d_form = "%d/%m/%y"
-    for repo_change in git_repo.iter_commits(diff_marker):
-        out_put_str += f"•[{repo_change.committed_datetime.strftime(d_form)}]: {repo_change.summary} <{repo_change.author}>\n"
-    return out_put_str
-
-
-async def deploy_start(tgbot, message, refspec, remote):
-    await asyncio.sleep(2)
-    await message.edit("Almost Done...")
-    await message.edit(RESTARTING_APP)
-    await asyncio.sleep(2)
-    await message.edit(
-        "Updating Mizuki...\nPlease wait for 5 minutes, modules are loading after that type `/ping` to check if I am online 👀"
-    )
-    await remote.push(refspec=refspec)
-    await tgbot.disconnect()
-    os.execl(sys.executable, sys.executable, *sys.argv)
+        await lol.edit("`Still Running....`")
+    if conf == "deploy":
+        if HEROKU_API_KEY is not None:
+            heroku = heroku3.from_key(HEROKU_API_KEY)
+            heroku_app = None
+            heroku_applications = heroku.apps()
+            if not HEROKU_APP_NAME:
+                await lol.edit(
+                    "`Please set up the HEROKU_APP_NAME variable to be able to update your bot.`"
+                )
+                repo.__del__()
+                return
+            for app in heroku_applications:
+                if app.name == HEROKU_APP_NAME:
+                    heroku_app = app
+                    break
+            if heroku_app is None:
+                await lol.edit(
+                    f"{txt}\n`Invalid Heroku credentials for updating bot dyno.`"
+                )
+                repo.__del__()
+                return
+            await lol.edit(
+                "`[Updater]\
+                            Your bot is being deployed, please wait for it to complete.\nIt may take upto 5 minutes `"
+            )
+            ups_rem.fetch(ac_br)
+            repo.git.reset("--hard", "FETCH_HEAD")
+            heroku_git_url = heroku_app.git_url.replace(
+                "https://", "https://api:" + HEROKU_API_KEY + "@"
+            )
+            if "heroku" in repo.remotes:
+                remote = repo.remote("heroku")
+                remote.set_url(heroku_git_url)
+            else:
+                remote = repo.create_remote("heroku", heroku_git_url)
+            try:
+                remote.push(refspec="HEAD:refs/heads/main", force=True)
+            except GitCommandError as error:
+                await lol.edit(f"{txt}\n`Here is the error log:\n{error}`")
+                repo.__del__()
+                return
+            await lol.edit("Successfully Updated!\n" "Restarting...")
+    else:
+        try:
+            ups_rem.pull(ac_br)
+        except GitCommandError:
+            repo.git.reset("--hard", "FETCH_HEAD")
+        await updateme_requirements()
+        await lol.edit("`Successfully Updated!\n" "restarting......`")
+        args = [sys.executable, "-m", "DaisyX"]
+        execle(sys.executable, *args, environ)
+        return
