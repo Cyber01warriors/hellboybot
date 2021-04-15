@@ -40,22 +40,11 @@ async def send_to_transfersh_async(file):
                 download_link = await response.text()
 
     print(
-        "Link to download file(will be saved till {}):\n{}".format(
+        "Link to download file (will be saved till {}):\n{}".format(
             final_date, download_link
         )
     )
     return download_link, final_date, size_of_file
-
-
-async def send_to_tmp_async(file):
-    url = "https://tmp.ninja/api.php?d=upload-tool"
-
-    with open(file, "rb") as f:
-        async with aiohttp.ClientSession() as session:
-            async with session.post(url, data={"file": f}) as response:
-                download_link = await response.text()
-
-    return download_link
 
 
 @bot.on(events.NewMessage(pattern="/transfersh"))
@@ -83,7 +72,7 @@ async def tsh(event):
 
             str(time.time() - start)
             await orta.edit(
-                f"File Successfully Uploaded to TransferSh.\n\nLink 👉 {download_link}\nExpired Date 👉 {final_date}\n\nUploaded by @TheMizukiBot 👸"
+                f"File Successfully Uploaded to TransferSh.\n\nLink 👉 {download_link}\nExpired Date 👉 {final_date}\n\nUploaded by @TheMizukiBot"
             )
         except Exception as e:
             traceback.print_exc()
@@ -93,42 +82,7 @@ async def tsh(event):
     raise events.StopPropagation
 
 
-@bot.on(events.NewMessage(pattern="/tmpninja"))
-async def tmp(event):
-    if event.reply_to_msg_id:
-        start = time.time()
-        url = await event.get_reply_message()
-        ilk = await event.respond("Downloading...")
-        try:
-            file_path = await url.download_media(
-                progress_callback=lambda d, t: asyncio.get_event_loop().create_task(
-                    progress(d, t, ilk, start, "Downloading...")
-                )
-            )
-        except Exception as e:
-            traceback.print_exc()
-            print(e)
-            await event.respond(f"Downloading Failed\n\n**Error:** {e}")
-
-        await ilk.delete()
-
-        try:
-            orta = await event.respond("Uploading to TmpNinja...")
-            download_link = await send_to_tmp_async(file_path)
-
-            str(time.time() - start)
-            await orta.edit(
-                f"File Successfully Uploaded to TmpNinja.\n\nLink 👉 {download_link}\n\nUploaded by @TheMizukiBot 👸"
-            )
-        except Exception as e:
-            traceback.print_exc()
-            print(e)
-            await event.respond(f"Uploading Failed\n\n**Error:** {e}")
-
-    raise events.StopPropagation
-
-
-@bot.on(events.NewMessage(pattern="/up"))
+@bot.on(events.NewMessage(pattern="/upload"))
 async def up(event):
     if event.reply_to_msg_id:
         start = time.time()
