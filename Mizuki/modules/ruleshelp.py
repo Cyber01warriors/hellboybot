@@ -6,4 +6,4 @@ __help__ = """
  • `/clearrules`*:* clear the rules for this chat.
 """
 
-__mod_name__ = "Rules 📛"
+__mod_name__ = "Rules"
