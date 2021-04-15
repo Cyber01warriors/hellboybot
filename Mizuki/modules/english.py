@@ -1,17 +1,11 @@
-from Mizuki import telethn as tbot
 import json
+
 import requests
-from Mizuki.events import register
-from telethon import *
-from telethon.tl import functions
-import os
-import urllib.request
-from typing import List
-from typing import Optional
 from PyDictionary import PyDictionary
-from telethon.tl import types
+from telethon import *
 from telethon.tl.types import *
 
+from Mizuki.events import register
 
 API_KEY = "6ae0c3a0-afdc-4532-a810-82ded0054236"
 URL = "http://services.gingersoftware.com/Ginger/correct/json/GingerTheText"
@@ -81,7 +75,6 @@ async def _(event):
     await event.reply(got)
 
 
-
 __help__ = """
 *Mizuki can help you with English*
 
@@ -92,4 +85,4 @@ __help__ = """
 • `/spell`*:* while replying to a message, will reply with a grammar corrected version.
 """
 
-__mod_name__= "English"
+__mod_name__ = "English"
