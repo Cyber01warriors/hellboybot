@@ -18,4 +18,4 @@ __help__ = """
 *𝐕𝐢𝐫𝐮𝐬 𝐒𝐜𝐚𝐧*
  ⦁ `/scanit`*:* Scan a file for virus (MAX SIZE = 3MB)"""
 
-__mod_name__ = "Exclusive #⃣"
+__mod_name__ = "Exclusive"
