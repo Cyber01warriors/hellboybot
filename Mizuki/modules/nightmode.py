@@ -77,11 +77,7 @@ async def profanity(event):
             await event.reply("Only admins can execute this command!")
             return
         else:
-            if not await can_change_info(message):
-                await event.reply(
-                    "You are missing the following rights to use this command > Can Changeinfo."
-                )
-                return
+            return
     if not input:
         if is_nightmode_indb(str(event.chat_id)):
             await event.reply("Currently Night Mode is Enabled for this Chat.")
