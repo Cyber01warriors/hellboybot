@@ -75,7 +75,6 @@ async def profanity(event):
     if not event.sender_id == OWNER_ID:
         if not await is_register_admin(event.input_chat, event.sender_id):
             await event.reply("Only admins can execute this command!")
-        else:
             return
     if not input:
         if is_nightmode_indb(str(event.chat_id)):
