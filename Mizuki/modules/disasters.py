@@ -540,7 +540,7 @@ Group admins/group owners do not need these commands.
  ╠ `/dragons`*:* Lists all Dragon disasters
  ╠ `/demons`*:* Lists all Demon disasters
  ╠ `/tigers`*:* Lists all Tigers disasters
- ╠ `/wolves`*:* Lists all Wolf disasters
+ ╚ `/wolves`*:* Lists all Wolf disasters
 
  ╔ *Ping:*
  ╠ `/ping`*:* gets ping time of bot to telegram server
@@ -587,9 +587,6 @@ Group admins/group owners do not need these commands.
  ╠ `/restart`*:* Restarts the bots service
  ╚ `/update`*:* Pulls the repo update and then restarts the bots service
 
- ╔ *Chatbot:* 
- ╚ `/listaichats`*:* Lists the chats the chatmode is enabled in
- 
  ╔ *Debugging and Shell:* 
  ╠ `/debug <on/off>`*:* Logs commands to updates.txt
  ╠ `/logs`*:* Run this in support group to get logs in pm
