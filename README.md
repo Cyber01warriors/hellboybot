@@ -25,6 +25,6 @@
 
 > All the credits goes to original repo owners, here just only collection of modified plugins of them
 
-### Join Mizuki updates [channel](https://t.me/MizukiUpdates) and support [group](https://t.me/MizukiSupport)
+### Join Mizuki updates [channel](https://t.me/MizukiUpdatesOfficial) and support [group](https://t.me/MizukiSupportOfficial)
 
 
