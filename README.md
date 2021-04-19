@@ -22,3 +22,7 @@
 - [SaitamaRobot](https://github.com/AnimeKaizoku/SaitamaRobot)
 - [WilliamButcherBot](https://github.com/thehamkercat/WilliamButcherBot)
 - [AnyDLBot](https://github.com/SpEcHiDe/AnyDLBot)
+
+### Join Mizuki updates [channel](https://t.me/MizukiUpdates) and support [group](https://t.me/MizukiSupport)
+
+
