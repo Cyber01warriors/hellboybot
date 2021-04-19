@@ -1,11 +1,13 @@
 # Ported from https://github.com/thehamkercat/WilliamButcherBot
 
-from pyrogram import filters
-from Mizuki import OWNER_ID as SUDOERS
-from Mizuki import pbot as app
-from Mizuki.utils.errors import capture_err
-from Mizuki.utils.admin import list_admins, member_permissions
 import os
+
+from pyrogram import filters
+
+from Mizuki import pbot as app
+from Mizuki.utils.admin import member_permissions
+from Mizuki.utils.errors import capture_err
+
 
 @app.on_message(filters.command("set_chat_title") & ~filters.private)
 @capture_err
@@ -21,9 +23,11 @@ async def set_chat_title(_, message):
             await message.reply_text("**Usage:**\n/set_chat_title NEW NAME")
             return
         old_title = message.chat.title
-        new_title = message.text.split(None ,1)[1]
+        new_title = message.text.split(None, 1)[1]
         await message.chat.set_title(new_title)
-        await message.reply_text(f"Successfully Changed Group Title From {old_title} To {new_title}")
+        await message.reply_text(
+            f"Successfully Changed Group Title From {old_title} To {new_title}"
+        )
     except Exception as e:
         print(e)
         await message.reply_text(e)
@@ -41,11 +45,15 @@ async def set_user_title(_, message):
             await message.reply_text("You Don't Have Enough Permissions.")
             return
         if len(message.command) < 2:
-            await message.reply_text("**Usage:**\n/set_user_title NEW ADMINISTRATOR TITLE")
+            await message.reply_text(
+                "**Usage:**\n/set_user_title NEW ADMINISTRATOR TITLE"
+            )
             return
-        title = message.text.split(None ,1)[1]
+        title = message.text.split(None, 1)[1]
         await app.set_administrator_title(chat_id, from_user.id, title)
-        await message.reply_text(f"Successfully Changed {from_user.mention}'s Admin Title To {title}")
+        await message.reply_text(
+            f"Successfully Changed {from_user.mention}'s Admin Title To {title}"
+        )
     except Exception as e:
         print(e)
         await message.reply_text(e)
