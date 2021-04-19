@@ -11,7 +11,7 @@
 
 ### Can be found on telegram as [@MizukiDevRobot](https://t.me/MizukiDevRobot)
 
-#### Don't forget to star the repo
+### Don't forget to star the repo
 
 ### Devs
 
