@@ -1,10 +1,10 @@
 import os
-
-from pyrogram import filters
-
+from pyrogram import Client, filters
+from Mizuki import OWNER_ID as SUDOERS
 from Mizuki import pbot as app
 from Mizuki.utils.errors import capture_err
-
+from pyrogram.types import ChatPermissions
+import asyncio
 
 async def list_admins(group_id):
     list_of_admins = []
