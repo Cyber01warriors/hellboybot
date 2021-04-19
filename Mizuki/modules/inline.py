@@ -23,13 +23,7 @@ async def inline_query_handler(client, query):
                 cache_time=10
             )
             return
-        elif text.split()[0] == "alive":
-            answerss = await alive_function(answers)
-            await client.answer_inline_query(
-                query.id,
-                results=answerss,
-                cache_time=10
-            )
+
         elif text.split()[0] == "tr":
             if len(text.split()) < 3:
                 await client.answer_inline_query(
@@ -205,24 +199,6 @@ async def inline_query_handler(client, query):
                 results=answerss
             )
 
-        elif text.split()[0] == "eval":
-            if len(text.split()) < 2:
-                await client.answer_inline_query(
-                    query.id,
-                    results=answers,
-                    switch_pm_text='Excute Python Code.',
-                    switch_pm_parameter='inline',
-                )
-                return
-            user_id = query.from_user.id
-            tex = text.split(None, 1)[1].strip()
-            answerss = await eval_func(answers, tex, user_id)
-            await client.answer_inline_query(
-                query.id,
-                results=answerss,
-                cache_time=2
-            )
-
         elif text.split()[0] == "gh_user":
             if len(text.split()) < 2:
                 await client.answer_inline_query(
@@ -251,24 +227,6 @@ async def inline_query_handler(client, query):
                 return
             tex = text.split(None, 1)[1].strip()
             answerss = await github_repo_func(answers, tex)
-            await client.answer_inline_query(
-                query.id,
-                results=answerss,
-                cache_time=2
-            )
-
-        elif text.split()[0] == "search":
-            if len(text.split()) < 2:
-                await client.answer_inline_query(
-                    query.id,
-                    results=answers,
-                    switch_pm_text='Global Message Search.',
-                    switch_pm_parameter='inline',
-                )
-                return
-            user_id = query.from_user.id
-            tex = text.split(None, 1)[1].strip()
-            answerss = await tg_search_func(answers, tex, user_id)
             await client.answer_inline_query(
                 query.id,
                 results=answerss,
