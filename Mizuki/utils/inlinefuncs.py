@@ -19,12 +19,14 @@ from Mizuki.utils.fetch import fetch
 from Mizuki.utils.formatter import convert_seconds_to_minutes as time_convert
 from Mizuki.utils.pastebin import paste
 from Mizuki import (
-    pbot as app, BOT_USERNAME, EVENT_LOGS as LOG_GROUP_ID
+    pbot as app, EVENT_LOGS as LOG_GROUP_ID
 )
 from Mizuki.core.types.InlineQueryResult import InlineQueryResultAudio, InlineQueryResultCachedAudio
 from Python_ARQ import ARQ
 ARQ_API = "http://thearq.tech"
 arq = ARQ(ARQ_API)
+
+BOT_USERNAME = "MizukiDevRobot"
 
 async def inline_help_func(__HELP__):
     buttons = InlineKeyboard(row_width=2)
