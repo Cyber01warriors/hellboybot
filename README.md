@@ -23,6 +23,8 @@
 - [WilliamButcherBot](https://github.com/thehamkercat/WilliamButcherBot)
 - [AnyDLBot](https://github.com/SpEcHiDe/AnyDLBot)
 
+> All the credits goes to original repo owners, here just only a collection of modified plugins of them
+
 ### Join Mizuki updates [channel](https://t.me/MizukiUpdates) and support [group](https://t.me/MizukiSupport)
 
 
