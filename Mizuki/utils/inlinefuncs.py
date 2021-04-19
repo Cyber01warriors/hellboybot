@@ -19,16 +19,14 @@ from Mizuki.utils.fetch import fetch
 from Mizuki.utils.formatter import convert_seconds_to_minutes as time_convert
 from Mizuki.utils.pastebin import paste
 from Mizuki import (
-    pbot as app, EVENT_LOGS as LOG_GROUP_ID
+    pbot as app, BOT_USERNAME, EVENT_LOGS as LOG_GROUP_ID
 )
 from Mizuki.core.types.InlineQueryResult import InlineQueryResultAudio, InlineQueryResultCachedAudio
 from Python_ARQ import ARQ
 ARQ_API = "http://thearq.tech"
 arq = ARQ(ARQ_API)
 
-BOT_USERNAME = "MizukiDevRobot"
-
-async def inline_help_func(__HELP__):
+async def inline_help_func(__help__):
     buttons = InlineKeyboard(row_width=2)
     buttons.add(
         InlineKeyboardButton(
@@ -44,8 +42,8 @@ async def inline_help_func(__HELP__):
         InlineQueryResultArticle(
             title="Inline Commands",
             description="Help Related To Inline Usage.",
-            input_message_content=InputTextMessageContent(__HELP__),
-            thumb_url="https://hamker.me/cy00x5x.png",
+            input_message_content=InputTextMessageContent(__help__),
+            thumb_url="https://telegra.ph/file/a39e5688b6764c6c29809.jpg",
             reply_markup=buttons
         )
     ]
