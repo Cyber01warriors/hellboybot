@@ -541,7 +541,6 @@ Group admins/group owners do not need these commands.
  ╠ `/demons`*:* Lists all Demon disasters
  ╠ `/tigers`*:* Lists all Tigers disasters
  ╠ `/wolves`*:* Lists all Wolf disasters
- ╚ `/renters`*:* Lists all Rental Association members
 
  ╔ *Ping:*
  ╠ `/ping`*:* gets ping time of bot to telegram server
