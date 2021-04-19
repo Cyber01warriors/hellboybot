@@ -277,16 +277,16 @@ __help__ = """
 `@MizukiDevRobot [command] [query]`
 
 >> Commands <<
-- tr [LANG] [QUERY] - Translate Text.
-- ud [QUERY] - Urban Dictionary Query.
-- google [QUERY] - Google Search.
-- webss [URL] - Take Screenshot Of A Website.
-- bitly [URL] - Shorten A Link.
-- wall [QUERY] - Find Wallpapers.
-- saavn [SONG_NAME] - Get Songs From Saavn.
-- deezer [SONG_NAME] - Get Songs From Deezer.
-- yt [Query] - Youtube Search.
-- torrent [QUERY] - Torrent Search.
-- lyrics [QUERY] - Lyrics Search.
-- gh_user [USERNAME] - Search A Github User.
-- gh_repo [USERNAME/REPO] - Search A Github Repo."""
+- `tr` [LANG] [QUERY] - Translate Text.
+- `ud` [QUERY] - Urban Dictionary Query.
+- `google` [QUERY] - Google Search.
+- `webss` [URL] - Take Screenshot Of A Website.
+- `bitly` [URL] - Shorten A Link.
+- `wall` [QUERY] - Find Wallpapers.
+- `saavn` [SONG_NAME] - Get Songs From Saavn.
+- `deezer` [SONG_NAME] - Get Songs From Deezer.
+- `yt` [Query] - Youtube Search.
+- `torrent` [QUERY] - Torrent Search.
+- `lyrics` [QUERY] - Lyrics Search.
+- `gh_user` [USERNAME] - Search A Github User.
+- `gh_repo` [USERNAME/REPO] - Search A Github Repo."""
