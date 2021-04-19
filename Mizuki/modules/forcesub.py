@@ -182,7 +182,7 @@ __help__ = """
 • When enabled I will mute unsubscribed members and show them a unmute button. When they pressed the button I will unmute them
 
 *Setup:*
-× First of all add me in the group as admin with ban users permission and in the channel as admin.
+❕First of all add me in the group as admin with ban users permission and in the channel as admin.
 Note: Only creator of the group can setup me and I will not allow force subscribe again if not done so.
  
 *Commmands:*
