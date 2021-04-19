@@ -1,6 +1,6 @@
-## Updates going on 😏
+## Mizuki - A powerful telegram group manager bot with tons of functions
 
-## Deploy to heroku 💤
+### Deploy to heroku 💤
 
 - Fork this repo, create heroku new app and connect forked repo
 - Then get all vars from [here](https://github.com/ImJanindu/Mizuki/blob/main/vars)
@@ -11,8 +11,8 @@
 
 ### Can be found on telegram as [@MizukiDevRobot](https://t.me/MizukiDevRobot)
 
-### Don't forget to star the repo
+#### Don't forget to star the repo
 
-## Devs
+### Devs
 
 - [Janindu](https://t.me/ImJanindu)
