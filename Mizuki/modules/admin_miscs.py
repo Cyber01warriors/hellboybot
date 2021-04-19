@@ -1,3 +1,5 @@
+# Ported from https://github.com/thehamkercat/WilliamButcherBot
+
 import os
 from pyrogram import filters
 from pyrogram.types import ChatPermissions
@@ -100,7 +102,7 @@ async def set_chat_photo(_, message):
             return
         photo = await message.reply_to_message.download()
         await message.chat.set_photo(photo)
-        await message.reply_text(f"Successfully Changed Group Photo")
+        await message.reply_text("Successfully Changed Group Photo.")
         os.remove(photo)
     except Exception as e:
         print(e)
