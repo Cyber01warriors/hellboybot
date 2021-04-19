@@ -42,7 +42,7 @@ async def inline_help_func(__help__):
         InlineQueryResultArticle(
             title="Inline Commands",
             description="Help Related To Inline Usage.",
-            input_message_content=InputTextMessageContent(__HELP__),
+            input_message_content=InputTextMessageContent(__help__),
             thumb_url="https://telegra.ph/file/a39e5688b6764c6c29809.jpg",
             reply_markup=buttons
         )
