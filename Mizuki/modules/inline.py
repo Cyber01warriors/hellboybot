@@ -7,7 +7,7 @@ from pyrogram.errors.exceptions.bad_request_400 import QueryIdInvalid
 
 @app.on_message(filters.command("inline"))
 async def inline_help(_, message):
-    await app.send_message(message.chat.id, text=__help__)
+    await app.send_message(message.chat.id, text=__HELP__)
 
 
 @app.on_inline_query()
@@ -16,7 +16,7 @@ async def inline_query_handler(client, query):
         text = query.query.lower()
         answers = []
         if text.strip() == '':
-            answerss = await inline_help_func(__help__)
+            answerss = await inline_help_func(__HELP__)
             await client.answer_inline_query(
                 query.id,
                 results=answerss,
@@ -246,7 +246,7 @@ async def inline_query_handler(client, query):
         return
 
 __mod_name__ = "Inline"
-__help__ = """
+__HELP__ = """
 `- alive - Check Bot's Stats.
 - tr [LANG] [QUERY] - Translate Text.
 - ud [QUERY] - Urban Dictionary Query.
