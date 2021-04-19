@@ -26,10 +26,10 @@
 ### Credits
 
 - [SaitamaRobot](https://github.com/AnimeKaizoku/SaitamaRobot)
+- [MashaRobot](https://github.com/Mr-Dark-Prince/MashaRoBot)
 - [WilliamButcherBot](https://github.com/thehamkercat/WilliamButcherBot)
-- [AnyDLBot](https://github.com/SpEcHiDe/AnyDLBot)
 
-All the credits goes to original repo owners, here just only collection of modified plugins of them
+All the credits goes to original code owners, here just only collection of modified plugins of them
 
 ### Join Mizuki updates [channel](https://t.me/MizukiUpdatesOfficial) and support [group](https://t.me/MizukiSupportOfficial)
 
