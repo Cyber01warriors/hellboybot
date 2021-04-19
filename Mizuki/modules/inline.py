@@ -3,12 +3,33 @@
 from Mizuki import pbot as app
 from Mizuki import pbot
 from Mizuki.utils.inlinefuncs import *
-from pyrogram import filters
+from pyrogram import filters, Client
+from pyrogram.types import Message
 from pyrogram.errors.exceptions.bad_request_400 import QueryIdInvalid
 
-@app.on_message(filters.command("inline"))
-async def inline_help(_, message):
-    await message.reply(__help__)
+@pbot.on_message(filters.command("inline"))
+async def inline_help(client: Client, message: Message):
+    await message.reply_text(">> Inline Bot Service Of @MizukiDevRobot <<
+
+`I'm more efficient when added as group admin. By the way these commands can be used by anyone in a group via inline.`
+
+Syntax:
+`@MizukiDevRobot [command] [query]`
+
+Commands:
+- tr [LANG] [QUERY] - Translate Text.
+- ud [QUERY] - Urban Dictionary Query.
+- google [QUERY] - Google Search.
+- webss [URL] - Take Screenshot Of A Website.
+- bitly [URL] - Shorten A Link.
+- wall [QUERY] - Find Wallpapers.
+- saavn [SONG_NAME] - Get Songs From Saavn.
+- deezer [SONG_NAME] - Get Songs From Deezer.
+- yt [Query] - Youtube Search.
+- torrent [QUERY] - Torrent Search.
+- lyrics [QUERY] - Lyrics Search.
+- gh_user [USERNAME] - Search A Github User.
+- gh_repo [USERNAME/REPO] - Search A Github Repo.")
 
 
 @app.on_inline_query()
