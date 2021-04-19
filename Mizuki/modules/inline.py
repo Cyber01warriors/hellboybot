@@ -242,12 +242,12 @@ async def inline_query_handler(client, query):
             )
 
     except (IndexError, TypeError, KeyError, ValueError, QueryIdInvalid) as e:
-        print(e + "InLine")
+        print(e)
         return
 
 __mod_name__ = "Inline"
 __help__ = """
-- alive - Check Bot's Stats.
+`- alive - Check Bot's Stats.
 - tr [LANG] [QUERY] - Translate Text.
 - ud [QUERY] - Urban Dictionary Query.
 - google [QUERY] - Google Search.
@@ -262,5 +262,4 @@ __help__ = """
 - eval [CODE] - Execute Python Code.
 - gh_user [USERNAME] - Search A Github User.
 - gh_repo [USERNAME/REPO] - Search A Github Repo.
-- search [QUERY] - Search For A Message Globally.
-"""
+- search [QUERY] - Search For A Message Globally.`"""
