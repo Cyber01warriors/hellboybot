@@ -84,8 +84,6 @@ __help__ = """
 *Available commands:*
 *Markdown:*
  • `/markdownhelp`*:* quick summary of how markdown works in telegram - can only be called in private chats
-*Paste:*
- • `/paste`*:* saves replied content to `nekobin.com` and replies with a url
 *React:*
  • `/react`*:* reacts with a random reaction
 *Message:*
