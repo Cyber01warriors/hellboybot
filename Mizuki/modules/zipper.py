@@ -47,7 +47,7 @@ async def _(event):
             )
             return
 
-    mone = await event.reply("⏳️ Please wait...")
+    mone = await event.reply("Processing...")
     if not os.path.isdir(TEMP_DOWNLOAD_DIRECTORY):
         os.makedirs(TEMP_DOWNLOAD_DIRECTORY)
     if event.reply_to_msg_id:
@@ -63,6 +63,7 @@ async def _(event):
     zipfile.ZipFile(directory_name + ".zip", "w", zipfile.ZIP_DEFLATED).write(
         directory_name
     )
+    await mone.edit("Zipping...")
     await event.client.send_file(
         event.chat_id,
         directory_name + ".zip",
@@ -70,6 +71,7 @@ async def _(event):
         allow_cache=False,
         reply_to=event.message.id,
     )
+    await mone.delete()
 
 
 def zipdir(path, ziph):
@@ -149,7 +151,7 @@ async def _(event):
         with zipfile.ZipFile(downloaded_file_name, "r") as zip_ref:
             zip_ref.extractall(extracted)
         filename = sorted(get_lst_of_files(extracted, []))
-        await event.reply("Unzipping now 😌")
+        await mone.edit("Unzipping...")
         for single_file in filename:
             if os.path.exists(single_file):
                 caption_rts = os.path.basename(single_file)
@@ -196,6 +198,7 @@ async def _(event):
                     )
                     continue
                 os.remove(single_file)
+        await mone.delete()
         os.remove(downloaded_file_name)
 
 
