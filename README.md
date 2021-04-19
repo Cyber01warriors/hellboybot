@@ -16,3 +16,9 @@
 ### Devs
 
 - [Janindu](https://t.me/ImJanindu)
+
+### Credits
+
+- [SaitamaRobot](https://github.com/AnimeKaizoku/SaitamaRobot)
+- [WilliamButcherBot](https://github.com/thehamkercat/WilliamButcherBot)
+- [AnyDLBot](https://github.com/SpEcHiDe/AnyDLBot)
