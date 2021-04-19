@@ -54,9 +54,9 @@ async def download_song(v_url):
         else:
             return
     url = v_url.pattern_match.group(1)
-    rkp = await v_url.reply("**Processing...**")
+    rkp = await v_url.reply("Processing...")
     if not url:
-        await rkp.edit("**No!**\nUsage`/song <song name>`")
+        await rkp.edit("**What's the song you want?**\nUsage`/song <song name>`")
     search = SearchVideos(url, offset=1, mode="json", max_results=1)
     test = search.result()
     p = json.loads(test)
@@ -66,7 +66,7 @@ async def download_song(v_url):
     except BaseException:
         return await rkp.edit("`Failed to find that song`")
     type = "audio"
-    await rkp.edit("**Preparing to download by @Infinity_BOTs**")
+    await rkp.edit("Preparing to download...")
     if type == "audio":
         opts = {
             "format": "bestaudio",
@@ -89,7 +89,7 @@ async def download_song(v_url):
         }
         song = True
     try:
-        await rkp.edit("**Searching song, please wait 😁**")
+        await rkp.edit("Downloading...")
         with YoutubeDL(opts) as rip:
             rip_data = rip.extract_info(url)
     except DownloadError as DE:
@@ -123,7 +123,7 @@ async def download_song(v_url):
         return
     time.time()
     if song:
-        await rkp.edit(f"**Sending the song...**")
+        await rkp.edit("Uploading...")
 
         lel = await v_url.client.send_file(
             v_url.chat_id,
@@ -139,6 +139,7 @@ async def download_song(v_url):
                 )
             ],
         )
+        rkp.delete()
         os.system("rm -rf *.mp3")
         os.system("rm -rf *.webp")
 
