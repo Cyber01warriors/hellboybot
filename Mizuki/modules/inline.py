@@ -9,7 +9,7 @@ from pyrogram.errors.exceptions.bad_request_400 import QueryIdInvalid
 
 @pbot.on_message(filters.command("inline"))
 async def inline_help(client: Client, message: Message):
-    await message.reply_text(">> Inline Bot Service Of @MizukiDevRobot <<
+    await message.reply_text(""">> Inline Bot Service Of @MizukiDevRobot <<
 
 `I'm more efficient when added as group admin. By the way these commands can be used by anyone in a group via inline.`
 
@@ -29,7 +29,7 @@ Commands:
 - torrent [QUERY] - Torrent Search.
 - lyrics [QUERY] - Lyrics Search.
 - gh_user [USERNAME] - Search A Github User.
-- gh_repo [USERNAME/REPO] - Search A Github Repo.")
+- gh_repo [USERNAME/REPO] - Search A Github Repo.""")
 
 
 @app.on_inline_query()
