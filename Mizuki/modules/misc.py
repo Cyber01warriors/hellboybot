@@ -88,6 +88,8 @@ __help__ = """
  • `/paste`*:* saves replied content to `nekobin.com` and replies with a url
 *React:*
  • `/react`*:* reacts with a random reaction
+*Message:*
+ • `/send <text>`*:* sends the text you given to the group via me
 *Github:*
  • `/git <username>`*:* get details of github profiles
 *Urban Dictonary:*
