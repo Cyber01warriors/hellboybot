@@ -17,7 +17,7 @@ async def inline_query_handler(client, query):
         text = query.query.lower()
         answers = []
         if text.strip() == '':
-            answerss = await inline_help_func(__HELP__)
+            answerss = await inline_help_func(__help__)
             await client.answer_inline_query(
                 query.id,
                 results=answerss,
@@ -247,8 +247,15 @@ async def inline_query_handler(client, query):
         return
 
 __mod_name__ = "Inline"
-__HELP__ = """
-`- alive - Check Bot's Stats.
+__help__ = """
+*Inline Bot Service Of @MizukiDevRobot*
+
+`I'm more efficient when added as group admin. By the way these commands can be used by anyone in a group via inline.`
+
+*Syntax:*
+`@MizukiDevRobot [command] [query]`
+
+*Commands:*
 - tr [LANG] [QUERY] - Translate Text.
 - ud [QUERY] - Urban Dictionary Query.
 - google [QUERY] - Google Search.
@@ -260,7 +267,5 @@ __HELP__ = """
 - yt [Query] - Youtube Search.
 - torrent [QUERY] - Torrent Search.
 - lyrics [QUERY] - Lyrics Search.
-- eval [CODE] - Execute Python Code.
 - gh_user [USERNAME] - Search A Github User.
-- gh_repo [USERNAME/REPO] - Search A Github Repo.
-- search [QUERY] - Search For A Message Globally.`"""
+- gh_repo [USERNAME/REPO] - Search A Github Repo."""
