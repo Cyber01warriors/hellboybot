@@ -25,8 +25,8 @@
 
 ### Credits
 
-- [SaitamaRobot](https://github.com/AnimeKaizoku/SaitamaRobot)
 - [MashaRobot](https://github.com/Mr-Dark-Prince/MashaRoBot)
+- [SaitamaRobot](https://github.com/AnimeKaizoku/SaitamaRobot)
 - [WilliamButcherBot](https://github.com/thehamkercat/WilliamButcherBot)
 
 All the credits goes to original code owners, here just only collection of modified plugins of them
