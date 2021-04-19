@@ -410,7 +410,7 @@ __help__ = """
 - `/poll 12345 | am i cool? | False False False yes no`
 - `/poll 12345 | am i cool? | True@1 False False yes no`
 
-*To stop a poll*
+*To stop a poll:*
 Reply to the poll with `/stoppoll <poll-id>` to stop the poll
 
 *NOTE:*
