@@ -12,12 +12,3 @@ async def memes(client, message):
         ) as resp:
             r = await resp.json()
             await message.reply_photo(r["url"], caption=r["title"])
-
-
-__help__ = """
-*Mizuki gives you memes randomly gained through meme API*
-
-• `/memes`*:* get very interesting and funny memes randomly.
-"""
-
-__mod_name__ = "Memes"
