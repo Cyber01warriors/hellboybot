@@ -30,7 +30,6 @@ CurrencyConverter
 googletrans==3.1.0a0
 jikanpy
 speedtest-cli
-coffeehouse
 regex
 numpy
 bleach
