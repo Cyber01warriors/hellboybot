@@ -8,7 +8,7 @@ from pyrogram.errors.exceptions.bad_request_400 import QueryIdInvalid
 
 @app.on_message(filters.command("inline"))
 async def inline_help(_, message):
-    await pbot.send_message(message.chat.id, text=__HELP__)
+    await message.reply(__help__)
 
 
 @app.on_inline_query()
@@ -248,14 +248,14 @@ async def inline_query_handler(client, query):
 
 __mod_name__ = "Inline"
 __help__ = """
-*Inline Bot Service Of @MizukiDevRobot*
+>> Inline Bot Service Of @MizukiDevRobot <<
 
 `I'm more efficient when added as group admin. By the way these commands can be used by anyone in a group via inline.`
 
-*Syntax:*
+Syntax:
 `@MizukiDevRobot [command] [query]`
 
-*Commands:*
+Commands:
 - tr [LANG] [QUERY] - Translate Text.
 - ud [QUERY] - Urban Dictionary Query.
 - google [QUERY] - Google Search.
