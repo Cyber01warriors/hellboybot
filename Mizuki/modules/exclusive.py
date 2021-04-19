@@ -18,6 +18,9 @@ __help__ = """
 *𝐕𝐢𝐫𝐮𝐬 𝐒𝐜𝐚𝐧*
  ⦁ `/scanit`*:* Scan a file for virus (MAX SIZE = 3MB)
 
+*𝐌𝐞𝐦𝐞𝐬*
+ ⦁ `/memes`*:* get very interesting and funny memes randomly.
+
 *𝐓𝐨𝐫𝐫𝐞𝐧𝐭*
  ⦁ `/torrent <query>`*:* search available torrents for your query.
 """
