@@ -18,7 +18,7 @@ URL | filename | username | password"""
     DEL_ETED_CUSTOM_THUMB_NAIL = "<b>✅ Custom thumbnail cleared succesfully.</b>"
     FF_MPEG_DEL_ETED_CUSTOM_MEDIA = "<b>✅ Media cleared succesfully.</b>"
     SAVED_RECVD_DOC_FILE = "<b>Document Downloaded Successfully ✅</b>"
-    CUSTOM_CAPTION_UL_FILE = "Uploaded by @Infinity_BOTs"
+    CUSTOM_CAPTION_UL_FILE = "@Infinity_BOTs"
     NO_CUSTOM_THUMB_NAIL_FOUND = "<b>No Custom Thumbnail found 🤷‍♂️</b>"
     NO_VOID_FORMAT_FOUND = "<b>Lel\nYouTubeDL</b> said: `{}`"
     USER_ADDED_TO_DB = (
