@@ -53,6 +53,7 @@ async def save_filters(_, message):
 async def get_filterss(_, message):
     _filters = await get_filters_names(message.chat.id)
     if not _filters:
+        await message.reply_text("No text filters in {message.chat.title}\n")
         return
     else:
         msg = f"Text filters in {message.chat.title}\n"
