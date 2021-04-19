@@ -139,7 +139,7 @@ async def download_song(v_url):
                 )
             ],
         )
-        rkp.delete()
+        await rkp.delete()
         os.system("rm -rf *.mp3")
         os.system("rm -rf *.webp")
 
