@@ -32,6 +32,7 @@ from Mizuki import pbot as bot
 from Mizuki.utils.chatbase import TRChatBase
 from Mizuki.utils.display_progress import progress_for_pyrogram
 
+
 @bot.on_message(pyrogram.filters.command(["rename"]))
 async def rename_doc(bot, update):
 
