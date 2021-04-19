@@ -1,4 +1,4 @@
-## Mizuki - A powerful telegram group manager bot with tons of functions ❤
+## Mizuki - A powerful telegram group manager bot with tons of functions which helpful for you ❤
 
 <p align="center">
   <img src="https://telegra.ph/file/8dea6246ac55303be89e1.jpg">
