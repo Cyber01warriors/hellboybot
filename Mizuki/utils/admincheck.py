@@ -1,7 +1,7 @@
 from typing import Callable, Dict, List, Union
 
 from pyrogram import Client
-from pyrogram.types import Chat, User
+from pyrogram.types import Chat, User, Message
 
 from Mizuki import OWNER_ID
 
