@@ -4,6 +4,7 @@ lxml
 motor
 apscheduler
 cfscrape
+Pillow
 gitpython==3.1.11
 beautifulsoup4
 git+git://github.com/google/chatbase-python.git
