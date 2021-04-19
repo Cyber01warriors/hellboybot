@@ -464,6 +464,8 @@ def adminlist(update, context):
 
 
 __help__ = """
+Here are some commands helpful for admins to manage groups
+
  • `/admins`*:* list of admins in the chat
 
 *Admins only:*
@@ -474,6 +476,11 @@ __help__ = """
  • `/demote`*:* demotes the user replied to
  • `/title <title here>`*:* sets a custom title for an admin that the bot promoted
  • `/admincache`*:* force refresh the admins list
+
+*Admin Miscs:*
+ • `/set_chat_title`*:* change the name of a group or channel
+ • `/set_chat_photo`*:* change the PFP of a group or channel
+ • `/set_user_title`*:* change the administrator title of an admin
 """
 
 ADMINLIST_HANDLER = DisableAbleCommandHandler("admins", adminlist)
