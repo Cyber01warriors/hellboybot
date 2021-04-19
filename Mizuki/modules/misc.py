@@ -81,24 +81,33 @@ def markdown_help(update: Update, context: CallbackContext):
 
 
 __help__ = """
-*Available commands:*
+*An "odds and ends" module for small, simple commands which don't really fit anywhere.*
+
 *Markdown:*
  • `/markdownhelp`*:* quick summary of how markdown works in telegram - can only be called in private chats
+
 *React:*
  • `/react`*:* reacts with a random reaction
+
 *Message:*
  • `/send <text>`*:* sends the text you given to the group via me
+
 *Github:*
  • `/git <username>`*:* get details of github profiles
+
 *Urban Dictonary:*
  • `/ud <word>`*:* type the word or expression you want to search use
+
 *Wikipedia:*
  • `/wiki <query>`*:* wikipedia your query
+
 *Wallpapers:*
  • `/wall <query>`*:* get a wallpaper from wall.alphacoders.com
+
 *Covid Stats:*
  • `/covid`*:* get global totals of covid stats
  • `/covid <country>`*:* get covid stats of country you want
+
 *Currency converter:* 
  • `/cash`*:* currency converter
 Example:
