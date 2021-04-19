@@ -29,9 +29,10 @@ from hachoir.parser import createParser
 from PIL import Image
 
 from Mizuki import pbot as bot
+from Mizuki.utils.admincheck import authorized_users_only
 from Mizuki.utils.chatbase import TRChatBase
 from Mizuki.utils.display_progress import progress_for_pyrogram
-from Mizuki.utils.admincheck import authorized_users_only
+
 
 @authorized_users_only
 @bot.on_message(pyrogram.filters.command(["rename"]))
