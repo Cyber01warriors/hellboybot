@@ -26,7 +26,7 @@ from Python_ARQ import ARQ
 ARQ_API = "http://thearq.tech"
 arq = ARQ(ARQ_API)
 
-async def inline_help_func(__HELP__):
+async def inline_help_func(__help__):
     buttons = InlineKeyboard(row_width=2)
     buttons.add(
         InlineKeyboardButton(
@@ -42,12 +42,12 @@ async def inline_help_func(__HELP__):
         InlineQueryResultArticle(
             title="Inline Commands",
             description="Help Related To Inline Usage.",
-            input_message_content=InputTextMessageContent(__HELP__),
+            input_message_content=InputTextMessageContent(__help__),
             thumb_url="https://telegra.ph/file/a39e5688b6764c6c29809.jpg",
             reply_markup=buttons
         )
     ]
-
+    return answerss
 
 async def translate_func(answers, lang, tex):
     i = Translator().translate(tex, dest=lang)
