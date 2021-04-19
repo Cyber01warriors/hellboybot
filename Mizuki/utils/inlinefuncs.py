@@ -30,8 +30,8 @@ async def inline_help_func(__help__):
     buttons = InlineKeyboard(row_width=2)
     buttons.add(
         InlineKeyboardButton(
-            'Get More Help.',
-            url=f"t.me/{BOT_USERNAME}?start=start"
+            'Get More Help?',
+            url=f"t.me/{BOT_USERNAME}?start=help"
         ),
         InlineKeyboardButton(
             "Go Inline!",
