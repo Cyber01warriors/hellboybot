@@ -78,7 +78,7 @@ async def _(event):
 __help__ = """
 *Mizuki can help you with English*
 
-*Commands*
+*Commands:*
 • `/synonyms <word>`*:* find the synonyms of a word.
 • `/antonyms <word>`*:* find the antonyms of a word.
 • `/define <text>`*:* type the word or expression you want to search.
