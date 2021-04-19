@@ -1,7 +1,7 @@
-from typing import List
+from typing import Callable, Dict, List, Union
+
 from pyrogram.types import Chat, User
-from typing import List, Dict, Union
-from typing import Callable
+
 from Mizuki import OWNER_ID
 
 admins: Dict[int, List[int]] = {}
@@ -16,6 +16,7 @@ def get(chat_id: int) -> Union[List[int], bool]:
         return admins[chat_id]
 
     return False
+
 
 async def get_administrators(chat: Chat) -> List[User]:
     get = admins.get(chat.id)
@@ -32,6 +33,7 @@ async def get_administrators(chat: Chat) -> List[User]:
 
         admins.set(chat.id, to_set)
         return await get_administrators(chat)
+
 
 def authorized_users_only(func: Callable) -> Callable:
     async def decorator(client: Client, message: Message):
