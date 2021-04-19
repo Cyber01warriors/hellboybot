@@ -33,7 +33,7 @@ Send /me to know current plan details"""
     REPLY_TO_DOC_FOR_C2V = (
         "<b>Reply to a Telegram media to convert that video to streamable 😌</b>"
     )
-    REPLY_TO_DOC_FOR_SCSS = "<b>Reply to a Telegram media to get screenshots 👻</b>"
+    REPLY_TO_DOC_FOR_SCSS = "<b>Reply to a Telegram media to get screenshots 😉</b>"
     REPLY_TO_DOC_FOR_RENAME_FILE = "<b>Reply to a Telegram media with new file name</b> \n<i>eg: /rename NewFile.mp4</i>"
     AFTER_GET_DL_LINK = "<b>Direct Link Generated! \n\nLink 👉 {} \n\nThis link valid for {} days.\n\nBy @Infinity_BOTs</b>"
     FF_MPEG_RO_BOT_RE_SURRECT_ED = """<b>Syntax: /trim HH:MM:SS [HH:MM:SS]</b>"""
@@ -51,7 +51,7 @@ Send /me to know current plan details"""
     )
     ERR_ONLY_TWO_MEDIA_IN_ALBUM = "<b>Media Album should contain only two photos. Please re-send the media album, and then try again, or send only two photos in an album.</b>"
     INVALID_UPLOAD_BOT_URL_FORMAT = "<b>URL format is incorrect. make sure your url starts with either http:// or https://. You can set custom file name using the format link | file_name.extension</b>"
-    ABUSIVE_USERS = "<b>Admins blocked you. 😂 Contact @ImJanindu</b>"
+    ABUSIVE_USERS = "<b>Admins blocked you. Contact @ImJanindu</b>"
     FF_MPEG_RO_BOT_AD_VER_TISE_MENT = "https://telegram.dog/FFMpegRoBot"
     EXTRACT_ZIP_INTRO_ONE = (
         "<b>Send a compressed file first, Then reply /unzip command to the file.</b>"
