@@ -1,13 +1,14 @@
 # https://github.com/thehamkercat/WilliamButcherBot/blob/dev/wbb/modules/inline.py
 
 from Mizuki import pbot as app
+from Mizuki import pbot
 from Mizuki.utils.inlinefuncs import *
 from pyrogram import filters
 from pyrogram.errors.exceptions.bad_request_400 import QueryIdInvalid
 
 @app.on_message(filters.command("inline"))
 async def inline_help(_, message):
-    await app.send_message(message.chat.id, text=__HELP__)
+    await pbot.send_message(message.chat.id, text=__HELP__)
 
 
 @app.on_inline_query()
