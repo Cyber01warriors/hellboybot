@@ -5,14 +5,14 @@
 
 from pyrogram import filters
 
+from Mizuki import pbot as app
+from Mizuki.function.pluginhelpers import member_permissions
 from Mizuki.utils.filterdb import (
     delete_filter,
     get_filter,
     get_filters_names,
     save_filter,
 )
-from Mizuki.function.pluginhelpers import member_permissions
-from Mizuki import pbot as app
 
 
 @app.on_message(filters.command("addfilter") & ~filters.edited & ~filters.private)
@@ -64,9 +64,7 @@ async def get_filterss(_, message):
 @app.on_message(filters.command("delfilter") & ~filters.edited & ~filters.private)
 async def del_filter(_, message):
     if len(message.command) < 2:
-        await message.reply_text(
-            "**Usage**\n__/delfilter <textfilter name>__"
-        )
+        await message.reply_text("**Usage**\n__/delfilter <textfilter name>__")
 
     elif len(await member_permissions(message.chat.id, message.from_user.id)) < 1:
         await message.reply_text("**You don't have enough permissions**")
@@ -74,9 +72,7 @@ async def del_filter(_, message):
     else:
         name = message.text.split(None, 1)[1].strip()
         if not name:
-            await message.reply_text(
-                "**Usage**\n__/delfilter <textfilter name>__"
-            )
+            await message.reply_text("**Usage**\n__/delfilter <textfilter name>__")
             return
         chat_id = message.chat.id
         deleted = await delete_filter(chat_id, name)
@@ -87,7 +83,12 @@ async def del_filter(_, message):
 
 
 @app.on_message(
-    filters.incoming & filters.text & ~filters.private & ~filters.edited & ~filters.channel & ~filters.bot
+    filters.incoming
+    & filters.text
+    & ~filters.private
+    & ~filters.edited
+    & ~filters.channel
+    & ~filters.bot
 )
 async def filters_re(_, message):
     try:
