@@ -81,7 +81,7 @@ def markdown_help(update: Update, context: CallbackContext):
 
 
 __help__ = """
-*An "odds and ends" module for small, simple commands which don't really fit anywhere.*
+An "odds and ends" module for small, simple commands which don't really fit anywhere.
 
 *Markdown:*
  • `/markdownhelp`*:* quick summary of how markdown works in telegram - can only be called in private chats
