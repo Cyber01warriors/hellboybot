@@ -7,7 +7,7 @@ class Translation(object):
 URL | filename | username | password"""
     NOYES_URL = "<b>Slow URL detected. Please use https://shrtz.me/PtsVnf6 and get me a fast URL so that I can upload to Telegram, 🚀 without me slowing down for other users.</b>"
     DOWNLOAD_START = "<b>Downloading Started 😉</b>"
-    UPLOAD_START = "<b>Download successful 😌 \nNow uploading. Please wait 🥺</b>"
+    UPLOAD_START = "<b>Download successful ✅\nNow uploading, Please wait 👌</b>"
     RCHD_BOT_API_LIMIT = "<b>Size greater than maximum allowed size (50MB). 🙄 Neverthless, trying to upload.</b>"
     RCHD_TG_API_LIMIT = "<b>Downloaded in {} seconds.\nDetected File Size: {}\nWTF 😬, I cannot upload files greater than 1.5GB due to Telegram API limitations 😒</b>"
     AFTER_SUCCESSFUL_UPLOAD_MSG = "<b>If you find this bot useful, please share with your friends and family. If any complaints contact @ImJanindu</b>"
