@@ -24,6 +24,11 @@ __help__ = """
 *Cricket:*
 ⦁ `/cs`*:* get latest live cricket matches scores from cricinfo.
 
+*Weather:*
+⦁ `/weather <city>`*:* Get weather info in a particular place.
+⦁ `/wttr <city>`*:* Advanced weather module, usage same as `/weather` cmd.
+⦁ `/wttr moon`*:* Get the current status of moon.
+
 *Time:*
 ⦁ `/time <query>`*:* gives information about a timezone.
 
