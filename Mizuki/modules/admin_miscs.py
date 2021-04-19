@@ -105,7 +105,3 @@ async def set_chat_photo(_, message):
     except Exception as e:
         print(e)
         await message.reply_text(e)
-
-__help__ = "Lel Test"
-
-__mod_name__ = "Admin Miscs"
