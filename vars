@@ -156,11 +156,6 @@
          "description": "Telethon string session from https://repl.it/@SpEcHiDe/GenerateStringSession",
          "required": true,
          "value": ""
-      },
-      "CHAT_BASE_TOKEN": {
-         "description": "Get a token from https://chatbase.com",
-         "required": true,
-         "value": ""
       }, 
       "MONGO_DB_URI": {
          "description": "Mongo db URI here. Get it from mongodb.com create acc. Create organization. Create a cluster connection mode from everywhere give user pass get uri. replace <password> with pass <name> with Mizuki",
