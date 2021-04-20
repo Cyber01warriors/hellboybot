@@ -1,11 +1,11 @@
 import asyncio
 from telethon.tl.types import ChannelParticipantsAdmins
-from Mizuki.events import register as mizuki
+from Mizuki import tbot as bot
 import telethon
 from telethon import events
 
 
-@mizuki(pattern="^/tagall")
+@bot.on(events.NewMessage(pattern="/tagall"))
 async def _(event):
     if event.fwd_from:
         return
@@ -17,7 +17,7 @@ async def _(event):
     await event.delete()
 
 
-@mizuki(pattern="^/administrator")
+@bot.on(events.NewMessage(pattern="/administrator"))
 async def _(event):
     if event.fwd_from:
         return
