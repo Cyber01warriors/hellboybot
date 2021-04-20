@@ -35,3 +35,12 @@ async def _(event):
     else:
         await event.reply(mentions)
     await event.delete()
+
+
+__help__ = """
+I can tag all members in group with a message.
+
+• `/tagall <message>`*:* tag all members in the group with given message.
+"""
+
+__mod_name__ = "Tagger"
