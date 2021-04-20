@@ -6,7 +6,7 @@ import math
 from Mizuki.events import register as borg
 
 
-@borg.on(pattern="^/calc")
+@borg(pattern="^/calc")
 async def _(event):
     if event.fwd_from or event.via_bot_id:
         return
