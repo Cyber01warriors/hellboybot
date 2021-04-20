@@ -11,8 +11,8 @@ from telethon import events
 @bot.on(events.NewMessage(pattern="/tagall"))
 async def _(event):
     if event.fwd_from:
-        return
-    mentions = "Hello"
+        return # @ImJanindu
+    mentions = event.pattern_match.group(1)
     chat = await event.get_input_chat()
     async for x in bot.iter_participants(chat, 100):
         mentions += f" \n [{x.first_name}](tg://user?id={x.id})"
@@ -24,7 +24,7 @@ async def _(event):
 async def _(event):
     if event.fwd_from:
         return
-    mentions = "Administrators: "
+    mentions = "**Admins in this chat:** "
     chat = await event.get_input_chat()
     async for x in bot.iter_participants(chat, filter=ChannelParticipantsAdmins):
         mentions += f" \n [{x.first_name}](tg://user?id={x.id})"
