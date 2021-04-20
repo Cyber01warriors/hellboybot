@@ -356,10 +356,16 @@ def get_help(update: Update, context: CallbackContext):
                             text="Help",
                             url="t.me/{}?start=help".format(context.bot.username),
                         )
-                    ]
+                    ],
+                    [
+                        InlineKeyboardButton(
+                            text="Support Chat",
+                            url="https://t.me/{}".format(SUPPORT_CHAT),
+                        )
+                    ],
                 ]
             ),
-        )
+        )             
         return
 
     elif len(args) >= 2 and any(args[1].lower() == x for x in HELPABLE):
