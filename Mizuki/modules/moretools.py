@@ -8,6 +8,9 @@ __help__ = """
 *Nekobin:*
 ⦁ `/paste <reply to text>`*:* paste given text on nekobin and give url.
 
+*Math:*
+⦁ `/calc <maths equation>`*:* solves the given maths equation by BODMAS rule.
+
 *Zipper:*
 ⦁ `/zip`*:* reply to a telegram file to compress it in .zip format.
 ⦁ `/unzip`*:* reply to a telegram file to decompress it from the .zip format.
