@@ -8,7 +8,6 @@ pyromod
 python-arq
 gitpython==3.1.11
 beautifulsoup4
-git+git://github.com/google/chatbase-python.git
 requests
 PyDictionary
 pykeyboard
