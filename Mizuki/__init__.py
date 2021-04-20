@@ -93,7 +93,6 @@ if ENV:
     STRING_SESSION = os.environ.get("STRING_SESSION", None)
     VIRUS_API_KEY = os.environ.get("VIRUS_API_KEY", None)
     DOWNLOAD_LOCATION = "Downloads/"
-    CHAT_BASE_TOKEN = os.environ.get("CHAT_BASE_TOKEN", "")
     DEF_WATER_MARK_FILE = ""
     HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY", None)
     HEROKU_APP_NAME = os.environ.get("HEROKU_APP_NAME", None)
@@ -155,7 +154,6 @@ else:
     API_HASH = Config.API_HASH
     STRING_SESSION = Config.STRING_SESSION
     DOWNLOAD_LOCATION = "Downloads/"
-    CHAT_BASE_TOKEN = os.environ.get("CHAT_BASE_TOKEN", "")
     DEF_WATER_MARK_FILE = ""
     BOT_ID = Config.BOT_ID
     OPENWEATHERMAP_ID = Config.OPENWEATHERMAP_ID
