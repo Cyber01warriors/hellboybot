@@ -1,3 +1,6 @@
+# @ImJanindu <https://t.me/Infinity_BOTs>
+# Mizuki Tagall
+
 import asyncio
 from telethon.tl.types import ChannelParticipantsAdmins
 from Mizuki import tbot as bot
