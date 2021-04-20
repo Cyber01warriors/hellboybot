@@ -8,7 +8,7 @@ import telethon
 from telethon import events
 
 
-@bot.on(events.NewMessage(pattern="/tagall"))
+@bot.on(events.NewMessage(pattern="/tagall ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return # @ImJanindu
