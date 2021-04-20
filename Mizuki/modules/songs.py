@@ -146,8 +146,6 @@ async def download_song(v_url):
 
 __help__ = """
  • `/song <song name>`*:* uploads the song from YouTube in the best quality available.
- • `/deezer <song name>`*:* uploads the song from Deezer in best quality available.
- • `/saavn <song name>`*:* uploads the song from JioSaavn in best quality available.
  • `/lyrics <song name>`*:* provides the lyrics of the song you want.
 """
 
