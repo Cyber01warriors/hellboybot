@@ -1,36 +1,30 @@
-## Mizuki - A powerful telegram group manager bot with tons of functions which helpful for you ❤ <br>
+![hellboy01_bot](https://telegra.ph/file/4149b4fd7a4acf3f4c96f.jpg)
+### Developers:
+[@Cyber01_Warriors](https://t.me/Cyber01_Warriors)
+# Hell Boy Bot
 
-<p align="center">
-  <img src="https://telegra.ph/file/8dea6246ac55303be89e1.jpg">
-</p>
+A Telegram Python bot running on python3 forked with saitama with a sqlalchemy database and an entirely themed persona to make fun and good management for you in your groups.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![Python](http://forthebadge.com/images/badges/made-with-python.svg)](https://python.org)&nbsp;
+Can be found on telegram as [@hellboy01_bot](https://t.me/hellboy01_bot)
+The Support group can be reached out to at [Infinity JE](https://t.me/InfinityJEOT), where you can ask for help , discover new features, report bugs, and stay in the loop whenever a new update is available. 
 
-### Deploy to heroku 💤
 
-- Fork this repo, create heroku new app and connect forked repo
-- Then get all vars from [here](https://github.com/ImJanindu/Mizuki/blob/main/vars)
-- Simply set all vars from heroku app settings
-- Add heroku-postgresql resource to heroku app
-- Add [this url](https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest) on heroku buildpacks (need for some modules)
-- Finally deploy the bot
+Updates channel as at [Infinity BOTs](https://t.me/Infinity_BOTs)
 
-### Can be found on telegram as [@MizukiDevRobot](https://t.me/MizukiDevRobot)
+## How to setup or deploy
 
-### Don't forget to star the repo ⭐
+### Read these notes carefully before proceeding 
+ - This bot is forked from saitama which is based on marie
+ - Your code must be open source and a link to our repo
+ - last, we don't support fork and asking for fork in our support group will result to gban.
 
-### Devs
+## How to setup on Heroku 
+For starters click on this button 
 
-- [Janindu](https://t.me/ImJanindu)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Ez-Tee/Mizuki/tree/Mizuki) 
 
-### Credits
-
-- [MashaRobot](https://github.com/Mr-Dark-Prince/MashaRoBot)
-- [SaitamaRobot](https://github.com/AnimeKaizoku/SaitamaRobot)
-- [WilliamButcherBot](https://github.com/thehamkercat/WilliamButcherBot)
-
-All the credits goes to original code owners, here just only collection of modified plugins of them
-
-### Join Mizuki updates [channel](https://t.me/MizukiUpdatesOfficial) and support [group](https://t.me/MizukiSupportOfficial) 🛠
+## Credits
+The bot is based on the original work done by [PaulSonOfLars](https://github.com/PaulSonOfLars)
+This repo was just revamped to suit an Anime-centric community. All original credits go to Paul and his dedication, Without his efforts, this fork would not have been possible!
 
 
