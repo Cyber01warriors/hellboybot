@@ -78,7 +78,7 @@ def get_readable_time(seconds: int) -> str:
 PM_START_TEXT = """Hey there, my name is Hell Boy.\n\nI am a next gen powerful group manager bot.\n\nHit /help to find my list of available commands."""
 buttons = [
     [
-        InlineKeyboardButton(text="♞ Support", url="https://t.me/Infinity_BOTs"),
+        InlineKeyboardButton(text="♞ Support", url="t.me/hellboysupportgroup"),
         InlineKeyboardButton(text="❔ Help", callback_data="help_back"),
     ],
     [
