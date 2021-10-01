@@ -18,7 +18,7 @@ Updates channel as at [Infinity BOTs](https://t.me/Infinity_BOTs)
  - Your code must be open source and a link to our repo
  - last, we don't support fork and asking for fork in our support group will result to gban.
 
-## How to setup on Heroku 
+### How to setup on Heroku 
 For starters click on this button 
 
 [![Deploy on Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Ez-Tee/Mizuki/tree/Mizuki) 
