@@ -1,7 +1,7 @@
 {
-   "name": "Mizuki Bot",
+   "name": "Hell Boy Bot",
    "description": "An Anime themed Telegram group management bot.",
-   "repository": "https://github.com/ImJanindu/Mizuki",
+   "repository": "https://github.com/Cyber01warriors/hellboybot",
    "addons": [
       {
          "options": {
