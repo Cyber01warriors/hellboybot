@@ -21,7 +21,7 @@ Updates channel as at [Infinity BOTs](https://t.me/Infinity_BOTs)
 ### How to setup on Heroku 
 For starters click on this button 
 
-[![Deploy on Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Cyber01warriors/hellboybot) 
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Ez-Tee/Mizuki/tree/Mizuki)
 
 ## Credits
 The bot is based on the original work done by [PaulSonOfLars](https://github.com/PaulSonOfLars)
